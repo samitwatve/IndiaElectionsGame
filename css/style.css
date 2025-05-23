@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: 90vh;
+    margin: 20px auto 0 auto;
+    max-width: 98vw;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.player-panel {
+    width: 260px;
+    background: #e3e9f7;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+}
+
+.player1-panel {
+    border-right: 2px solid #c3cbe6;
+}
+.player2-panel {
+    border-left: 2px solid #c3cbe6;
+}
+
+.main-panel {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 8px;
+    background: #f9fafc;
+    min-width: 0;
+}
+
+.map-container {
+    width: 60vw;
+    height: 70vh;
+    background: #dbeafe;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    min-height: 300px;
+    max-width: 1000px;
+    max-height: 90vh;
+}
+
+/* Highlighted region style */
+.region-highlighted {
+    stroke: #ff9800 !important;
+    stroke-width: 3 !important;
+    filter: drop-shadow(0 0 6px #ff9800aa);
+    z-index: 2;
+}
+
+#region-name-display {
+    font-size: 1.1em;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+    background: #e0e7ef;
+    border-radius: 0 0 8px 8px;
+    margin-top: 0;
+}
+
+
+.info-container {
+    width: 100%;
+    background: #2d3a4e;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 1100px) {
+    .map-container {
+        width: 90vw;
+        height: 40vh;
+        min-width: 200px;
+        min-height: 150px;
+    }
+    .player-panel {
+        width: 120px;
+        padding: 8px 2px;
+    }
+}
+
+@media (max-width: 800px) {
+    .game-container {
+        flex-direction: column;
+        height: auto;
+        max-width: 100vw;
+    }
+    .player-panel {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #c3cbe6;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .player2-panel {
+        border-bottom: none;
+        border-top: 2px solid #c3cbe6;
+    }
+    .main-panel {
+        padding: 16px 4px;
+    }
+    .map-container {
+        width: 98vw;
+        height: 220px;
+    }
+}
