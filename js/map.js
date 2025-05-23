@@ -16,7 +16,18 @@ document.addEventListener('DOMContentLoaded', function () {
         mapContainer.parentElement.appendChild(regionNameDisplay);
     }
 
-    fetch('static/INDIA_V2.svg')
+    // First, load the states data
+    fetch('static/states_data.json')
+        .then(response => response.json())
+        .then(statesData => {
+            // Build a map from SvgId to data
+            window.statesDataMap = {};
+            statesData.forEach(item => {
+                window.statesDataMap[item.SvgId] = item;
+            });
+            // Now load the SVG
+            return fetch('static/INDIA_V2.svg');
+        })
         .then(response => response.text())
         .then(svgText => {
             mapContainer.innerHTML = '';
@@ -41,9 +52,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Add hover and click events to all regions (paths with id and name)
                 const regions = svg.querySelectorAll('path[id][name]');
                 regions.forEach(region => {
-                    // Hover: show name
+                    // Hover: show all info from states_data.json
                     region.addEventListener('mouseenter', function (e) {
-                        regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                        if (!window.statesDataMap) {
+                            regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                            return;
+                        }
+                        // Try to match by id, then by name (case-insensitive, ignoring spaces)
+                        let data = window.statesDataMap[region.id];
+                        if (!data) {
+                            // Try to match by name (normalize both)
+                            const regionName = (region.getAttribute('name') || '').replace(/\s+/g, '').toLowerCase();
+                            data = Object.values(window.statesDataMap).find(d => d.State.replace(/\s+/g, '').toLowerCase() === regionName);
+                        }
+                        if (data) {
+                            const info = [
+                                `State: ${data.State}`,
+                                `UT: ${data.UnionTerritory === 'TRUE' ? 'T' : 'F'}`,
+                                `CI: ${data.CoastalIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `NE: ${data.NortheastIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `SI: ${data.SouthIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `HH: ${data.HindiHeartland === 'TRUE' ? 'T' : 'F'}`,
+                                `AR: ${data.AgriculturalRegion === 'TRUE' ? 'T' : 'F'}`,
+                                `BL: ${data.BorderLands === 'TRUE' ? 'T' : 'F'}`,
+                                `LS: ${data.LokSabhaSeats}`
+                            ].join('; ');
+                            regionNameDisplay.textContent = info;
+                        } else {
+                            regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                        }
                     });
                     region.addEventListener('mouseleave', function (e) {
                         regionNameDisplay.textContent = '';
@@ -64,7 +101,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 const lakshadweepBox = svg.querySelector('#bbox-lakshadweep');
                 if (lakshadweepBox) {
                     lakshadweepBox.addEventListener('mouseenter', function (e) {
-                        regionNameDisplay.textContent = 'Lakshadweep';
+                        // Try to show Lakshadweep info
+                        let info = 'Lakshadweep';
+                        if (window.statesDataMap && window.statesDataMap['INLD']) {
+                            const data = window.statesDataMap['INLD'];
+                            info = [
+                                `State: ${data.State}`,
+                                `UT: ${data.UnionTerritory === 'TRUE' ? 'T' : 'F'}`,
+                                `CI: ${data.CoastalIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `NE: ${data.NortheastIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `SI: ${data.SouthIndia === 'TRUE' ? 'T' : 'F'}`,
+                                `HH: ${data.HindiHeartland === 'TRUE' ? 'T' : 'F'}`,
+                                `AR: ${data.AgriculturalRegion === 'TRUE' ? 'T' : 'F'}`,
+                                `BL: ${data.BorderLands === 'TRUE' ? 'T' : 'F'}`,
+                                `LS: ${data.LokSabhaSeats}`
+                            ].join('; ');
+                        }
+                        regionNameDisplay.textContent = info;
                     });
                     lakshadweepBox.addEventListener('mouseleave', function (e) {
                         regionNameDisplay.textContent = '';
