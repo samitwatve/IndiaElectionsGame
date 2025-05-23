@@ -105,7 +105,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "FALSE",
     "LokSabhaSeats": "1",
-    "SvgId": "INDH"
+    "SvgId": "INDD"
   },
   {
     "State": "Delhi",
@@ -225,7 +225,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "TRUE",
     "LokSabhaSeats": "1",
-    "SvgId": "INLD"
+    "SvgId": "INLA"
   },
   {
     "State": "Lakshadweep",
@@ -261,7 +261,7 @@
     "AgriculturalRegion": "TRUE",
     "BorderLands": "FALSE",
     "LokSabhaSeats": "48",
-    "SvgId": "INMA"
+    "SvgId": "INMH"
   },
   {
     "State": "Manipur",
@@ -285,7 +285,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "TRUE",
     "LokSabhaSeats": "2",
-    "SvgId": "INMG"
+    "SvgId": "INML"
   },
   {
     "State": "Mizoram",
@@ -321,7 +321,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "FALSE",
     "LokSabhaSeats": "21",
-    "SvgId": "INOD"
+    "SvgId": "INOR"
   },
   {
     "State": "Puducherry",
@@ -393,7 +393,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "FALSE",
     "LokSabhaSeats": "17",
-    "SvgId": "INTL"
+    "SvgId": "INTG"
   },
   {
     "State": "Tripura",
@@ -405,7 +405,7 @@
     "AgriculturalRegion": "FALSE",
     "BorderLands": "TRUE",
     "LokSabhaSeats": "2",
-    "SvgId": "INTP"
+    "SvgId": "INTR"
   },
   {
     "State": "Uttar Pradesh",

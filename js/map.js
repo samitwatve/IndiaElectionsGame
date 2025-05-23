@@ -3,6 +3,61 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapContainer = document.getElementById('map-container');
     if (!mapContainer) return;
 
+    // --- CATEGORY BUTTONS LOGIC ---
+    const categoryButtonsContainer = document.getElementById('category-buttons-container');
+    let lastCategory = null;
+    if (categoryButtonsContainer) {
+        categoryButtonsContainer.addEventListener('click', function (e) {
+            if (e.target.classList.contains('category-btn')) {
+                const category = e.target.getAttribute('data-category');
+                // Remove active from all
+                Array.from(categoryButtonsContainer.children).forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                lastCategory = category;
+                highlightCategoryStates(category);
+            }
+        });
+    }
+
+    // Helper to highlight all states for a category
+    function highlightCategoryStates(category) {
+        // Ensure a debug output container exists
+        let debugEl = document.getElementById('debug-output');
+        if (!debugEl) {
+            debugEl = document.createElement('pre');
+            debugEl.id = 'debug-output';
+            debugEl.style.position = 'absolute';
+            debugEl.style.bottom = '0';
+            debugEl.style.left = '0';
+            debugEl.style.width = '100%';
+            debugEl.style.maxHeight = '150px';
+            debugEl.style.overflow = 'auto';
+            debugEl.style.background = 'rgba(0,0,0,0.7)';
+            debugEl.style.color = '#fff';
+            debugEl.style.fontSize = '12px';
+            debugEl.style.padding = '8px';
+            mapContainer.appendChild(debugEl);
+        }
+        // Helper to append messages
+        const log = msg => { debugEl.textContent += msg + '\n'; };
+        // Remove previous highlights
+        const svg = mapContainer.querySelector('svg');
+        if (!svg || !window.statesDataMap) return;
+        svg.querySelectorAll('.region-highlighted').forEach(el => el.classList.remove('region-highlighted'));
+        // Find all SvgIds where category is TRUE or true
+        const matchingIds = Object.values(window.statesDataMap)
+            .filter(d => (d[category] === true) || (d[category] === 'TRUE'))
+            .map(d => d.SvgId);
+        debugEl.textContent = `Category: ${category}\n`;
+        log(`Matching IDs: ${matchingIds.join(', ')}`);
+        // Highlight all matching regions
+        matchingIds.forEach(id => {
+            const els = svg.querySelectorAll(`[id="${id}"]`);
+            log(`Elements for ${id}: ${els.length}`);
+            els.forEach(el => el.classList.add('region-highlighted'));
+        });
+    }
+
     // Add a region name display at the bottom if not present
     let regionNameDisplay = document.getElementById('region-name-display');
     if (!regionNameDisplay) {
@@ -17,9 +72,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // First, load the states data
-    fetch('static/states_data.json')
+    fetch(`static/states_data.json?t=${Date.now()}`, { cache: 'no-store' })
         .then(response => response.json())
         .then(statesData => {
+            // Normalize TRUE/FALSE flags to booleans for all keys
+            statesData.forEach(item => {
+                Object.entries(item).forEach(([k, v]) => {
+                    if (v === 'TRUE') item[k] = true;
+                    if (v === 'FALSE') item[k] = false;
+                });
+            });
             // Build a map from SvgId to data
             window.statesDataMap = {};
             statesData.forEach(item => {
@@ -49,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Highlight logic
                 let lastHighlighted = null;
 
-                // Add hover and click events to all regions (paths with id and name)
-                const regions = svg.querySelectorAll('path[id][name]');
+                // Add hover and click events to all SVG elements with an id
+                const regions = svg.querySelectorAll('[id]');
                 regions.forEach(region => {
                     // Hover: show all info from states_data.json
                     region.addEventListener('mouseenter', function (e) {
@@ -68,13 +130,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (data) {
                             const info = [
                                 `State: ${data.State}`,
-                                `UT: ${data.UnionTerritory === 'TRUE' ? 'T' : 'F'}`,
-                                `CI: ${data.CoastalIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `NE: ${data.NortheastIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `SI: ${data.SouthIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `HH: ${data.HindiHeartland === 'TRUE' ? 'T' : 'F'}`,
-                                `AR: ${data.AgriculturalRegion === 'TRUE' ? 'T' : 'F'}`,
-                                `BL: ${data.BorderLands === 'TRUE' ? 'T' : 'F'}`,
+                                `UT: ${data.UnionTerritory ? 'T' : 'F'}`,
+                                `CI: ${data.CoastalIndia ? 'T' : 'F'}`,
+                                `NE: ${data.NortheastIndia ? 'T' : 'F'}`,
+                                `SI: ${data.SouthIndia ? 'T' : 'F'}`,
+                                `HH: ${data.HindiHeartland ? 'T' : 'F'}`,
+                                `AR: ${data.AgriculturalRegion ? 'T' : 'F'}`,
+                                `BL: ${data.BorderLands ? 'T' : 'F'}`,
                                 `LS: ${data.LokSabhaSeats}`
                             ].join('; ');
                             regionNameDisplay.textContent = info;
@@ -87,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                     // Click: highlight
                     region.addEventListener('click', function (e) {
+                        // If a category is active, ignore single highlight
+                        if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
                         if (lastHighlighted) {
                             lastHighlighted.classList.remove('region-highlighted');
                         }
@@ -107,13 +171,13 @@ document.addEventListener('DOMContentLoaded', function () {
                             const data = window.statesDataMap['INLD'];
                             info = [
                                 `State: ${data.State}`,
-                                `UT: ${data.UnionTerritory === 'TRUE' ? 'T' : 'F'}`,
-                                `CI: ${data.CoastalIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `NE: ${data.NortheastIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `SI: ${data.SouthIndia === 'TRUE' ? 'T' : 'F'}`,
-                                `HH: ${data.HindiHeartland === 'TRUE' ? 'T' : 'F'}`,
-                                `AR: ${data.AgriculturalRegion === 'TRUE' ? 'T' : 'F'}`,
-                                `BL: ${data.BorderLands === 'TRUE' ? 'T' : 'F'}`,
+                                `UT: ${data.UnionTerritory ? 'T' : 'F'}`,
+                                `CI: ${data.CoastalIndia ? 'T' : 'F'}`,
+                                `NE: ${data.NortheastIndia ? 'T' : 'F'}`,
+                                `SI: ${data.SouthIndia ? 'T' : 'F'}`,
+                                `HH: ${data.HindiHeartland ? 'T' : 'F'}`,
+                                `AR: ${data.AgriculturalRegion ? 'T' : 'F'}`,
+                                `BL: ${data.BorderLands ? 'T' : 'F'}`,
                                 `LS: ${data.LokSabhaSeats}`
                             ].join('; ');
                         }
@@ -123,6 +187,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         regionNameDisplay.textContent = '';
                     });
                     lakshadweepBox.addEventListener('click', function (e) {
+                        // If a category is active, ignore single highlight
+                        if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
                         if (lastHighlighted) {
                             lastHighlighted.classList.remove('region-highlighted');
                         }
