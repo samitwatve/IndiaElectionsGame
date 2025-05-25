@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPlayer = 1;
     const capturedCounts = { 1: 0, 2: 0 };
     const capturedList = { 1: [], 2: [] };
+    const currentTurnDisplay = document.getElementById('current-turn');
 
     // --- CATEGORY BUTTONS LOGIC ---
     const categoryButtonsContainer = document.getElementById('category-buttons-container');
@@ -160,18 +161,29 @@ document.addEventListener('DOMContentLoaded', function () {
                         // capture logic: only if not already captured and is a state
                         if (!region.classList.contains('captured-p1') &&
                             !region.classList.contains('captured-p2')) {
+                            const seats = +window.statesDataMap[region.id].LokSabhaSeats;
                             region.classList.add(`captured-p${currentPlayer}`);
-                            capturedCounts[currentPlayer]++;
-                            // record which state by its official name from our data
-                            const stateName = window.statesDataMap[region.id].State;
-                            capturedList[currentPlayer].push(stateName);
-                            const infoBox = document.getElementById(`player${currentPlayer}-info`);
-                            if (infoBox) {
-                                const list = capturedList[currentPlayer].join(', ');
-                                infoBox.textContent =
-                                  `States captured (${capturedList[currentPlayer].length}): ${list}`;
+                            capturedCounts[currentPlayer] += seats;
+                            capturedList[currentPlayer].push(window.statesDataMap[region.id].State);
+
+                            // Update both info panels and highlight active
+                            ['1','2'].forEach(p => {
+                              const box = document.getElementById(`player${p}-info`);
+                              box.textContent = `Seats: ${capturedCounts[p]}; States: ${capturedList[p].join(', ')}`;
+                              box.classList.toggle('active', +p === currentPlayer);
+                            });
+
+                            // Check for win
+                            if (capturedCounts[currentPlayer] >= 272) {
+                              alert(`Player ${currentPlayer} wins with ${capturedCounts[currentPlayer]} seats!`);
+                              return;
                             }
+
+                            // Switch turn
                             currentPlayer = currentPlayer === 1 ? 2 : 1;
+
+                            // Update turn display
+                            currentTurnDisplay.textContent = `Current Turn: Player ${currentPlayer}`;
                         }
                         // If a category is active, ignore single highlight
                         if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
