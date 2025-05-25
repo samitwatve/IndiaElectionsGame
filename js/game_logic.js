@@ -63,5 +63,16 @@ export function assignInitialLeans(svg, statesDataMap, leanSeatTarget = 100) {
     else region.classList.add('lean-none');
   });
 
+  // Display summary of assigned states & seats
+  const p1Count = Object.values(assigned).filter(v => v === 1).length;
+  const p2Count = Object.values(assigned).filter(v => v === 2).length;
+  let summaryEl = document.getElementById('lean-summary');
+  if (!summaryEl) {
+    summaryEl = document.createElement('div');
+    summaryEl.id = 'lean-summary';
+    svg.parentNode.insertBefore(summaryEl, svg.nextSibling);
+  }
+  summaryEl.textContent =
+    `Player 1: ${p1Count} states, ${p1Seats} seats | Player 2: ${p2Count} states, ${p2Seats} seats`;
   return assigned;
 }
