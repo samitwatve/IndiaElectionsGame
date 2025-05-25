@@ -1,3 +1,34 @@
+/* Campaign Promises Buttons Container */
+.promises-buttons-container {
+    width: 60vw;
+    max-width: 1000px;
+    min-width: 350px;
+    margin: 8px auto 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.promise-btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+    min-width: 90px;
+    max-width: 140px;
+    white-space: nowrap;
+}
+.promise-btn:hover, .promise-btn.active {
+    background: #004ba0;
+    color: #fffbe7;
+}
 /* Turn and active player styles */
 #current-turn { font-size: 1.1em; font-weight: bold; margin-bottom: 8px; }
 .player-info.active { background: rgba(255,215,0,0.3); padding: 4px; border-radius: 4px; }

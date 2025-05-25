@@ -28,25 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Helper to highlight all states for a category
     function highlightCategoryStates(category) {
-        // Ensure a debug output container exists
-        let debugEl = document.getElementById('debug-output');
-        if (!debugEl) {
-            debugEl = document.createElement('pre');
-            debugEl.id = 'debug-output';
-            debugEl.style.position = 'absolute';
-            debugEl.style.bottom = '0';
-            debugEl.style.left = '0';
-            debugEl.style.width = '100%';
-            debugEl.style.maxHeight = '150px';
-            debugEl.style.overflow = 'auto';
-            debugEl.style.background = 'rgba(0,0,0,0.7)';
-            debugEl.style.color = '#fff';
-            debugEl.style.fontSize = '12px';
-            debugEl.style.padding = '8px';
-            mapContainer.appendChild(debugEl);
-        }
-        // Helper to append messages
-        const log = msg => { debugEl.textContent += msg + '\n'; };
         // Remove previous highlights
         const svg = mapContainer.querySelector('svg');
         if (!svg || !window.statesDataMap) return;
@@ -55,12 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const matchingIds = Object.values(window.statesDataMap)
             .filter(d => (d[category] === true) || (d[category] === 'TRUE'))
             .map(d => d.SvgId);
-        debugEl.textContent = `Category: ${category}\n`;
-        log(`Matching IDs: ${matchingIds.join(', ')}`);
         // Highlight all matching regions
         matchingIds.forEach(id => {
             const els = svg.querySelectorAll(`[id="${id}"]`);
-            log(`Elements for ${id}: ${els.length}`);
             els.forEach(el => el.classList.add('region-highlighted'));
         });
     }
