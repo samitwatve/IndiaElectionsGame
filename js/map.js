@@ -1,7 +1,13 @@
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
+
     const mapContainer = document.getElementById('map-container');
     if (!mapContainer) return;
+
+    // Track whose turn, counts, and lists of states captured
+    let currentPlayer = 1;
+    const capturedCounts = { 1: 0, 2: 0 };
+    const capturedList = { 1: [], 2: [] };
 
     // --- CATEGORY BUTTONS LOGIC ---
     const categoryButtonsContainer = document.getElementById('category-buttons-container');
@@ -87,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
             statesData.forEach(item => {
                 window.statesDataMap[item.SvgId] = item;
             });
-            // Now load the SVG
-            return fetch('static/INDIA_V2.svg');
+            // Now load the SVG (bust cache)
+            return fetch(`static/INDIA_V2.svg?t=${Date.now()}`, { cache: 'no-store' });
         })
         .then(response => response.text())
         .then(svgText => {
@@ -112,8 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 let lastHighlighted = null;
 
                 // Add hover and click events to all SVG elements with an id
+                // Only bind to actual state elements by checking against our data map
                 const regions = svg.querySelectorAll('[id]');
                 regions.forEach(region => {
+                    if (!window.statesDataMap[region.id]) return;
                     // Hover: show all info from states_data.json
                     region.addEventListener('mouseenter', function (e) {
                         if (!window.statesDataMap) {
@@ -147,8 +155,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     region.addEventListener('mouseleave', function (e) {
                         regionNameDisplay.textContent = '';
                     });
-                    // Click: highlight
+                    // Click: capture logic and highlight
                     region.addEventListener('click', function (e) {
+                        // capture logic: only if not already captured and is a state
+                        if (!region.classList.contains('captured-p1') &&
+                            !region.classList.contains('captured-p2')) {
+                            region.classList.add(`captured-p${currentPlayer}`);
+                            capturedCounts[currentPlayer]++;
+                            // record which state by its official name from our data
+                            const stateName = window.statesDataMap[region.id].State;
+                            capturedList[currentPlayer].push(stateName);
+                            const infoBox = document.getElementById(`player${currentPlayer}-info`);
+                            if (infoBox) {
+                                const list = capturedList[currentPlayer].join(', ');
+                                infoBox.textContent =
+                                  `States captured (${capturedList[currentPlayer].length}): ${list}`;
+                            }
+                            currentPlayer = currentPlayer === 1 ? 2 : 1;
+                        }
                         // If a category is active, ignore single highlight
                         if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
                         if (lastHighlighted) {
