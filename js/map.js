@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 svg.classList.add('india-svg-map');
                 mapContainer.appendChild(svg);
 
+                // --- INITIAL LEAN ASSIGNMENT ---
+                import(`./game_logic.js?t=${Date.now()}`).then(mod => {
+                  mod.assignInitialLeans(svg, window.statesDataMap, 200); // 100 seats each
+                }).catch(() => {});
+
                 // Highlight logic
                 let lastHighlighted = null;
 

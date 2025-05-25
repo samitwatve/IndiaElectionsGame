@@ -1,3 +1,27 @@
+/* Lean coloring for initial state leans */
+.lean-p1 {
+    fill: #ffb347 !important; /* light orange */
+    opacity: 0.85;
+    transition: fill 0.3s;
+}
+.lean-p2 {
+    fill: #90ee90 !important; /* light green */
+    opacity: 0.85;
+    transition: fill 0.3s;
+}
+.lean-none {
+    fill: #e0e0e0 !important; /* neutral gray */
+    opacity: 0.7;
+    transition: fill 0.3s;
+}
+
+/* Optionally, for stronger leans (not used yet, but for future expansion) */
+.lean-p1.strong {
+    fill: #ff9800 !important; /* darker orange */
+}
+.lean-p2.strong {
+    fill: #388e3c !important; /* darker green */
+}
 /* Campaign Promises Buttons Container */
 .promises-buttons-container {
     width: 60vw;
