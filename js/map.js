@@ -53,7 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
         regionNameDisplay.style.padding = '8px 0 0 0';
         regionNameDisplay.style.fontWeight = 'bold';
         regionNameDisplay.style.minHeight = '24px';
-        mapContainer.parentElement.appendChild(regionNameDisplay);
+        if (mapContainer && mapContainer.parentElement) {
+            mapContainer.parentElement.appendChild(regionNameDisplay);
+        } else {
+            document.body.appendChild(regionNameDisplay);
+        }
     }
 
     // First, load the states data
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // --- INITIAL LEAN ASSIGNMENT ---
                 import(`./game_logic.js?t=${Date.now()}`).then(mod => {
-                  mod.assignInitialLeans(svg, window.statesDataMap, 200); // 100 seats each
+                  mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
                 }).catch(() => {});
 
                 // Highlight logic
@@ -109,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Hover: show all info from states_data.json
                     region.addEventListener('mouseenter', function (e) {
                         if (!window.statesDataMap) {
-                            regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                            if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
                             return;
                         }
                         // Try to match by id, then by name (case-insensitive, ignoring spaces)
@@ -131,13 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
                                 `BL: ${data.BorderLands ? 'T' : 'F'}`,
                                 `LS: ${data.LokSabhaSeats}`
                             ].join('; ');
-                            regionNameDisplay.textContent = info;
+                            if (regionNameDisplay) regionNameDisplay.textContent = info;
                         } else {
-                            regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                            if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
                         }
                     });
                     region.addEventListener('mouseleave', function (e) {
-                        regionNameDisplay.textContent = '';
+                        if (regionNameDisplay) regionNameDisplay.textContent = '';
                     });
                     // Click: capture logic and highlight
                     region.addEventListener('click', function (e) {
@@ -200,10 +204,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                 `LS: ${data.LokSabhaSeats}`
                             ].join('; ');
                         }
-                        regionNameDisplay.textContent = info;
+                        if (regionNameDisplay) regionNameDisplay.textContent = info;
                     });
                     lakshadweepBox.addEventListener('mouseleave', function (e) {
-                        regionNameDisplay.textContent = '';
+                        if (regionNameDisplay) regionNameDisplay.textContent = '';
                     });
                     lakshadweepBox.addEventListener('click', function (e) {
                         // If a category is active, ignore single highlight
@@ -222,3 +226,4 @@ document.addEventListener('DOMContentLoaded', function () {
             mapContainer.innerHTML = '<p style="color:red">Failed to load map.</p>';
         });
 });
+

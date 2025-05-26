@@ -1,3 +1,4 @@
+  <!-- Removed duplicate Campaign Tech Tree section at top -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>India Elections Game UI</title>
   <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>India Elections Game</h1>
-    <i class="fas fa-cog"></i>
+  <header style="margin-bottom:0;padding:0 0 2px 0;height:38px;min-height:0;">
+    <h1 style="font-size:1.1em;margin:0;line-height:38px;display:inline-block;vertical-align:middle;">India Elections Game</h1>
+    <i class="fas fa-cog" style="vertical-align:middle;"></i>
   </header>
 
 
@@ -47,15 +48,17 @@
         <button class="promise-btn">Hindi Education</button>
       </div>
     </div>
-    <div class="player-panel player2-panel">
-      <h2>Player 2</h2>
-      <div id="player2-info" class="player-info">Seats: 0; States: </div>
+    <!-- Tech Tree Panel replaces Player 2 Panel -->
+    <div class="tech-tree-panel">
+      <h2>Campaign Tech Tree</h2>
+      <div id="tech-tree-rows"></div>
     </div>
   </div>
   <div class="info-container" id="info-container">
     <!-- Global game info goes here -->
   </div>
 
+  <script type="module" src="js/tech-tree.js"></script>
   <script type="module" src="js/map.js"></script>
   <script src="js/progress.js"></script>
   <script src="js/player1.js"></script>
