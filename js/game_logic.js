@@ -17,7 +17,8 @@ function shuffle(array) {
  * @param {number} leanSeatTarget - Seat threshold per player (default 100)
  * @returns {Object} assigned - Mapping of state ID to 1 (P1), 2 (P2), or 0 (neutral)
  */
-export function assignInitialLeans(svg, statesDataMap, leanSeatTarget = 100) {
+export function assignInitialLeans(svg, statesDataMap, leanSeatTarget = 50) {
+  console.log('leanSeatTarget seen by function →', leanSeatTarget);
   // Clear existing lean classes and default to neutral
   Object.keys(statesDataMap).forEach(id => {
     const region = svg.querySelector(`#${id}`);
@@ -27,29 +28,40 @@ export function assignInitialLeans(svg, statesDataMap, leanSeatTarget = 100) {
     }
   });
 
-  // Get and shuffle state IDs
-  const stateIds = Object.keys(statesDataMap);
+  // Get state IDs, sort by ascending seat count, then shuffle for randomness among equals
+  const stateIds = Object.keys(statesDataMap)
+    .sort((a, b) => Number(statesDataMap[a].LokSabhaSeats) - Number(statesDataMap[b].LokSabhaSeats));
   shuffle(stateIds);
 
-  let p1Seats = 0;
-  let p2Seats = 0;
+
+  let p1Seats = 0, p2Seats = 0, idx = 0;
   const assigned = {};
 
-  // Alternate picks: even index → P1, odd → P2
-  for (let i = 0; i < stateIds.length; i++) {
-    const id = stateIds[i];
+  // Assign one state at a time to the player with fewer seats, stop as soon as either reaches the target
+  // let assignmentLog = ['*** assignInitialLeans v2.1 ***'];
+  while (p1Seats < leanSeatTarget && p2Seats < leanSeatTarget && idx < stateIds.length) {
+    const id = stateIds[idx];
     const seats = Number(statesDataMap[id].LokSabhaSeats);
-
-    if (i % 2 === 0 && p1Seats < leanSeatTarget) {
+    const stateName = statesDataMap[id].State || id;
+    if (p1Seats <= p2Seats) {
+      // Skip this state if it would push P1 beyond target and smaller states remain
+      if (p1Seats + seats > leanSeatTarget && idx < stateIds.length - 1) {
+        idx++;
+        continue;
+      }
       assigned[id] = 1;
       p1Seats += seats;
-    } else if (i % 2 !== 0 && p2Seats < leanSeatTarget) {
+      // assignmentLog.push(`P1: ${stateName} assigned, total = ${p1Seats}`);
+    } else {
+      if (p2Seats + seats > leanSeatTarget && idx < stateIds.length - 1) {
+        idx++;
+        continue;
+      }
       assigned[id] = 2;
       p2Seats += seats;
+      // assignmentLog.push(`P2: ${stateName} assigned, total = ${p2Seats}`);
     }
-
-    // Stop once both have crossed the target
-    if (p1Seats >= leanSeatTarget && p2Seats >= leanSeatTarget) break;
+    idx++;
   }
 
   // Apply classes based on assignment
@@ -63,16 +75,6 @@ export function assignInitialLeans(svg, statesDataMap, leanSeatTarget = 100) {
     else region.classList.add('lean-none');
   });
 
-  // Display summary of assigned states & seats
-  const p1Count = Object.values(assigned).filter(v => v === 1).length;
-  const p2Count = Object.values(assigned).filter(v => v === 2).length;
-  let summaryEl = document.getElementById('lean-summary');
-  if (!summaryEl) {
-    summaryEl = document.createElement('div');
-    summaryEl.id = 'lean-summary';
-    svg.parentNode.insertBefore(summaryEl, svg.nextSibling);
-  }
-  summaryEl.textContent =
-    `Player 1: ${p1Count} states, ${p1Seats} seats | Player 2: ${p2Count} states, ${p2Seats} seats`;
+  // Removed assignment log and summary display
   return assigned;
 }
