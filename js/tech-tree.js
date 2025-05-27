@@ -6,27 +6,27 @@
 // ----------------------------
 export const policyTree = {
   /* 1 ── Social & Cultural Identity */
-'Social & Cultural Identity': [
-  'Hindutva Cultural Push',
+'Social Policy': [
+  'Hindutva',
   'Uniform Civil Code',
   'Hindi Education Mandate',
-  'Secularism Safeguards'
+  'Secularism'
 ],
 
 /* 2 ── Social Justice & Inclusion */
 'Social Justice & Inclusion': [
-  'Reservation Expansion (Mandal)',
-  'Women’s Reservation Bill',
-  'Tribal Rights Protection',
+  'Mandal Commission',
+  'Women’s Reservation',
+  'Tribal Rights',
   'Waqf Board Reforms'
 ],
 
 /* 3 ── Infrastructure & Development */
-  'Infrastructure & Development': [
-    'National Highways & Airports Upgrade',
-    'Ports Modernisation (Coastal)',
-    'Smart Cities & Urban Renewal',
-    'Defense & Border Infrastructure Boost'
+  'Infrastructure': [
+    'Highways & Airports',
+    'Ports Modernisation',
+    'Smart Cities',
+    'Defense & Border Infra'
   ],
 
   /* 4 ── Economic & Fiscal Reform */
@@ -39,8 +39,8 @@ export const policyTree = {
 
   /* 5 ── Agriculture & Environment */
   'Agriculture & Environment': [
-    'MSP Guarantee & Farm Loan Waivers',
-    'Irrigation & River‑Linking Projects',
+    'Farm Loan Waivers',
+    'River‑Linking Projects',
     'GMOs',
     'Farm Bills'
   ]
@@ -50,20 +50,19 @@ export const policyTree = {
 // Render the tech tree as five rows (one per branch)
 function renderTechTreeRows(tree, container) {
   Object.entries(tree).forEach(([branch, leaves]) => {
-    const row = document.createElement('div');
-    row.className = 'tech-tree-row';
+    // Section wrapper for each branch
+    const section = document.createElement('div');
+    section.className = 'tech-tree-section';
 
-    const branchLabel = document.createElement('div');
-    branchLabel.className = 'tech-tree-branch-label';
-    branchLabel.textContent = branch;
-    row.appendChild(branchLabel);
+    // Section header
+    const sectionHeader = document.createElement('div');
+    sectionHeader.className = 'tech-tree-section-header';
+    sectionHeader.textContent = branch;
+    section.appendChild(sectionHeader);
 
-    const leavesWrap = document.createElement('div');
-    leavesWrap.className = 'tech-tree-leaves';
-    // 2x2 grid for each card (4 leaves per branch)
+    // Cards grid for this branch
     const cardGrid = document.createElement('div');
     cardGrid.className = 'tech-tree-card-grid';
-    // Always 2 columns, 2 rows (for 4 leaves)
     for (let i = 0; i < 2; i++) {
       const row = document.createElement('div');
       row.className = 'tech-tree-card-row';
@@ -71,7 +70,6 @@ function renderTechTreeRows(tree, container) {
         const idx = i * 2 + j;
         if (idx >= leaves.length) break;
         const leaf = leaves[idx];
-        // Card cell: label above, bar below
         const cell = document.createElement('div');
         cell.className = 'tech-tree-leaf-cell';
 
@@ -91,11 +89,11 @@ function renderTechTreeRows(tree, container) {
         barFill.style.width = '0%';
         barContainer.appendChild(barFill);
 
-        // Click to increase fill
+        // Click to increase fill (10 clicks to full)
         barContainer.addEventListener('click', function() {
           let progress = parseInt(barContainer.getAttribute('data-progress'));
           if (progress < 100) {
-            progress += 25;
+            progress += 10;
             if (progress > 100) progress = 100;
             barContainer.setAttribute('data-progress', progress);
             barFill.style.width = progress + '%';
@@ -115,16 +113,18 @@ function renderTechTreeRows(tree, container) {
       }
       cardGrid.appendChild(row);
     }
-    leavesWrap.appendChild(cardGrid);
-    });
-    row.appendChild(leavesWrap);
-    container.appendChild(row);
+    section.appendChild(cardGrid);
+    container.appendChild(section);
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const techTreeRows = document.getElementById('tech-tree-rows');
+  console.log('[tech-tree.js] DOMContentLoaded. techTreeRows:', techTreeRows);
   if (techTreeRows) {
     renderTechTreeRows(policyTree, techTreeRows);
+    console.log('[tech-tree.js] renderTechTreeRows called.');
+  } else {
+    console.warn('[tech-tree.js] techTreeRows element not found!');
   }
 });
