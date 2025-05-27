@@ -16,10 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (categoryButtonsContainer) {
         categoryButtonsContainer.addEventListener('click', function (e) {
             if (e.target.classList.contains('category-btn')) {
-                const category = e.target.getAttribute('data-category');
-                // Remove active from all
-                Array.from(categoryButtonsContainer.children).forEach(btn => btn.classList.remove('active'));
+                // Remove active from all category-btns (including those in all rows)
+                const allBtns = categoryButtonsContainer.querySelectorAll('.category-btn');
+                allBtns.forEach(btn => btn.classList.remove('active'));
+                // Toggle active only for the clicked button
                 e.target.classList.add('active');
+                const category = e.target.getAttribute('data-category');
                 lastCategory = category;
                 highlightCategoryStates(category);
             }

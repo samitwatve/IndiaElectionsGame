@@ -113,16 +113,17 @@ header.game-header::after{
 /* —————————————————————————————————————————————— */
 /*  5.  Main play area                            */
 /* —————————————————————————————————————————————— */
+/* Main panel: blank white background for the map area */
 .main-panel{
   display:flex; flex-direction:column; align-items:center;
   justify-content:flex-start; padding:16px 8px; min-width:0; overflow:auto;
-  background:#f9fafc;
+  background:#fff;
 }
 /* SVG map slot – 672×563 in mock‑up, but flexible */
 .map-container{
   width:40vw; max-width:700px; min-width:220px;
   height:60vh; max-height:70vh; min-height:200px;
-  background:#dbeafe; border-radius:10px;
+  background:#fff; border-radius:10px;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 1px 6px rgba(0,0,0,.07); margin-top:12px;
 }
@@ -134,13 +135,22 @@ header.game-header::after{
   margin:22px 0 0;
 }
 .category-btn{
-  background:#ff9800; color:#fff; border:none; border-radius:6px;
-  padding:6px 10px; font-size:.85rem; font-weight:500; cursor:pointer;
-  min-width:88px; /* matches Penpot button width */
+  background:#90caf9; /* light blue */
+  color:#1976d2;
+  border:none;
+  border-radius:6px;
+  padding:3px 7px;
+  font-size:0.72rem;
+  font-weight:500;
+  cursor:pointer;
+  min-width:64px;
   box-shadow:0 1px 4px rgba(0,0,0,.08);
   transition:.2s background,color;
 }
-.category-btn:hover,.category-btn.active{background:#c65d03; color:#fffbe7;}
+.category-btn:hover,.category-btn.active{
+  background:#1976d2;
+  color:#fffbe7;
+}
 
 /* Campaign promise buttons row */
 .promises-buttons-container{
@@ -206,8 +216,9 @@ header.game-header::after{
 
 /* Highlighted region */
 .region-highlighted{
-  stroke:#ff9800!important; stroke-width:3!important;
-  filter:drop-shadow(0 0 6px #ff9800aa); z-index:2;
+  stroke:#1976d2!important; /* blue border */
+  stroke-width:3!important;
+  filter:drop-shadow(0 0 6px #1976d2aa); z-index:2;
 }
 
 /* —————————————————————————————————————————————— */
