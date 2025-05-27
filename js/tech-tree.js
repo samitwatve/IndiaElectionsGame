@@ -60,43 +60,62 @@ function renderTechTreeRows(tree, container) {
 
     const leavesWrap = document.createElement('div');
     leavesWrap.className = 'tech-tree-leaves';
-    leaves.forEach(leaf => {
-      // Health bar structure
-      const barContainer = document.createElement('div');
-      barContainer.className = 'tech-tree-leaf health-bar';
-      barContainer.setAttribute('data-progress', '0');
+    // 2x2 grid for each card (4 leaves per branch)
+    const cardGrid = document.createElement('div');
+    cardGrid.className = 'tech-tree-card-grid';
+    // Always 2 columns, 2 rows (for 4 leaves)
+    for (let i = 0; i < 2; i++) {
+      const row = document.createElement('div');
+      row.className = 'tech-tree-card-row';
+      for (let j = 0; j < 2; j++) {
+        const idx = i * 2 + j;
+        if (idx >= leaves.length) break;
+        const leaf = leaves[idx];
+        // Card cell: label above, bar below
+        const cell = document.createElement('div');
+        cell.className = 'tech-tree-leaf-cell';
 
-      const barFill = document.createElement('div');
-      barFill.className = 'health-bar-fill';
-      barFill.style.width = '0%';
+        // Text label for campaign promise (OUTSIDE the bar)
+        const barLabel = document.createElement('div');
+        barLabel.className = 'health-bar-label';
+        barLabel.textContent = leaf;
+        cell.appendChild(barLabel);
 
-      const barLabel = document.createElement('span');
-      barLabel.className = 'health-bar-label';
-      barLabel.textContent = leaf;
+        // Completion bar
+        const barContainer = document.createElement('div');
+        barContainer.className = 'tech-tree-leaf health-bar';
+        barContainer.setAttribute('data-progress', '0');
 
-      barContainer.appendChild(barFill);
-      barContainer.appendChild(barLabel);
+        const barFill = document.createElement('div');
+        barFill.className = 'health-bar-fill';
+        barFill.style.width = '0%';
+        barContainer.appendChild(barFill);
 
-      // Click to increase fill
-      barContainer.addEventListener('click', function() {
-        let progress = parseInt(barContainer.getAttribute('data-progress'));
-        if (progress < 100) {
-          progress += 25;
-          if (progress > 100) progress = 100;
-          barContainer.setAttribute('data-progress', progress);
-          barFill.style.width = progress + '%';
-          // Color transition
-          if (progress < 50) {
-            barFill.style.background = '#b0bec5';
-          } else if (progress < 100) {
-            barFill.style.background = '#64b5f6';
-          } else {
-            barFill.style.background = '#43a047';
+        // Click to increase fill
+        barContainer.addEventListener('click', function() {
+          let progress = parseInt(barContainer.getAttribute('data-progress'));
+          if (progress < 100) {
+            progress += 25;
+            if (progress > 100) progress = 100;
+            barContainer.setAttribute('data-progress', progress);
+            barFill.style.width = progress + '%';
+            // Color transition
+            if (progress < 50) {
+              barFill.style.background = '#b0bec5';
+            } else if (progress < 100) {
+              barFill.style.background = '#64b5f6';
+            } else {
+              barFill.style.background = '#43a047';
+            }
           }
-        }
-      });
+        });
 
-      leavesWrap.appendChild(barContainer);
+        cell.appendChild(barContainer);
+        row.appendChild(cell);
+      }
+      cardGrid.appendChild(row);
+    }
+    leavesWrap.appendChild(cardGrid);
     });
     row.appendChild(leavesWrap);
     container.appendChild(row);
