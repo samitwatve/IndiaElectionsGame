@@ -146,10 +146,12 @@ header.game-header::after{
   min-width:64px;
   box-shadow:0 1px 4px rgba(0,0,0,.08);
   transition:.2s background,color;
+  opacity: 0.7;
 }
-.category-btn:hover,.category-btn.active{
+.category-btn.active, .category-btn:hover {
   background:#1976d2;
   color:#fffbe7;
+  opacity: 1;
 }
 
 /* Campaign promise buttons row */
