@@ -1,13 +1,7 @@
+
+import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse } from './purse.js';
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
-
-    // Player 1 purse logic
-    let player1Purse = 300;
-    const player1PurseDiv = document.getElementById('player1-purse');
-    function updatePlayer1PurseDisplay() {
-        if (player1PurseDiv) player1PurseDiv.textContent = `Purse: ₹${player1Purse}M`;
-    }
-    updatePlayer1PurseDisplay();
 
     const mapContainer = document.getElementById('map-container');
     if (!mapContainer) return;
@@ -171,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             }
                             // Only Player 1's purse is affected
                             if (currentPlayer === 1) {
-                                if (player1Purse >= seats) {
-                                    player1Purse -= seats;
+                                if (getPlayer1Purse() >= seats) {
+                                    setPlayer1Purse(getPlayer1Purse() - seats);
                                     updatePlayer1PurseDisplay();
                                 } else {
                                     alert('Not enough funds!');
