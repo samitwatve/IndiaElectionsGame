@@ -1,3 +1,22 @@
+// Utility: interpolate between two hex colors
+function interpolateColor(color1, color2, factor) {
+    // color1, color2: hex strings like '#43a047', '#ff9800'
+    // factor: 0.0 (color1) to 1.0 (color2)
+    const c1 = color1.match(/\w\w/g).map(x => parseInt(x, 16));
+    const c2 = color2.match(/\w\w/g).map(x => parseInt(x, 16));
+    const result = c1.map((v, i) => Math.round(v + (c2[i] - v) * factor));
+    return `#${result.map(x => x.toString(16).padStart(2, '0')).join('')}`;
+}
+
+// Map popularity (0=green, 100=orange) to color
+function popularityToColor(score) {
+    // Green: #43a047, Orange: #ff9800
+    const green = '43a047';
+    const orange = 'ff9800';
+    // Clamp score
+    const s = Math.max(0, Math.min(100, score));
+    return interpolateColor(green, orange, s / 100);
+}
 
 import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse } from './purse.js';
 // On app start, load the SVG map into the map container and resize it appropriately
@@ -103,7 +122,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // --- INITIAL LEAN ASSIGNMENT ---
                 import(`./game_logic.js?t=${Date.now()}`).then(mod => {
-                  mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
+                  // Get popularity scores for player 1
+                  window.popularityScores = mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
+                  // Color each region by popularity
+                  Object.entries(window.popularityScores).forEach(([id, score]) => {
+                    const region = svg.querySelector(`#${id}`);
+                    if (region) {
+                      region.style.fill = popularityToColor(score);
+                    }
+                  });
                 }).catch(() => {});
 
                 // Highlight logic
@@ -114,31 +141,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 const regions = svg.querySelectorAll('[id]');
                 regions.forEach(region => {
                     if (!window.statesDataMap[region.id]) return;
-                    // Hover: show all info from states_data.json
+                    // Hover: show state name, Lok Sabha seats, and popularity score
                     region.addEventListener('mouseenter', function (e) {
                         if (!window.statesDataMap) {
                             if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
                             return;
                         }
-                        // Try to match by id, then by name (case-insensitive, ignoring spaces)
                         let data = window.statesDataMap[region.id];
-                        if (!data) {
-                            // Try to match by name (normalize both)
-                            const regionName = (region.getAttribute('name') || '').replace(/\s+/g, '').toLowerCase();
-                            data = Object.values(window.statesDataMap).find(d => d.State.replace(/\s+/g, '').toLowerCase() === regionName);
-                        }
+                        let popScore = window.popularityScores ? window.popularityScores[region.id] : undefined;
                         if (data) {
                             const info = [
                                 `State: ${data.State}`,
-                                `UT: ${data.UnionTerritory ? 'T' : 'F'}`,
-                                `CI: ${data.CoastalIndia ? 'T' : 'F'}`,
-                                `NE: ${data.NortheastIndia ? 'T' : 'F'}`,
-                                `SI: ${data.SouthIndia ? 'T' : 'F'}`,
-                                `HH: ${data.HindiHeartland ? 'T' : 'F'}`,
-                                `AR: ${data.AgriculturalRegion ? 'T' : 'F'}`,
-                                `BL: ${data.BorderLands ? 'T' : 'F'}`,
-                                `LS: ${data.LokSabhaSeats}`
-                            ].join('; ');
+                                `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                                `Popularity: ${popScore !== undefined ? popScore : 'N/A'}`
+                            ].join(' | ');
                             if (regionNameDisplay) regionNameDisplay.textContent = info;
                         } else {
                             if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
