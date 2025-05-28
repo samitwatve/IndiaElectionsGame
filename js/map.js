@@ -1,6 +1,14 @@
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Player 1 purse logic
+    let player1Purse = 300;
+    const player1PurseDiv = document.getElementById('player1-purse');
+    function updatePlayer1PurseDisplay() {
+        if (player1PurseDiv) player1PurseDiv.textContent = `Purse: ₹${player1Purse}M`;
+    }
+    updatePlayer1PurseDisplay();
+
     const mapContainer = document.getElementById('map-container');
     if (!mapContainer) return;
 
@@ -150,10 +158,46 @@ document.addEventListener('DOMContentLoaded', function () {
                         // capture logic: only if not already captured and is a state
                         if (!region.classList.contains('captured-p1') &&
                             !region.classList.contains('captured-p2')) {
-                            const seats = +window.statesDataMap[region.id].LokSabhaSeats;
-                            region.classList.add(`captured-p${currentPlayer}`);
-                            capturedCounts[currentPlayer] += seats;
-                            capturedList[currentPlayer].push(window.statesDataMap[region.id].State);
+                            let seats = +window.statesDataMap[region.id].LokSabhaSeats;
+                            let isMinorUT = false;
+                            // Special handling for Lakshadweep: also deduct for Daman & Diu and Dadra & Nagar Haveli
+                            if (window.statesDataMap[region.id].State === 'Lakshadweep') {
+                                const minorUTs = ['Lakshadweep', 'Daman And Diu', 'Dadra And Nagar Haveli'];
+                                seats = minorUTs.reduce((sum, ut) => {
+                                    const utEntry = Object.values(window.statesDataMap).find(d => d.State === ut);
+                                    return sum + (utEntry ? +utEntry.LokSabhaSeats : 0);
+                                }, 0);
+                                isMinorUT = true;
+                            }
+                            // Only Player 1's purse is affected
+                            if (currentPlayer === 1) {
+                                if (player1Purse >= seats) {
+                                    player1Purse -= seats;
+                                    updatePlayer1PurseDisplay();
+                                } else {
+                                    alert('Not enough funds!');
+                                    return;
+                                }
+                            }
+                            // Mark all minor UTs as captured if Lakshadweep is clicked
+                            if (isMinorUT) {
+                                const minorUTs = ['Lakshadweep', 'Daman And Diu', 'Dadra And Nagar Haveli'];
+                                minorUTs.forEach(ut => {
+                                    const utEntry = Object.values(window.statesDataMap).find(d => d.State === ut);
+                                    if (utEntry) {
+                                        const utRegion = svg.querySelector(`[id="${utEntry.SvgId}"]`);
+                                        if (utRegion && !utRegion.classList.contains('captured-p1') && !utRegion.classList.contains('captured-p2')) {
+                                            utRegion.classList.add(`captured-p${currentPlayer}`);
+                                            capturedCounts[currentPlayer] += +utEntry.LokSabhaSeats;
+                                            capturedList[currentPlayer].push(utEntry.State);
+                                        }
+                                    }
+                                });
+                            } else {
+                                region.classList.add(`captured-p${currentPlayer}`);
+                                capturedCounts[currentPlayer] += seats;
+                                capturedList[currentPlayer].push(window.statesDataMap[region.id].State);
+                            }
 
                             // Update both info panels and highlight active
                             ['1','2'].forEach(p => {
@@ -172,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             currentPlayer = currentPlayer === 1 ? 2 : 1;
 
                             // Update turn display
-                            currentTurnDisplay.textContent = `Current Turn: Player ${currentPlayer}`;
+                            if(currentTurnDisplay) currentTurnDisplay.textContent = `Current Turn: Player ${currentPlayer}`;
                         }
                         // If a category is active, ignore single highlight
                         if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;

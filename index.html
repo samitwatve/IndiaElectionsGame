@@ -9,17 +9,126 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- Timer container moved absolutely to top right -->
+  <div class="timer-container">
+    <div class="circle-timer">
+      <svg width="90" height="90">
+        <circle
+          cx="45"
+          cy="45"
+          r="40"
+          stroke="#e6e6e6"
+          stroke-width="6"
+          fill="none"
+        />
+        <circle
+          id="timer-progress"
+          cx="45"
+          cy="45"
+          r="40"
+          stroke="#3498db"
+          stroke-width="6"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="251"
+          stroke-dashoffset="0"
+        />
+      </svg>
+      <div class="timer-text" id="timer-phase">Phase 1 / 10</div>
+    </div>
+  </div>
   <header style="margin-bottom:0;padding:0 0 2px 0;height:38px;min-height:0;">
     <h1 style="font-size:1.1em;margin:0;line-height:38px;display:inline-block;vertical-align:middle;">India Elections Game</h1>
     <i class="fas fa-cog" style="vertical-align:middle;"></i>
   </header>
 
 
-  <div id="current-turn">Current Turn: Player 1</div>
+
+
+<style>
+  .timer-container {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .circle-timer {
+    position: relative;
+    width: 90px;
+    height: 90px;
+  }
+  .circle-timer svg {
+    transform: rotate(-90deg);
+  }
+  .timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  // Timer settings
+  let totalPhases = 10;
+  let currentPhase = 1;
+  let duration = 60; // seconds per phase
+  let timeLeft = duration;
+  const circle = document.getElementById('timer-progress');
+  const phaseText = document.getElementById('timer-phase');
+  const circumference = 2 * Math.PI * 40; // r=40
+
+  function updateTimer() {
+    // Update circle
+    const offset = circumference * (1 - timeLeft / duration);
+    circle.style.strokeDashoffset = offset;
+
+    // Update phase text
+    phaseText.textContent = `Phase ${currentPhase} / ${totalPhases}`;
+  }
+
+  function nextPhase() {
+    if (currentPhase < totalPhases) {
+      currentPhase++;
+      timeLeft = duration;
+      updateTimer();
+    } else {
+      phaseText.textContent = "Game Over";
+      clearInterval(timerInterval);
+      // Optionally, you can also gray out the timer circle
+      circle.style.stroke = '#aaa';
+    }
+  }
+
+  // Initialize
+  circle.style.strokeDasharray = circumference;
+  circle.style.strokeDashoffset = 0;
+  updateTimer();
+
+  // Timer countdown
+  const timerInterval = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      updateTimer();
+    } else {
+      nextPhase();
+    }
+  }, 1000);
+</script>
   <div class="game-container">
     <div class="player-panel player1-panel">
       <h2>Player 1</h2>
       <div id="player1-info" class="player-info">Seats: 0; States: </div>
+      <div id="player1-purse" class="player-purse">Purse: ₹300M</div>
     </div>
     <div class="main-panel">
       <div class="map-container" id="map-container">
