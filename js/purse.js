@@ -1,10 +1,23 @@
 // Add 100M to Player 1's purse at the end of each phase
 export function addPhasePurseBonus() {
-    player1Purse += 100;
+    player1Purse += 250;
     updatePlayer1PurseDisplay();
+    showPlayer1PurseAddition(250);
+}
+// Show green animation for cash added to purse
+export function showPlayer1PurseAddition(amount) {
+    const player1PurseDiv = document.getElementById('player1-purse');
+    if (!player1PurseDiv) return;
+    let addition = document.createElement('span');
+    addition.className = 'purse-addition';
+    addition.textContent = `+${amount}M`;
+    player1PurseDiv.appendChild(addition);
+    setTimeout(() => {
+        if (addition && addition.parentNode) addition.parentNode.removeChild(addition);
+    }, 1000);
 }
 // Purse logic for Player 1
-let player1Purse = 100;
+let player1Purse = 250;
 
 export function getPlayer1Purse() {
     return player1Purse;

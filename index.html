@@ -134,11 +134,16 @@
     if (currentPhase < totalPhases) {
       currentPhase++;
       timeLeft = duration;
-      // Add 100M to Player 1's purse at the end of each phase
+      // Add 250M to Player 1's purse at the end of each phase
       import('./js/purse.js').then(mod => {
         mod.addPhasePurseBonus();
       });
       updateTimer();
+      // Animate phase label
+      phaseText.classList.remove('phase-animate');
+      // Force reflow to restart animation if needed
+      void phaseText.offsetWidth;
+      phaseText.classList.add('phase-animate');
     } else {
       phaseText.textContent = "Game Over";
       clearInterval(timerInterval);

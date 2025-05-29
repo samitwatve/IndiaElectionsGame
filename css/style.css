@@ -1,3 +1,53 @@
+/* Animation for phase label update */
+.phase-animate {
+  animation: phase-pop 0.7s cubic-bezier(.36,1.5,.64,1) both;
+}
+@keyframes phase-pop {
+  0% { transform: translate(-50%, -50%) scale(1); color: #1976d2; }
+  20% { transform: translate(-50%, -60%) scale(1.25); color: #43a047; }
+  60% { transform: translate(-50%, -50%) scale(1.1); color: #1976d2; }
+  100% { transform: translate(-50%, -50%) scale(1); color: #1976d2; }
+}
+.purse-deduction {
+  color: #fff;
+  background: #e53935;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  animation: purse-deduction-fade 1s forwards;
+}
+
+/* Green animation for cash addition */
+.purse-addition {
+  color: #fff;
+  background: #43a047;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  animation: purse-addition-fade 1s forwards;
+}
+@keyframes purse-addition-fade {
+  0% { opacity: 0; transform: translate(-50%, -120%) scale(0.7); }
+  10% { opacity: 1; transform: translate(-50%, -140%) scale(1.1); }
+  60% { opacity: 1; transform: translate(-50%, -160%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -180%) scale(0.7); }
+}
 /* Purse shake and deduction animation */
 /* Make purse label a positioning context for deduction animation */
 .player-purse {
