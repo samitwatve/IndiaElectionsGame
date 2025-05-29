@@ -3,16 +3,34 @@ export function saveLogToFile() {
   const logBox = document.getElementById('player1-log');
   if (!logBox) return;
   const logText = logBox.value;
-  // Use Node.js require if available (for Electron or dev server)
+  // Try Node.js/Electron first
   try {
     // eslint-disable-next-line no-undef
     const { saveLogToFile } = require('./logger_node_helper.js');
     saveLogToFile(logText, GAME_ID);
-    // Optionally, show a message to the user
     alert('Game log saved to logs folder.');
+    return;
   } catch (e) {
-    // Not running in Node.js context
-    alert('Log saving is only supported in Node.js/Electron environment.');
+    // Not running in Node.js context, fallback to browser download
+  }
+  // Browser: trigger download
+  try {
+    const blob = new Blob([logText], { type: 'text/plain' });
+    const now = new Date();
+    const dd = String(now.getDate()).padStart(2, '0');
+    const mm = String(now.getMonth() + 1).padStart(2, '0');
+    const yy = String(now.getFullYear()).slice(-2);
+    const filename = `${typeof GAME_ID !== 'undefined' ? GAME_ID : 'game'}_${dd}${mm}${yy}_log.txt`;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+    alert('Game log downloaded.');
+  } catch (err) {
+    alert('Could not save or download the log.');
   }
 }
 // logger.js - Handles action logging for Player 1 and Game ID
