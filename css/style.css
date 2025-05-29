@@ -1,3 +1,53 @@
+/* Purse shake and deduction animation */
+/* Make purse label a positioning context for deduction animation */
+.player-purse {
+  position: relative;
+}
+.player-purse.shake {
+  animation: purse-shake 0.4s;
+}
+@keyframes purse-shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+.purse-deduction {
+  color: #fff;
+  background: #e53935;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  animation: purse-deduction-fade 1s forwards;
+}
+@keyframes purse-deduction-fade {
+  0% { opacity: 0; transform: translate(-50%, -120%) scale(0.7); }
+  10% { opacity: 1; transform: translate(-50%, -140%) scale(1.1); }
+  60% { opacity: 1; transform: translate(-50%, -160%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -180%) scale(0.7); }
+}
+/* Shake animation for promise bar */
+.shake {
+  animation: shake 0.35s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-8px); }
+  40%, 60% { transform: translateX(8px); }
+  100% { transform: none; }
+}
 .category-btn-row {
   display: flex;
   flex-direction: row;

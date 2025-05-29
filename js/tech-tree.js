@@ -48,6 +48,8 @@ export const policyTree = {
 
 
 // Render the tech tree as five rows (one per branch)
+import { getPlayer1Purse, setPlayer1Purse, updatePlayer1PurseDisplay, shakePlayer1Purse, showPlayer1PurseDeduction } from './purse.js';
+
 function renderTechTreeRows(tree, container) {
   Object.entries(tree).forEach(([branch, leaves]) => {
     // Section wrapper for each branch
@@ -89,22 +91,44 @@ function renderTechTreeRows(tree, container) {
         barFill.style.width = '0%';
         barContainer.appendChild(barFill);
 
-        // Click to increase fill (10 clicks to full)
+        // Click to increase fill (10 clicks to full, 10M rupees per click, free after full)
         barContainer.addEventListener('click', function() {
           let progress = parseInt(barContainer.getAttribute('data-progress'));
           if (progress < 100) {
-            progress += 10;
-            if (progress > 100) progress = 100;
-            barContainer.setAttribute('data-progress', progress);
-            barFill.style.width = progress + '%';
-            // Color transition
-            if (progress < 50) {
-              barFill.style.background = '#b0bec5';
-            } else if (progress < 100) {
-              barFill.style.background = '#64b5f6';
+            // Check purse
+            let purse = getPlayer1Purse();
+            if (purse >= 10) {
+              purse -= 10;
+              setPlayer1Purse(purse);
+              updatePlayer1PurseDisplay();
+              showPlayer1PurseDeduction(10);
+              progress += 10;
+              if (progress > 100) progress = 100;
+              barContainer.setAttribute('data-progress', progress);
+              barFill.style.width = progress + '%';
+              // Color transition
+              if (progress < 50) {
+                barFill.style.background = '#b0bec5';
+              } else if (progress < 100) {
+                barFill.style.background = '#64b5f6';
+              } else {
+                barFill.style.background = '#43a047';
+              }
+              if (progress === 100) {
+                // Shake the promise bar to indicate it's maxed out
+                barContainer.classList.add('shake');
+                setTimeout(() => barContainer.classList.remove('shake'), 400);
+              }
             } else {
-              barFill.style.background = '#43a047';
+              // Not enough money, show a warning (shake)
+              barContainer.classList.add('shake');
+              shakePlayer1Purse();
+              setTimeout(() => barContainer.classList.remove('shake'), 400);
             }
+          } else {
+            // Already full, shake to indicate no more allowed
+            barContainer.classList.add('shake');
+            setTimeout(() => barContainer.classList.remove('shake'), 400);
           }
         });
 
