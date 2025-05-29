@@ -113,7 +113,7 @@
 <script type="module">
   import './js/map.js'; // Ensure map.js runs and updates projected seats
   // Timer settings
-  let totalPhases = 12;
+  let totalPhases = 2;
   window.currentPhase = 1;
   let duration = 15; // seconds per phase
   let timeLeft = duration;
@@ -157,9 +157,32 @@
       clearInterval(timerInterval);
       // Optionally, you can also gray out the timer circle
       circle.style.stroke = '#aaa';
-      // Save log to file
-      import('./js/logger.js').then(mod => {
-        mod.saveLogToFile();
+      // Play victory sound, then save log to file after sound finishes
+      import('./js/purse.js').then(mod => {
+        let audio;
+        if (typeof mod.playSound === 'function') {
+          // If playSound returns the Audio object, use it
+          audio = mod.playSound('victory.mp3');
+        }
+        if (!audio) {
+          audio = new Audio('static/sounds/victory.mp3');
+          audio.volume = 0.7;
+          audio.play();
+        }
+        if (audio) {
+          audio.addEventListener('ended', () => {
+            import('./js/logger.js').then(mod2 => {
+              mod2.saveLogToFile();
+            });
+          });
+        } else {
+          // Fallback: if no audio object, just save log after a short delay
+          setTimeout(() => {
+            import('./js/logger.js').then(mod2 => {
+              mod2.saveLogToFile();
+            });
+          }, 1200);
+        }
       });
     }
   }
