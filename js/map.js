@@ -7,7 +7,69 @@
                               region.style.fill = popularityToColor(popObj);
                           }
                       });
+                      // Also update projected seats circle
+                      updateProjectedSeatsCircle();
                   }
+// --- Projected Seats Circle Logic ---
+function updateProjectedSeatsCircle() {
+    // Get popularityScores and statesDataMap
+    const popularityScores = window.popularityScores;
+    const statesDataMap = window.statesDataMap;
+    if (!popularityScores || !statesDataMap) return;
+
+    let p1Seats = 0, p2Seats = 0, othersSeats = 0, totalSeats = 0;
+    Object.entries(statesDataMap).forEach(([id, data]) => {
+        const seats = Number(data.LokSabhaSeats);
+        totalSeats += seats;
+        const pop = popularityScores[id];
+        if (!pop) return;
+        // Assign all seats to the most popular party in that state
+        if (pop.p1 >= pop.p2 && pop.p1 >= pop.others) p1Seats += seats;
+        else if (pop.p2 >= pop.p1 && pop.p2 >= pop.others) p2Seats += seats;
+        else othersSeats += seats;
+    });
+
+    // Update text
+    const seatsText = document.getElementById('seats-text');
+    if (seatsText) {
+        seatsText.textContent = `P1: ${p1Seats} | P2: ${p2Seats} | Others: ${othersSeats}`;
+    }
+
+    // Update arcs
+    const circumference = 2 * Math.PI * 40; // r=40
+    // Proportions
+    const p1Prop = p1Seats / totalSeats;
+    const p2Prop = p2Seats / totalSeats;
+    const othersProp = othersSeats / totalSeats;
+
+    // Each arc is a segment of the circle, drawn in order: P1, P2, Others
+    // All arcs start at the top (12 o'clock, -90deg)
+    // We'll use stroke-dasharray and stroke-dashoffset to achieve this
+    const p1Arc = circumference * p1Prop;
+    const p2Arc = circumference * p2Prop;
+    const othersArc = circumference * othersProp;
+
+    // Set dasharray and dashoffset for each
+    const p1Circle = document.getElementById('seats-p1');
+    const p2Circle = document.getElementById('seats-p2');
+    const othersCircle = document.getElementById('seats-others');
+
+    if (p1Circle) {
+        p1Circle.style.strokeDasharray = `${p1Arc} ${circumference - p1Arc}`;
+        p1Circle.style.strokeDashoffset = '0';
+        p1Circle.style.display = p1Arc > 0 ? '' : 'none';
+    }
+    if (p2Circle) {
+        p2Circle.style.strokeDasharray = `${p2Arc} ${circumference - p2Arc}`;
+        p2Circle.style.strokeDashoffset = `-${p1Arc}`;
+        p2Circle.style.display = p2Arc > 0 ? '' : 'none';
+    }
+    if (othersCircle) {
+        othersCircle.style.strokeDasharray = `${othersArc} ${circumference - othersArc}`;
+        othersCircle.style.strokeDashoffset = `-${p1Arc + p2Arc}`;
+        othersCircle.style.display = othersArc > 0 ? '' : 'none';
+    }
+}
 // Utility: interpolate between two hex colors
 function interpolateColor(color1, color2, factor) {
     // color1, color2: hex strings like '#43a047', '#ff9800'
@@ -166,6 +228,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                   // Initial color
                   refreshAllStateColors();
+                  // Initial projected seats circle
+                  updateProjectedSeatsCircle();
                   // Get popularity scores for player 1
                   window.popularityScores = mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
                   // Color each region by popularity

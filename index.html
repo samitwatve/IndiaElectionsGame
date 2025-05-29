@@ -37,6 +37,17 @@
       </svg>
       <div class="timer-text" id="timer-phase">Phase 1 / 10</div>
     </div>
+    <!-- Projected Seats Circle Display -->
+    <div class="circle-seats" style="margin-top:10px;">
+      <svg width="90" height="90">
+        <circle cx="45" cy="45" r="40" stroke="#e6e6e6" stroke-width="6" fill="none" />
+        <!-- Arcs for P1, P2, Others will be drawn here by JS -->
+        <circle id="seats-p1" cx="45" cy="45" r="40" stroke="#ff9800" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.95;" />
+        <circle id="seats-p2" cx="45" cy="45" r="40" stroke="#43a047" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.95;" />
+        <circle id="seats-others" cx="45" cy="45" r="40" stroke="#bdbdbd" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.7;" />
+      </svg>
+      <div class="timer-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
+    </div>
   </div>
   <header style="margin-bottom:0;padding:0 0 2px 0;height:38px;min-height:0;">
     <h1 style="font-size:1.1em;margin:0;line-height:38px;display:inline-block;vertical-align:middle;">India Elections Game</h1>
@@ -77,7 +88,8 @@
   }
 </style>
 
-<script>
+<script type="module">
+  import './js/map.js'; // Ensure map.js runs and updates projected seats
   // Timer settings
   let totalPhases = 10;
   let currentPhase = 1;
