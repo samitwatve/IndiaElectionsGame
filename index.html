@@ -232,12 +232,13 @@
         winner = 2;
       }
       // Play victory or hung parliament sound, then show overlay
-      let audio = new Audio('static/sounds/victory.mp3');
+      // Show the overlay first …
+      showGameOverScreen(winner);
+
+      // …then start the victory music
+      const audio = new Audio('static/sounds/victory.mp3');
       audio.volume = 0.7;
       audio.play();
-      audio.addEventListener('ended', () => {
-        showGameOverScreen(winner);
-      });
     }
   }
 
