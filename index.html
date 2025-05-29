@@ -10,11 +10,22 @@
 </head>
 <body>
 
+
   <!-- Start Screen Overlay -->
   <div id="start-screen" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;">
     <h1 style="color:#fff;font-size:2.5em;margin-bottom:24px;">India Elections Game</h1>
     <button id="start-game-btn" style="font-size:1.5em;padding:16px 48px;border-radius:8px;border:none;background:#3498db;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Start Game</button>
     <p style="color:#eee;margin-top:32px;font-size:1.1em;max-width:400px;text-align:center;">Welcome! Click Start Game to begin and enable music.</p>
+  </div>
+
+  <!-- Game Over Screen Overlay -->
+  <div id="gameover-screen" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.88);flex-direction:column;align-items:center;justify-content:center;">
+    <h1 id="gameover-banner" style="color:#fff;font-size:2.5em;margin-bottom:24px;">Player X Wins!</h1>
+    <div style="display:flex;gap:24px;">
+      <button id="download-log-btn" style="font-size:1.2em;padding:14px 36px;border-radius:8px;border:none;background:#43a047;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Download Game Log</button>
+      <button id="quit-btn" style="font-size:1.2em;padding:14px 36px;border-radius:8px;border:none;background:#e53935;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Quit</button>
+    </div>
+    <p style="color:#eee;margin-top:32px;font-size:1.1em;max-width:400px;text-align:center;">Would you like to download the game log? If you select No, the game will quit immediately.</p>
   </div>
 
   <!-- Timer container moved absolutely to top right -->
@@ -136,12 +147,14 @@
       bgMusic.volume = 0.5;
     }
     bgMusic.play();
+    // Start the timer only now
+    startTimer();
   }
   startBtn.addEventListener('click', startGame);
   // Timer settings
   let totalPhases = 2;
   window.currentPhase = 1;
-  let duration = 15; // seconds per phase
+  let duration = 27; // seconds per phase
   let timeLeft = duration;
   window.duration = duration;
   window.timeLeft = timeLeft;
@@ -158,6 +171,22 @@
     phaseText.textContent = `Phase ${window.currentPhase} / ${totalPhases}`;
     window.timeLeft = timeLeft;
     window.duration = duration;
+  }
+
+  // Show Game Over screen with winner (1 or 2)
+  function showGameOverScreen(winner) {
+    // Hide main UI
+    document.querySelector('.game-container').style.display = 'none';
+    document.querySelector('.timer-container').style.display = 'none';
+    // Show overlay
+    const gameoverScreen = document.getElementById('gameover-screen');
+    const banner = document.getElementById('gameover-banner');
+    if (winner === 1 || winner === 2) {
+      banner.textContent = `Player ${winner} Wins!`;
+    } else {
+      banner.textContent = 'Hung Parliament! Try again next time!';
+    }
+    gameoverScreen.style.display = 'flex';
   }
 
   function nextPhase() {
@@ -181,39 +210,33 @@
     } else {
       phaseText.textContent = "Game Over";
       clearInterval(timerInterval);
-      // Optionally, you can also gray out the timer circle
       circle.style.stroke = '#aaa';
-      // Stop background music if playing
       if (bgMusic && !bgMusic.paused) {
         bgMusic.pause();
         bgMusic.currentTime = 0;
       }
-      // Play victory sound, then save log to file after sound finishes
-      import('./js/purse.js').then(mod => {
-        let audio;
-        if (typeof mod.playSound === 'function') {
-          // If playSound returns the Audio object, use it
-          audio = mod.playSound('victory.mp3');
+      // Determine winner: must have > 272 seats, else Hung Parliament
+      let winner = null;
+      let p1 = 0, p2 = 0;
+      const seatsText = document.getElementById('seats-text');
+      if (seatsText) {
+        const match = seatsText.textContent.match(/P1: (\d+) \| P2: (\d+)/);
+        if (match) {
+          p1 = parseInt(match[1], 10);
+          p2 = parseInt(match[2], 10);
         }
-        if (!audio) {
-          audio = new Audio('static/sounds/victory.mp3');
-          audio.volume = 0.7;
-          audio.play();
-        }
-        if (audio) {
-          audio.addEventListener('ended', () => {
-            import('./js/logger.js').then(mod2 => {
-              mod2.saveLogToFile();
-            });
-          });
-        } else {
-          // Fallback: if no audio object, just save log after a short delay
-          setTimeout(() => {
-            import('./js/logger.js').then(mod2 => {
-              mod2.saveLogToFile();
-            });
-          }, 1200);
-        }
+      }
+      if (p1 > 272 && p1 > p2) {
+        winner = 1;
+      } else if (p2 > 272 && p2 > p1) {
+        winner = 2;
+      }
+      // Play victory or hung parliament sound, then show overlay
+      let audio = new Audio('static/sounds/victory.mp3');
+      audio.volume = 0.7;
+      audio.play();
+      audio.addEventListener('ended', () => {
+        showGameOverScreen(winner);
       });
     }
   }
@@ -223,15 +246,39 @@
   circle.style.strokeDashoffset = circumference;
   updateTimer();
 
-  // Timer countdown
-  const timerInterval = setInterval(() => {
-    if (timeLeft > 0) {
-      timeLeft--;
-      updateTimer();
-    } else {
-      nextPhase();
-    }
-  }, 1000);
+  // Timer countdown (starts only after Start Game is clicked)
+  let timerInterval = null;
+  function startTimer() {
+    if (timerInterval) return; // Prevent multiple intervals
+    timerInterval = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        updateTimer();
+      } else {
+        nextPhase();
+      }
+    }, 1000);
+  }
+  // Game Over screen button logic
+  const gameoverScreen = document.getElementById('gameover-screen');
+  const downloadLogBtn = document.getElementById('download-log-btn');
+  const quitBtn = document.getElementById('quit-btn');
+  if (downloadLogBtn) {
+    downloadLogBtn.addEventListener('click', () => {
+      import('./js/logger.js').then(mod => {
+        mod.saveLogToFile();
+        // Optionally, after download, quit the game
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+      });
+    });
+  }
+  if (quitBtn) {
+    quitBtn.addEventListener('click', () => {
+      window.location.reload();
+    });
+  }
 </script>
   <div class="game-container">
     <div class="player-panel player1-panel">
