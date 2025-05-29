@@ -65,12 +65,12 @@ function updateProjectedSeatsCircle() {
     }
     if (p2Circle) {
         p2Circle.style.strokeDasharray = `${p2Arc} ${circumference - p2Arc}`;
-        p2Circle.style.strokeDashoffset = `-${p1Arc}`;
+        p2Circle.style.strokeDashoffset = `${-p1Arc}`;
         p2Circle.style.display = p2Arc > 0 ? '' : 'none';
     }
     if (othersCircle) {
         othersCircle.style.strokeDasharray = `${othersArc} ${circumference - othersArc}`;
-        othersCircle.style.strokeDashoffset = `-${p1Arc + p2Arc}`;
+        othersCircle.style.strokeDashoffset = `${-(p1Arc + p2Arc)}`;
         othersCircle.style.display = othersArc > 0 ? '' : 'none';
     }
 }

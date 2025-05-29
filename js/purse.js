@@ -1,3 +1,8 @@
+// Add 100M to Player 1's purse at the end of each phase
+export function addPhasePurseBonus() {
+    player1Purse += 100;
+    updatePlayer1PurseDisplay();
+}
 // Purse logic for Player 1
 let player1Purse = 100;
 
