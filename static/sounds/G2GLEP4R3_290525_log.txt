@@ -1,0 +1,195 @@
+===GAME START===
+Game ID: G2GLEP4R3
+===PHASE 1 START===
+[00:03] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:03] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:04] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:04] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:05] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:05] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:05] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:05] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:09] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:10] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:10] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:11] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:11] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:11] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:11] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:12] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:15] =============PHASE 2 START============
+[00:15] <Player1> received ₹ +250M
+[00:15] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:15] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:16] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:17] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:17] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:17] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:18] <Player1> spent ₹ -4M on a Himachal Pradesh campaign
+[00:18] <Player1> spent ₹ -4M on a Himachal Pradesh campaign
+[00:19] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:19] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:19] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:20] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:20] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:20] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:20] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:21] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:21] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:21] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:21] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:21] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:22] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:22] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:23] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:23] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:23] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:23] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:24] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:24] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:24] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:24] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:25] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:25] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:25] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:25] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:25] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:26] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:26] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:26] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:30] =============PHASE 3 START============
+[00:30] <Player1> received ₹ +250M
+[00:30] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:30] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:30] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:32] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:32] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:45] =============PHASE 4 START============
+[00:45] <Player1> received ₹ +250M
+[01:00] =============PHASE 5 START============
+[01:00] <Player1> received ₹ +250M
+[01:15] =============PHASE 6 START============
+[01:15] <Player1> received ₹ +250M
+[01:30] =============PHASE 7 START============
+[01:30] <Player1> received ₹ +250M
+[01:45] =============PHASE 8 START============
+[01:45] <Player1> received ₹ +250M
+[02:00] =============PHASE 9 START============
+[02:00] <Player1> received ₹ +250M
+[02:02] <Player1> spent ₹ -17M on a Telangana campaign
+[02:02] <Player1> spent ₹ -17M on a Telangana campaign
+[02:02] <Player1> spent ₹ -17M on a Telangana campaign
+[02:03] <Player1> spent ₹ -17M on a Telangana campaign
+[02:04] <Player1> spent ₹ -17M on a Telangana campaign
+[02:04] <Player1> spent ₹ -17M on a Telangana campaign
+[02:04] <Player1> spent ₹ -17M on a Telangana campaign
+[02:05] <Player1> spent ₹ -17M on a Telangana campaign
+[02:05] <Player1> spent ₹ -17M on a Telangana campaign
+[02:05] <Player1> spent ₹ -17M on a Telangana campaign
+[02:06] <Player1> spent ₹ -48M on a Maharashtra campaign
+[02:06] <Player1> spent ₹ -48M on a Maharashtra campaign
+[02:06] <Player1> spent ₹ -48M on a Maharashtra campaign
+[02:06] <Player1> spent ₹ -48M on a Maharashtra campaign
+[02:07] <Player1> spent ₹ -48M on a Maharashtra campaign
+[02:07] <Player1> spent ₹ -10M on Mandal Commission
+[02:08] <Player1> spent ₹ -10M on Mandal Commission
+[02:08] <Player1> spent ₹ -10M on Mandal Commission
+[02:08] <Player1> spent ₹ -10M on Mandal Commission
+[02:08] <Player1> spent ₹ -10M on Mandal Commission
+[02:09] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[02:09] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[02:09] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[02:10] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[02:10] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[02:10] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[02:11] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[02:11] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[02:11] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:13] <Player1> spent ₹ -26M on a Gujarat campaign
+[02:13] <Player1> spent ₹ -10M on a Haryana campaign
+[02:13] <Player1> spent ₹ -10M on a Haryana campaign
+[02:14] <Player1> spent ₹ -10M on a Haryana campaign
+[02:14] <Player1> spent ₹ -10M on a Haryana campaign
+[02:14] <Player1> spent ₹ -10M on a Haryana campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] <Player1> spent ₹ -13M on a Punjab campaign
+[02:15] =============PHASE 10 START============
+[02:15] <Player1> received ₹ +250M
+[02:15] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:15] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:15] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:16] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:16] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:16] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:16] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:16] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:17] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:17] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:17] <Player1> spent ₹ -25M on a Rajasthan campaign
+[02:18] <Player1> spent ₹ -10M on Secularism
+[02:18] <Player1> spent ₹ -10M on Secularism
+[02:18] <Player1> spent ₹ -10M on Secularism
+[02:19] <Player1> spent ₹ -10M on Secularism
+[02:19] <Player1> spent ₹ -10M on Secularism
+[02:19] <Player1> spent ₹ -10M on Secularism
+[02:19] <Player1> spent ₹ -10M on Secularism
+[02:19] <Player1> spent ₹ -10M on Secularism
+[02:20] <Player1> spent ₹ -10M on Secularism
+[02:20] <Player1> spent ₹ -10M on Secularism
+[02:21] <Player1> spent ₹ -10M on Women’s Reservation
+[02:21] <Player1> spent ₹ -10M on Women’s Reservation
+[02:22] <Player1> spent ₹ -10M on Women’s Reservation
+[02:22] <Player1> spent ₹ -10M on Women’s Reservation
+[02:22] <Player1> spent ₹ -10M on Women’s Reservation
+[02:22] <Player1> spent ₹ -10M on Women’s Reservation
+[02:22] <Player1> spent ₹ -10M on Women’s Reservation
+[02:23] <Player1> spent ₹ -10M on Women’s Reservation
+[02:23] <Player1> spent ₹ -10M on Women’s Reservation
+[02:23] <Player1> spent ₹ -10M on Women’s Reservation
+[02:24] <Player1> spent ₹ -10M on Tribal Rights
+[02:24] <Player1> spent ₹ -10M on Tribal Rights
+[02:24] <Player1> spent ₹ -10M on Tribal Rights
+[02:30] =============PHASE 11 START============
+[02:30] <Player1> received ₹ +250M
+[02:30] <Player1> spent ₹ -14M on a Assam campaign
+[02:30] <Player1> spent ₹ -14M on a Assam campaign
+[02:31] <Player1> spent ₹ -2M on a Manipur campaign
+[02:31] <Player1> spent ₹ -2M on a Manipur campaign
+[02:32] <Player1> spent ₹ -1M on a Nagaland campaign
+[02:32] <Player1> spent ₹ -1M on a Nagaland campaign
+[02:33] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[02:33] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[02:33] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[02:33] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[02:34] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[02:35] <Player1> spent ₹ -10M on Highways & Airports
+[02:35] <Player1> spent ₹ -10M on Highways & Airports
+[02:35] <Player1> spent ₹ -10M on Highways & Airports
+[02:36] <Player1> spent ₹ -10M on Highways & Airports
+[02:36] <Player1> spent ₹ -10M on Highways & Airports
+[02:36] <Player1> spent ₹ -10M on Highways & Airports
+[02:36] <Player1> spent ₹ -10M on Highways & Airports
+[02:37] <Player1> spent ₹ -10M on Highways & Airports
+[02:37] <Player1> spent ₹ -10M on Highways & Airports
+[02:38] <Player1> spent ₹ -10M on Highways & Airports
+[02:40] <Player1> spent ₹ -10M on Ports Modernisation
+[02:41] <Player1> spent ₹ -10M on Ports Modernisation
+[02:42] <Player1> spent ₹ -10M on Ports Modernisation
+[02:42] <Player1> spent ₹ -10M on Ports Modernisation
+[02:42] <Player1> spent ₹ -10M on Ports Modernisation
+[02:43] <Player1> spent ₹ -10M on Ports Modernisation
+[02:45] =============PHASE 12 START============
+[02:45] <Player1> received ₹ +250M

@@ -1,0 +1,28 @@
+===GAME START===
+Game ID: GULK2H53B
+===PHASE 1 START===
+[00:15] =============PHASE 2 START============
+[00:15] <Player1> received ₹ +250M
+[00:30] =============PHASE 3 START============
+[00:30] <Player1> received ₹ +250M
+[00:45] =============PHASE 4 START============
+[00:45] <Player1> received ₹ +250M
+[01:00] =============PHASE 5 START============
+[01:00] <Player1> received ₹ +250M
+[01:15] =============PHASE 6 START============
+[01:15] <Player1> received ₹ +250M
+[01:30] =============PHASE 7 START============
+[01:30] <Player1> received ₹ +250M
+[01:39] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[01:39] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[01:39] <Player1> spent ₹ -25M on a Rajasthan campaign
+[01:40] <Player1> spent ₹ -25M on a Rajasthan campaign
+[01:40] <Player1> spent ₹ -26M on a Gujarat campaign
+[01:40] <Player1> spent ₹ -26M on a Gujarat campaign
+[01:40] <Player1> spent ₹ -26M on a Gujarat campaign
+[01:41] <Player1> spent ₹ -13M on a Punjab campaign
+[01:41] <Player1> spent ₹ -13M on a Punjab campaign
+[01:42] <Player1> spent ₹ -25M on a Rajasthan campaign
+[01:42] <Player1> spent ₹ -25M on a Rajasthan campaign
+[01:45] =============PHASE 8 START============
+[01:45] <Player1> received ₹ +250M

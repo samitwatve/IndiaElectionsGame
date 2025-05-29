@@ -289,6 +289,15 @@ document.addEventListener('DOMContentLoaded', function () {
                           let seats = +window.statesDataMap[region.id].LokSabhaSeats;
                           if (getPlayer1Purse() < seats) {
                               shakePlayer1Purse();
+                              // Play error sound if not enough cash
+                              if (typeof playSound === 'function') {
+                                  playSound('error.mp3');
+                              } else {
+                                  // fallback if playSound not in scope
+                                  const audio = new Audio('static/sounds/error.mp3');
+                                  audio.volume = 0.7;
+                                  audio.play();
+                              }
                               return;
                           }
                           setPlayer1Purse(getPlayer1Purse() - seats);

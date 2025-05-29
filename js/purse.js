@@ -14,6 +14,8 @@ export function showPlayer1PurseAddition(amount) {
     addition.className = 'purse-addition';
     addition.textContent = `+${amount}M`;
     player1PurseDiv.appendChild(addition);
+    // Play cash added sound
+    playSound('cash_added.mp3');
     setTimeout(() => {
         if (addition && addition.parentNode) addition.parentNode.removeChild(addition);
     }, 1000);
@@ -49,9 +51,34 @@ export function showPlayer1PurseDeduction(amount) {
     deduction.className = 'purse-deduction';
     deduction.textContent = `-${amount}M`;
     player1PurseDiv.appendChild(deduction);
+    // Play money spent sound
+    playSound('money_spent.mp3');
     setTimeout(() => {
         if (deduction && deduction.parentNode) deduction.parentNode.removeChild(deduction);
     }, 1000);
+}
+// Preload and play sounds instantly
+const soundFiles = ['cash_added.mp3', 'money_spent.mp3', 'error.mp3'];
+const soundCache = {};
+for (const file of soundFiles) {
+    const audio = new Audio(`static/sounds/${file}`);
+    audio.volume = 0.7;
+    soundCache[file] = audio;
+}
+
+function playSound(filename) {
+    const cached = soundCache[filename];
+    if (cached) {
+        // Clone the audio node to allow overlapping sounds
+        const clone = cached.cloneNode();
+        clone.volume = cached.volume;
+        clone.play();
+    } else {
+        // fallback if not preloaded
+        const audio = new Audio(`static/sounds/${filename}`);
+        audio.volume = 0.7;
+        audio.play();
+    }
 }
 
 // Ensure purse is displayed after DOM is ready
