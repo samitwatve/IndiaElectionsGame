@@ -1,3 +1,13 @@
+                  // Helper: refresh all state colors based on current popularity
+                  function refreshAllStateColors() {
+                      Object.entries(window.popularityScores).forEach(([id, popObj]) => {
+                          const region = svg.querySelector(`#${id}`);
+                          if (region) {
+                              region.classList.remove('lean-p1', 'lean-p2', 'lean-none');
+                              region.style.fill = popularityToColor(popObj);
+                          }
+                      });
+                  }
 // Utility: interpolate between two hex colors
 function interpolateColor(color1, color2, factor) {
     // color1, color2: hex strings like '#43a047', '#ff9800'
@@ -11,20 +21,28 @@ function interpolateColor(color1, color2, factor) {
 // Map popularity (0=green, 100=orange) to color
 // Map popularity object to color: orange for P1, green for P2, gray for Others
 function popularityToColor(popObj) {
-    const green = '43a047';
-    const orange = 'ff9800';
-    const neutral = 'bdbdbd'; // gray
+    const green = '#43a047';
+    const orange = '#ff9800';
+    const neutral = '#bdbdbd'; // gray
     if (!popObj || typeof popObj !== 'object') return '#' + neutral;
     const { p1 = 0, p2 = 0, others = 0 } = popObj;
     if (p1 >= p2 && p1 >= others) {
-        // P1 most popular: orange, intensity by p1
-        return '#' + interpolateColor(neutral, orange, p1 / 100);
+        // P1 most popular: if >60%, pure orange, else blend
+        if (p1 >= 60) {
+            return orange;
+        } else {
+            return interpolateColor(neutral, orange, p1 / 100);
+        }
     } else if (p2 >= p1 && p2 >= others) {
-        // P2 most popular: green, intensity by p2
-        return '#' + interpolateColor(neutral, green, p2 / 100);
+        // P2 most popular: if >60%, pure green, else blend
+        if (p2 >= 60) {
+            return green;
+        } else {
+            return interpolateColor(neutral, green, p2 / 100);
+        }
     } else {
         // Others most popular: neutral gray, intensity by others
-        return '#' + interpolateColor('#ffffff', neutral, Math.min(1, others / 100));
+        return interpolateColor('#ffffff', neutral, Math.min(1, others / 100));
     }
 }
 
@@ -130,8 +148,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 svg.classList.add('india-svg-map');
                 mapContainer.appendChild(svg);
 
-                // --- INITIAL LEAN ASSIGNMENT ---
+                // --- INITIAL LEAN ASSIGNMENT AND EVENT BINDINGS ---
                 import(`./game_logic.js?t=${Date.now()}`).then(mod => {
+                  // Get popularity scores for player 1
+                  window.popularityScores = mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
+
+                  // Helper: refresh all state colors based on current popularity
+                  function refreshAllStateColors() {
+                      Object.entries(window.popularityScores).forEach(([id, popObj]) => {
+                          const region = svg.querySelector(`#${id}`);
+                          if (region) {
+                              region.classList.remove('lean-p1', 'lean-p2', 'lean-none');
+                              region.style.fill = popularityToColor(popObj);
+                          }
+                      });
+                  }
+
+                  // Initial color
+                  refreshAllStateColors();
                   // Get popularity scores for player 1
                   window.popularityScores = mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
                   // Color each region by popularity
@@ -141,118 +175,102 @@ document.addEventListener('DOMContentLoaded', function () {
                       region.style.fill = popularityToColor(popObj);
                     }
                   });
-                }).catch(() => {});
 
-                // Highlight logic
-                let lastHighlighted = null;
-
-                // Add hover and click events to all SVG elements with an id
-                // Only bind to actual state elements by checking against our data map
-                const regions = svg.querySelectorAll('[id]');
-                regions.forEach(region => {
-                    if (!window.statesDataMap[region.id]) return;
-                    // Hover: show state name, Lok Sabha seats, and all popularity scores
-                    region.addEventListener('mouseenter', function (e) {
-                        if (!window.statesDataMap) {
-                            if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
-                            return;
-                        }
-                        let data = window.statesDataMap[region.id];
-                        let popObj = window.popularityScores ? window.popularityScores[region.id] : undefined;
-                        if (data) {
-                            let popText = 'N/A';
-                            if (popObj && typeof popObj === 'object') {
-                                popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
-                            }
-                            const info = [
-                                `State: ${data.State}`,
-                                `Lok Sabha Seats: ${data.LokSabhaSeats}`,
-                                `Popularity: ${popText}`
-                            ].join(' | ');
-                            if (regionNameDisplay) regionNameDisplay.textContent = info;
-                        } else {
-                            if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
-                        }
-                    });
-                    region.addEventListener('mouseleave', function (e) {
-                        if (regionNameDisplay) regionNameDisplay.textContent = '';
-                    });
-                    // Click: capture logic and highlight
-                    region.addEventListener('click', function (e) {
-                        // capture logic: only if not already captured and is a state
-                        if (!region.classList.contains('captured-p1') &&
-                            !region.classList.contains('captured-p2')) {
-                            let seats = +window.statesDataMap[region.id].LokSabhaSeats;
-                            let isMinorUT = false;
-                            // Special handling for Lakshadweep: also deduct for Daman & Diu and Dadra & Nagar Haveli
-                            if (window.statesDataMap[region.id].State === 'Lakshadweep') {
-                                const minorUTs = ['Lakshadweep', 'Daman And Diu', 'Dadra And Nagar Haveli'];
-                                seats = minorUTs.reduce((sum, ut) => {
-                                    const utEntry = Object.values(window.statesDataMap).find(d => d.State === ut);
-                                    return sum + (utEntry ? +utEntry.LokSabhaSeats : 0);
-                                }, 0);
-                                isMinorUT = true;
-                            }
-                            // Only Player 1's purse is affected
-                            if (currentPlayer === 1) {
-                                if (getPlayer1Purse() >= seats) {
-                                    setPlayer1Purse(getPlayer1Purse() - seats);
-                                    updatePlayer1PurseDisplay();
-                                } else {
-                                    alert('Not enough funds!');
-                                    return;
-                                }
-                            }
-                            // Mark all minor UTs as captured if Lakshadweep is clicked
-                            if (isMinorUT) {
-                                const minorUTs = ['Lakshadweep', 'Daman And Diu', 'Dadra And Nagar Haveli'];
-                                minorUTs.forEach(ut => {
-                                    const utEntry = Object.values(window.statesDataMap).find(d => d.State === ut);
-                                    if (utEntry) {
-                                        const utRegion = svg.querySelector(`[id="${utEntry.SvgId}"]`);
-                                        if (utRegion && !utRegion.classList.contains('captured-p1') && !utRegion.classList.contains('captured-p2')) {
-                                            utRegion.classList.add(`captured-p${currentPlayer}`);
-                                            capturedCounts[currentPlayer] += +utEntry.LokSabhaSeats;
-                                            capturedList[currentPlayer].push(utEntry.State);
-                                        }
-                                    }
-                                });
-                            } else {
-                                region.classList.add(`captured-p${currentPlayer}`);
-                                capturedCounts[currentPlayer] += seats;
-                                capturedList[currentPlayer].push(window.statesDataMap[region.id].State);
-                            }
-
-                            // Update both info panels and highlight active
-                            ['1','2'].forEach(p => {
-                              const box = document.getElementById(`player${p}-info`);
-                              box.textContent = `Seats: ${capturedCounts[p]}; States: ${capturedList[p].join(', ')}`;
-                              box.classList.toggle('active', +p === currentPlayer);
-                            });
-
-                            // Check for win
-                            if (capturedCounts[currentPlayer] >= 272) {
-                              alert(`Player ${currentPlayer} wins with ${capturedCounts[currentPlayer]} seats!`);
+                  // Highlight logic
+                  let lastHighlighted = null;
+                  // Add hover and click events to all SVG elements with an id
+                  // Only bind to actual state elements by checking against our data map
+                  const regions = svg.querySelectorAll('[id]');
+                  regions.forEach(region => {
+                      if (!window.statesDataMap[region.id]) return;
+                      // Hover: show state name, Lok Sabha seats, and all popularity scores
+                      region.addEventListener('mouseenter', function (e) {
+                          if (!window.statesDataMap) {
+                              if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
                               return;
-                            }
+                          }
+                          let data = window.statesDataMap[region.id];
+                          let popObj = window.popularityScores ? window.popularityScores[region.id] : undefined;
+                          if (data) {
+                              let popText = 'N/A';
+                              if (popObj && typeof popObj === 'object') {
+                                  popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                              }
+                              const info = [
+                                  `State: ${data.State}`,
+                                  `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                                  `Popularity: ${popText}`
+                              ].join(' | ');
+                              if (regionNameDisplay) regionNameDisplay.textContent = info;
+                          } else {
+                              if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                          }
+                      });
+                      region.addEventListener('mouseleave', function (e) {
+                          if (regionNameDisplay) regionNameDisplay.textContent = '';
+                      });
+                      // Click: popularity logic and highlight
+                      region.addEventListener('click', function (e) {
+                          // Only update if region is a state and popularityScores exists
+                          if (!window.popularityScores || !window.popularityScores[region.id]) return;
+                          let popObj = window.popularityScores[region.id];
+                          // Purse logic: cost = number of seats
+                          let seats = +window.statesDataMap[region.id].LokSabhaSeats;
+                          if (getPlayer1Purse() < seats) {
+                              alert('Not enough funds!');
+                              return;
+                          }
+                          setPlayer1Purse(getPlayer1Purse() - seats);
+                          updatePlayer1PurseDisplay();
+                          // Increase P1 popularity by 5%, max 100
+                          let increase = 5;
+                          let newP1 = Math.min(100, popObj.p1 + increase);
+                          let delta = newP1 - popObj.p1;
+                          if (delta <= 0) return; // Already at max
+                          // Decrease P2 and Others proportionally
+                          let totalOther = popObj.p2 + popObj.others;
+                          let newP2 = popObj.p2;
+                          let newOthers = popObj.others;
+                          if (totalOther > 0) {
+                              newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
+                              newOthers = Math.max(0, 100 - newP1 - newP2);
+                          } else {
+                              newP2 = 0;
+                              newOthers = 100 - newP1;
+                          }
+                          // Update the popularity object
+                          window.popularityScores[region.id] = { p1: newP1, p2: newP2, others: newOthers };
+                          // Refresh all state colors based on current popularity
+                          refreshAllStateColors();
 
-                            // Switch turn
-                            currentPlayer = currentPlayer === 1 ? 2 : 1;
+                          // Always update hover label for this region (instant feedback)
+                          if (regionNameDisplay) {
+                              let data = window.statesDataMap[region.id];
+                              let popObj = window.popularityScores[region.id];
+                              let popText = 'N/A';
+                              if (popObj && typeof popObj === 'object') {
+                                  popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                              }
+                              const info = [
+                                  `State: ${data.State}`,
+                                  `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                                  `Popularity: ${popText}`
+                              ].join(' | ');
+                              regionNameDisplay.textContent = info;
+                          }
 
-                            // Update turn display
-                            if(currentTurnDisplay) currentTurnDisplay.textContent = `Current Turn: Player ${currentPlayer}`;
-                        }
-                        // If a category is active, ignore single highlight
-                        if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
-                        if (lastHighlighted) {
-                            lastHighlighted.classList.remove('region-highlighted');
-                        }
-                        region.classList.add('region-highlighted');
-                        lastHighlighted = region;
-                    });
-                    // Optional: pointer cursor
-                    region.style.cursor = 'pointer';
-                });
+                          // If a category is active, ignore single highlight
+                          if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
+                          if (lastHighlighted) {
+                              lastHighlighted.classList.remove('region-highlighted');
+                          }
+                          region.classList.add('region-highlighted');
+                          lastHighlighted = region;
+                      });
+                      // Optional: pointer cursor
+                      region.style.cursor = 'pointer';
+                  });
+                }).catch(() => {});
 
                 // Add hover and click events to Lakshadweep bounding box
                 const lakshadweepBox = svg.querySelector('#bbox-lakshadweep');
