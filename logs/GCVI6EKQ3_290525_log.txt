@@ -1,0 +1,29 @@
+===GAME START===
+Game ID: GCVI6EKQ3
+===PHASE 1 START===
+[00:02] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:02] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:03] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:05] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:15] =============PHASE 2 START============
+[00:15] <Player1> received ₹ +250M
+[00:30] =============PHASE 3 START============
+[00:30] <Player1> received ₹ +250M
+[00:45] =============PHASE 4 START============
+[00:45] <Player1> received ₹ +250M
+[01:00] =============PHASE 5 START============
+[01:00] <Player1> received ₹ +250M
+[01:15] =============PHASE 6 START============
+[01:15] <Player1> received ₹ +250M
+[01:30] =============PHASE 7 START============
+[01:30] <Player1> received ₹ +250M
+[01:45] =============PHASE 8 START============
+[01:45] <Player1> received ₹ +250M
+[02:00] =============PHASE 9 START============
+[02:00] <Player1> received ₹ +250M
+[02:15] =============PHASE 10 START============
+[02:15] <Player1> received ₹ +250M
+[02:30] =============PHASE 11 START============
+[02:30] <Player1> received ₹ +250M
+[02:45] =============PHASE 12 START============
+[02:45] <Player1> received ₹ +250M

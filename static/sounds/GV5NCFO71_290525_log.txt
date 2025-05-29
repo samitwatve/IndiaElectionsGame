@@ -1,0 +1,39 @@
+===GAME START===
+Game ID: GV5NCFO71
+===PHASE 1 START===
+[00:06] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:07] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:07] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:07] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:08] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:08] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:09] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:09] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:12] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[00:12] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[00:15] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:30] =============PHASE 2 START============
+[00:30] <Player1> received ₹ +250M
+[00:31] <Player1> spent ₹ -40M on a Bihar campaign
+[00:31] <Player1> spent ₹ -40M on a Bihar campaign
+[00:32] <Player1> spent ₹ -40M on a Bihar campaign
+[00:33] <Player1> spent ₹ -40M on a Bihar campaign
+[00:33] <Player1> spent ₹ -40M on a Bihar campaign
+[00:34] <Player1> spent ₹ -40M on a Bihar campaign
+[00:35] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[01:00] =============PHASE 3 START============
+[01:00] <Player1> received ₹ +250M
+[01:12] <Player1> spent ₹ -10M on Highways & Airports
+[01:12] <Player1> spent ₹ -10M on Highways & Airports
+[01:14] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[01:14] <Player1> spent ₹ -11M on a Chhattisgarh campaign
+[01:15] <Player1> spent ₹ -14M on a Assam campaign
+[01:16] <Player1> spent ₹ -14M on a Assam campaign
+[01:20] <Player1> spent ₹ -1M on a Ladakh campaign
+[01:21] <Player1> spent ₹ -1M on a Ladakh campaign
+[01:22] <Player1> spent ₹ -28M on a Karnataka campaign
+[01:22] <Player1> spent ₹ -28M on a Karnataka campaign
+[01:25] <Player1> spent ₹ -39M on a Tamil Nadu campaign
+[01:26] <Player1> spent ₹ -39M on a Tamil Nadu campaign
+[01:30] =============PHASE 4 START============
+[01:30] <Player1> received ₹ +250M

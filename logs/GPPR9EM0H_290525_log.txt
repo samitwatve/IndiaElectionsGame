@@ -1,0 +1,30 @@
+===GAME START===
+Game ID: GPPR9EM0H
+===PHASE 1 START===
+[00:01] <Player1> spent ₹ -48M on a Maharashtra campaign
+[00:01] <Player1> spent ₹ -48M on a Maharashtra campaign
+[00:02] <Player1> spent ₹ -48M on a Maharashtra campaign
+[00:02] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:02] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:02] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:03] <Player1> spent ₹ -14M on a Assam campaign
+[00:04] <Player1> spent ₹ -2M on a Arunachal Pradesh campaign
+[00:05] <Player1> spent ₹ -2M on a Arunachal Pradesh campaign
+[00:06] <Player1> spent ₹ -1M on a Sikkim campaign
+[00:15] =============PHASE 2 START============
+[00:15] <Player1> received ₹ +250M
+[00:16] <Player1> spent ₹ -17M on a Telangana campaign
+[00:16] <Player1> spent ₹ -17M on a Telangana campaign
+[00:17] <Player1> spent ₹ -17M on a Telangana campaign
+[00:17] <Player1> spent ₹ -17M on a Telangana campaign
+[00:17] <Player1> spent ₹ -17M on a Telangana campaign
+[00:17] <Player1> spent ₹ -17M on a Telangana campaign
+[00:18] <Player1> spent ₹ -17M on a Telangana campaign
+[00:18] <Player1> spent ₹ -17M on a Telangana campaign
+[00:18] <Player1> spent ₹ -17M on a Telangana campaign
+[00:19] <Player1> spent ₹ -17M on a Telangana campaign
+[00:19] <Player1> spent ₹ -17M on a Telangana campaign
+[00:20] <Player1> spent ₹ -17M on a Telangana campaign
+[00:20] <Player1> spent ₹ -17M on a Telangana campaign
+[00:20] <Player1> spent ₹ -17M on a Telangana campaign
+[00:21] <Player1> spent ₹ -11M on a Chhattisgarh campaign

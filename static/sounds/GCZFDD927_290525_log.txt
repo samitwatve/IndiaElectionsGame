@@ -1,0 +1,32 @@
+===GAME START===
+Game ID: GCZFDD927
+===PHASE 1 START===
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:07] <Player1> spent ₹ -13M on a Punjab campaign
+[00:07] <Player1> spent ₹ -4M on a Himachal Pradesh campaign
+[00:08] <Player1> spent ₹ -4M on a Himachal Pradesh campaign
+[00:08] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:09] <Player1> spent ₹ -5M on a Jammu And Kashmir campaign
+[00:09] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:10] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:10] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:10] <Player1> spent ₹ -1M on a Ladakh campaign
+[00:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:12] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:13] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:13] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:14] <Player1> spent ₹ -48M on a Maharashtra campaign
+[00:15] =============PHASE 2 START============
+[00:15] <Player1> received ₹ +250M
+[00:15] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:15] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:16] <Player1> spent ₹ -40M on a Bihar campaign
+[00:16] <Player1> spent ₹ -40M on a Bihar campaign
+[00:17] <Player1> spent ₹ -40M on a Bihar campaign
+[00:18] <Player1> spent ₹ -14M on a Jharkhand campaign
+[00:19] <Player1> spent ₹ -14M on a Jharkhand campaign
+[00:19] <Player1> spent ₹ -14M on a Jharkhand campaign
+[00:19] <Player1> spent ₹ -14M on a Jharkhand campaign
+[00:19] <Player1> spent ₹ -14M on a Jharkhand campaign
+[00:21] <Player1> spent ₹ -14M on a Assam campaign
