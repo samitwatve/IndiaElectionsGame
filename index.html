@@ -1,4 +1,4 @@
-  <!-- Removed duplicate Campaign Tech Tree section at top -->
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,30 +7,28 @@
   <title>India Elections Game UI</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/timer-seats-fix.css" />
 </head>
 <body>
 
 
-  <!-- Start Screen Overlay -->
-  <div id="start-screen" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;">
-    <h1 style="color:#fff;font-size:2.5em;margin-bottom:24px;">India Elections Game</h1>
-    <button id="start-game-btn" style="font-size:1.5em;padding:16px 48px;border-radius:8px;border:none;background:#3498db;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Start Game</button>
-    <p style="color:#eee;margin-top:32px;font-size:1.1em;max-width:400px;text-align:center;">Welcome! Click Start Game to begin and enable music.</p>
+  <div id="start-screen" class="start-screen">
+    <h1 class="start-title">India Elections Game</h1>
+    <button id="start-game-btn" class="start-game-btn">Start Game</button>
+    <p class="start-desc">Welcome! Click Start Game to begin and enable music.</p>
   </div>
 
-  <!-- Game Over Screen Overlay -->
-  <div id="gameover-screen" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.88);flex-direction:column;align-items:center;justify-content:center;">
-    <h1 id="gameover-banner" style="color:#fff;font-size:2.5em;margin-bottom:24px;">Player X Wins!</h1>
-    <div style="display:flex;gap:24px;">
-      <button id="download-log-btn" style="font-size:1.2em;padding:14px 36px;border-radius:8px;border:none;background:#43a047;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Download Game Log</button>
-      <button id="quit-btn" style="font-size:1.2em;padding:14px 36px;border-radius:8px;border:none;background:#e53935;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Quit</button>
+  <div id="gameover-screen" class="gameover-screen">
+    <h1 id="gameover-banner" class="gameover-banner">Player X Wins!</h1>
+    <div class="gameover-btn-row">
+      <button id="download-log-btn" class="download-log-btn">Download Game Log</button>
+      <button id="quit-btn" class="quit-btn">Quit</button>
     </div>
-    <p style="color:#eee;margin-top:32px;font-size:1.1em;max-width:400px;text-align:center;">Would you like to download the game log? If you select No, the game will quit immediately.</p>
+    <p class="gameover-desc">Would you like to download the game log? If you select No, the game will quit immediately.</p>
   </div>
 
-  <!-- Timer container moved absolutely to top right -->
   <div class="timer-container">
-    <div class="circle-timer" style="width:180px;height:180px;">
+    <div class="circle-timer circle-timer-lg">
       <svg width="180" height="180">
         <circle
           cx="90"
@@ -53,80 +51,29 @@
           stroke-dashoffset="0"
         />
       </svg>
-      <div class="timer-text" id="timer-phase" style="
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.2em;
-        font-weight: bold;
-        width: 140px;
-        text-align: center;
-        pointer-events: none;
-        z-index: 2;
-      ">Phase 1 / 10</div>
+      <div class="timer-text timer-phase" id="timer-phase">Phase 1 / 10</div>
     </div>
     <!-- Projected Seats Circle Display -->
-    <div class="circle-seats" style="margin-top:24px;width:180px;height:180px;position:relative;">
+    <div class="circle-seats">
       <svg width="180" height="180">
         <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
         <!-- Arcs for P1, P2, Others will be drawn here by JS -->
-        <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.95;" />
-        <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.95;" />
-        <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.7;" />
+        <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p1" />
+        <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p2" />
+        <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-others" />
       </svg>
-      <div class="timer-text" id="seats-text" style="
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1em;
-        font-weight: bold;
-        width: 140px;
-        text-align: center;
-        pointer-events: none;
-        z-index: 2;
-      ">P1: 0 | P2: 0 | Others: 0</div>
+      <div class="timer-text seats-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
     </div>
   </div>
-  <header style="margin-bottom:0;padding:0 0 2px 0;height:38px;min-height:0;">
-    <h1 style="font-size:2.2em;margin:0;line-height:38px;display:inline-block;vertical-align:middle;">India Elections Game</h1>
-    <i class="fas fa-cog" style="vertical-align:middle;"></i>
+  <header class="main-header">
+    <h1 class="main-title">India Elections Game</h1>
+    <i class="fas fa-cog main-cog"></i>
   </header>
 
 
 
 
-<style>
-  .timer-container {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-  .circle-timer {
-    position: relative;
-    width: 90px;
-    height: 90px;
-  }
-  .circle-timer svg {
-    transform: rotate(-90deg);
-  }
-  .timer-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.7em;
-    font-weight: bold;
-    text-align: center;
-    pointer-events: none;
-  }
-</style>
+
 
 <script type="module" src="js/main.js"></script>
   <div class="game-container">
@@ -135,9 +82,9 @@
       <div id="player1-info" class="player-info">Seats: 0; States: </div>
       <div id="player1-purse" class="player-purse"></div>
       <!-- Action Log for Player 1 -->
-      <div style="margin-top:10px;">
-        <label for="player1-log" style="font-weight:bold;">Action Log</label>
-        <textarea id="player1-log" readonly style="width:100%;height:180px;resize:vertical;font-size:0.95em;background:#f9f9f9;color:#222;border:1px solid #ccc;padding:6px;box-sizing:border-box;"></textarea>
+      <div class="player1-log-container">
+        <label for="player1-log" class="player1-log-label">Action Log</label>
+        <textarea id="player1-log" readonly class="player1-log"></textarea>
       </div>
     </div>
     <div class="main-panel">

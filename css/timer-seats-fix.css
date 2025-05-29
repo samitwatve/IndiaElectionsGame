@@ -1,0 +1,46 @@
+/* Timer and Seats Ring Layout Fix */
+.timer-container {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  gap: 24px;
+}
+.circle-timer,
+.circle-seats {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-timer svg,
+.circle-seats svg {
+  width: 180px;
+  height: 180px;
+  display: block;
+  transform: rotate(-90deg);
+}
+.timer-phase,
+.seats-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+  font-weight: bold;
+}
+.timer-phase {
+  font-size: 1.2em;
+}
+.seats-text {
+  font-size: 1em;
+}
