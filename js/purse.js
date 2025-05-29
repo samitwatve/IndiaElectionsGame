@@ -1,10 +1,10 @@
 // Add 100M to Player 1's purse at the end of each phase
 import { logAction } from './logger.js';
-export function addPhasePurseBonus() {
+export function addPhasePurseBonus(phase) {
     player1Purse += 250;
     updatePlayer1PurseDisplay();
     showPlayer1PurseAddition(250);
-    logAction(`<Player1> received ₹ +250M`);
+    logAction(`<Player1> received ₹ +250M`, phase);
 }
 // Show green animation for cash added to purse
 export function showPlayer1PurseAddition(amount) {

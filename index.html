@@ -114,9 +114,11 @@
   import './js/map.js'; // Ensure map.js runs and updates projected seats
   // Timer settings
   let totalPhases = 12;
-  let currentPhase = 1;
+  window.currentPhase = 1;
   let duration = 15; // seconds per phase
   let timeLeft = duration;
+  window.duration = duration;
+  window.timeLeft = timeLeft;
   const circle = document.getElementById('timer-progress');
   const phaseText = document.getElementById('timer-phase');
   const radius = 80; // match SVG r="80"
@@ -127,16 +129,22 @@
     const offset = circumference * (1 - timeLeft / duration);
     circle.style.strokeDashoffset = circumference - offset;
     // Update phase text
-    phaseText.textContent = `Phase ${currentPhase} / ${totalPhases}`;
+    phaseText.textContent = `Phase ${window.currentPhase} / ${totalPhases}`;
+    window.timeLeft = timeLeft;
+    window.duration = duration;
   }
 
   function nextPhase() {
-    if (currentPhase < totalPhases) {
-      currentPhase++;
+    if (window.currentPhase < totalPhases) {
+      window.currentPhase++;
       timeLeft = duration;
+      // Log phase transition
+      import('./js/logger.js').then(mod => {
+        mod.logAction(`=============PHASE ${window.currentPhase} START============`, window.currentPhase);
+      });
       // Add 250M to Player 1's purse at the end of each phase
       import('./js/purse.js').then(mod => {
-        mod.addPhasePurseBonus();
+        mod.addPhasePurseBonus(window.currentPhase);
       });
       updateTimer();
       // Animate phase label
@@ -149,6 +157,10 @@
       clearInterval(timerInterval);
       // Optionally, you can also gray out the timer circle
       circle.style.stroke = '#aaa';
+      // Save log to file
+      import('./js/logger.js').then(mod => {
+        mod.saveLogToFile();
+      });
     }
   }
 
@@ -228,9 +240,29 @@
   <script src="js/selection.js"></script>
   <script src="js/global.js"></script>
   <script type="module">
-    import { logGameStart } from './js/logger.js';
+    import { logGameStart, saveLogToFile } from './js/logger.js';
     window.addEventListener('DOMContentLoaded', () => {
       logGameStart();
+    });
+
+    // Warn on refresh/close if game is running
+    window.addEventListener('beforeunload', (e) => {
+      // Game is running if not at Game Over
+      const phaseText = document.getElementById('timer-phase');
+      if (phaseText && !phaseText.textContent.includes('Game Over')) {
+        const confirmationMessage = 'The game is still running. Are you sure you want to leave? Your log will be saved.';
+        (e || window.event).returnValue = confirmationMessage;
+        // For most browsers
+        return confirmationMessage;
+      }
+    });
+
+    // On unload, if game is running, save log
+    window.addEventListener('unload', () => {
+      const phaseText = document.getElementById('timer-phase');
+      if (phaseText && !phaseText.textContent.includes('Game Over')) {
+        saveLogToFile();
+      }
     });
   </script>
 </body>
