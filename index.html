@@ -10,6 +10,13 @@
 </head>
 <body>
 
+  <!-- Start Screen Overlay -->
+  <div id="start-screen" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <h1 style="color:#fff;font-size:2.5em;margin-bottom:24px;">India Elections Game</h1>
+    <button id="start-game-btn" style="font-size:1.5em;padding:16px 48px;border-radius:8px;border:none;background:#3498db;color:#fff;cursor:pointer;box-shadow:0 2px 8px #0008;">Start Game</button>
+    <p style="color:#eee;margin-top:32px;font-size:1.1em;max-width:400px;text-align:center;">Welcome! Click Start Game to begin and enable music.</p>
+  </div>
+
   <!-- Timer container moved absolutely to top right -->
   <div class="timer-container">
     <div class="circle-timer" style="width:180px;height:180px;">
@@ -112,6 +119,25 @@
 
 <script type="module">
   import './js/map.js'; // Ensure map.js runs and updates projected seats
+  // --- Start Screen and Background Music Logic ---
+  let bgMusic;
+  const startScreen = document.getElementById('start-screen');
+  const startBtn = document.getElementById('start-game-btn');
+  // Disable game UI until started
+  document.body.style.overflow = 'hidden';
+  function startGame() {
+    // Hide start screen
+    startScreen.style.display = 'none';
+    document.body.style.overflow = '';
+    // Start background music
+    if (!bgMusic) {
+      bgMusic = new Audio('static/sounds/background_music.mp3');
+      bgMusic.loop = true;
+      bgMusic.volume = 0.5;
+    }
+    bgMusic.play();
+  }
+  startBtn.addEventListener('click', startGame);
   // Timer settings
   let totalPhases = 2;
   window.currentPhase = 1;
@@ -157,6 +183,11 @@
       clearInterval(timerInterval);
       // Optionally, you can also gray out the timer circle
       circle.style.stroke = '#aaa';
+      // Stop background music if playing
+      if (bgMusic && !bgMusic.paused) {
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+      }
       // Play victory sound, then save log to file after sound finishes
       import('./js/purse.js').then(mod => {
         let audio;
