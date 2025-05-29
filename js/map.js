@@ -9,13 +9,23 @@ function interpolateColor(color1, color2, factor) {
 }
 
 // Map popularity (0=green, 100=orange) to color
-function popularityToColor(score) {
-    // Green: #43a047, Orange: #ff9800
+// Map popularity object to color: orange for P1, green for P2, gray for Others
+function popularityToColor(popObj) {
     const green = '43a047';
     const orange = 'ff9800';
-    // Clamp score
-    const s = Math.max(0, Math.min(100, score));
-    return interpolateColor(green, orange, s / 100);
+    const neutral = 'bdbdbd'; // gray
+    if (!popObj || typeof popObj !== 'object') return '#' + neutral;
+    const { p1 = 0, p2 = 0, others = 0 } = popObj;
+    if (p1 >= p2 && p1 >= others) {
+        // P1 most popular: orange, intensity by p1
+        return '#' + interpolateColor(neutral, orange, p1 / 100);
+    } else if (p2 >= p1 && p2 >= others) {
+        // P2 most popular: green, intensity by p2
+        return '#' + interpolateColor(neutral, green, p2 / 100);
+    } else {
+        // Others most popular: neutral gray, intensity by others
+        return '#' + interpolateColor('#ffffff', neutral, Math.min(1, others / 100));
+    }
 }
 
 import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse } from './purse.js';
@@ -125,10 +135,10 @@ document.addEventListener('DOMContentLoaded', function () {
                   // Get popularity scores for player 1
                   window.popularityScores = mod.assignInitialLeans(svg, window.statesDataMap, 100); // 100 seats each
                   // Color each region by popularity
-                  Object.entries(window.popularityScores).forEach(([id, score]) => {
+                  Object.entries(window.popularityScores).forEach(([id, popObj]) => {
                     const region = svg.querySelector(`#${id}`);
                     if (region) {
-                      region.style.fill = popularityToColor(score);
+                      region.style.fill = popularityToColor(popObj);
                     }
                   });
                 }).catch(() => {});
@@ -141,19 +151,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 const regions = svg.querySelectorAll('[id]');
                 regions.forEach(region => {
                     if (!window.statesDataMap[region.id]) return;
-                    // Hover: show state name, Lok Sabha seats, and popularity score
+                    // Hover: show state name, Lok Sabha seats, and all popularity scores
                     region.addEventListener('mouseenter', function (e) {
                         if (!window.statesDataMap) {
                             if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
                             return;
                         }
                         let data = window.statesDataMap[region.id];
-                        let popScore = window.popularityScores ? window.popularityScores[region.id] : undefined;
+                        let popObj = window.popularityScores ? window.popularityScores[region.id] : undefined;
                         if (data) {
+                            let popText = 'N/A';
+                            if (popObj && typeof popObj === 'object') {
+                                popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                            }
                             const info = [
                                 `State: ${data.State}`,
                                 `Lok Sabha Seats: ${data.LokSabhaSeats}`,
-                                `Popularity: ${popScore !== undefined ? popScore : 'N/A'}`
+                                `Popularity: ${popText}`
                             ].join(' | ');
                             if (regionNameDisplay) regionNameDisplay.textContent = info;
                         } else {
