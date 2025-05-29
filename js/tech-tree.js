@@ -126,6 +126,8 @@ function renderTechTreeRows(tree, container) {
               // Not enough money, show a warning (shake)
               barContainer.classList.add('shake');
               shakePlayer1Purse();
+              // Play error sound for not enough money
+              import('./purse.js').then(({ playSound }) => playSound('error.mp3'));
               setTimeout(() => barContainer.classList.remove('shake'), 400);
             }
           } else {

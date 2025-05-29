@@ -66,7 +66,7 @@ for (const file of soundFiles) {
     soundCache[file] = audio;
 }
 
-function playSound(filename) {
+export function playSound(filename) {
     const cached = soundCache[filename];
     if (cached) {
         // Clone the audio node to allow overlapping sounds
