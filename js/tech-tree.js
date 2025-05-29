@@ -49,6 +49,7 @@ export const policyTree = {
 
 // Render the tech tree as five rows (one per branch)
 import { getPlayer1Purse, setPlayer1Purse, updatePlayer1PurseDisplay, shakePlayer1Purse, showPlayer1PurseDeduction } from './purse.js';
+import { logAction } from './logger.js';
 
 function renderTechTreeRows(tree, container) {
   Object.entries(tree).forEach(([branch, leaves]) => {
@@ -114,6 +115,8 @@ function renderTechTreeRows(tree, container) {
               } else {
                 barFill.style.background = '#43a047';
               }
+              // Log the action
+              logAction(`<Player1> spent ₹ -10M on ${leaf}`);
               if (progress === 100) {
                 // Shake the promise bar to indicate it's maxed out
                 barContainer.classList.add('shake');

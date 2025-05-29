@@ -113,6 +113,7 @@ function popularityToColor(popObj) {
 }
 
 import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse, shakePlayer1Purse, showPlayer1PurseDeduction } from './purse.js';
+import { logAction } from './logger.js';
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
     // Recalculate projected seats every 5 seconds
@@ -293,6 +294,9 @@ document.addEventListener('DOMContentLoaded', function () {
                           setPlayer1Purse(getPlayer1Purse() - seats);
                           updatePlayer1PurseDisplay();
                           showPlayer1PurseDeduction(seats);
+                          // Log Player 1 spending on state campaign
+                          const stateName = window.statesDataMap[region.id]?.State || region.id;
+                          logAction(`<Player1> spent ₹ -${seats}M on a ${stateName} campaign`);
                           // Increase P1 popularity by 5%, max 100
                           let increase = 5;
                           let newP1 = Math.min(100, popObj.p1 + increase);
