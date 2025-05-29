@@ -1,5 +1,5 @@
 // Purse logic for Player 1
-let player1Purse = 300;
+let player1Purse = 10000;
 
 export function getPlayer1Purse() {
     return player1Purse;

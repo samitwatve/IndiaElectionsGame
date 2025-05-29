@@ -23,11 +23,15 @@ function updateProjectedSeatsCircle() {
         totalSeats += seats;
         const pop = popularityScores[id];
         if (!pop) return;
-        // Assign all seats to the most popular party in that state
-        if (pop.p1 >= pop.p2 && pop.p1 >= pop.others) p1Seats += seats;
-        else if (pop.p2 >= pop.p1 && pop.p2 >= pop.others) p2Seats += seats;
-        else othersSeats += seats;
+        // Proportional allocation
+        p1Seats += seats * (pop.p1 / 100);
+        p2Seats += seats * (pop.p2 / 100);
+        othersSeats += seats * (pop.others / 100);
     });
+    // Round to nearest integer for display
+    p1Seats = Math.round(p1Seats);
+    p2Seats = Math.round(p2Seats);
+    othersSeats = Math.round(othersSeats);
 
     // Update text
     const seatsText = document.getElementById('seats-text');
@@ -36,7 +40,7 @@ function updateProjectedSeatsCircle() {
     }
 
     // Update arcs
-    const circumference = 2 * Math.PI * 40; // r=40
+    const circumference = 2 * Math.PI * 80; // r=80 (for bigger circle)
     // Proportions
     const p1Prop = p1Seats / totalSeats;
     const p2Prop = p2Seats / totalSeats;
@@ -111,6 +115,8 @@ function popularityToColor(popObj) {
 import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse } from './purse.js';
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
+    // Recalculate projected seats every 5 seconds
+    setInterval(updateProjectedSeatsCircle, 5000);
 
     const mapContainer = document.getElementById('map-container');
     if (!mapContainer) return;

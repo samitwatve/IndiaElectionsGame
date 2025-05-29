@@ -12,41 +12,41 @@
 
   <!-- Timer container moved absolutely to top right -->
   <div class="timer-container">
-    <div class="circle-timer">
-      <svg width="90" height="90">
+    <div class="circle-timer" style="width:180px;height:180px;">
+      <svg width="180" height="180">
         <circle
-          cx="45"
-          cy="45"
-          r="40"
+          cx="90"
+          cy="90"
+          r="80"
           stroke="#e6e6e6"
-          stroke-width="6"
+          stroke-width="12"
           fill="none"
         />
         <circle
           id="timer-progress"
-          cx="45"
-          cy="45"
-          r="40"
+          cx="90"
+          cy="90"
+          r="80"
           stroke="#3498db"
-          stroke-width="6"
+          stroke-width="12"
           fill="none"
           stroke-linecap="round"
-          stroke-dasharray="251"
+          stroke-dasharray="502"
           stroke-dashoffset="0"
         />
       </svg>
-      <div class="timer-text" id="timer-phase">Phase 1 / 10</div>
+      <div class="timer-text" id="timer-phase" style="font-size:0.7em;">Phase 1 / 10</div>
     </div>
     <!-- Projected Seats Circle Display -->
-    <div class="circle-seats" style="margin-top:10px;">
-      <svg width="90" height="90">
-        <circle cx="45" cy="45" r="40" stroke="#e6e6e6" stroke-width="6" fill="none" />
+    <div class="circle-seats" style="margin-top:24px;width:180px;height:180px;">
+      <svg width="180" height="180">
+        <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
         <!-- Arcs for P1, P2, Others will be drawn here by JS -->
-        <circle id="seats-p1" cx="45" cy="45" r="40" stroke="#ff9800" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.95;" />
-        <circle id="seats-p2" cx="45" cy="45" r="40" stroke="#43a047" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.95;" />
-        <circle id="seats-others" cx="45" cy="45" r="40" stroke="#bdbdbd" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" style="opacity:0.7;" />
+        <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.95;" />
+        <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.95;" />
+        <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" style="opacity:0.7;" />
       </svg>
-      <div class="timer-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
+      <div class="timer-text" id="seats-text" style="font-size:0.7em;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;">P1: 0 | P2: 0 | Others: 0</div>
     </div>
   </div>
   <header style="margin-bottom:0;padding:0 0 2px 0;height:38px;min-height:0;">
@@ -140,7 +140,7 @@
     <div class="player-panel player1-panel">
       <h2>Player 1</h2>
       <div id="player1-info" class="player-info">Seats: 0; States: </div>
-      <div id="player1-purse" class="player-purse">Purse: ₹300M</div>
+      <div id="player1-purse" class="player-purse">Purse: ₹10000M</div>
     </div>
     <div class="main-panel">
       <div class="map-container" id="map-container">
