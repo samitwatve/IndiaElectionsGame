@@ -1,141 +1,110 @@
-  
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>India Elections Game UI</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/timer-seats-fix.css" />
-</head>
-<body>
-
-
-  <div id="start-screen" class="start-screen">
-    <h1 class="start-title">India Elections Game</h1>
-    <button id="start-game-btn" class="start-game-btn">Start Game</button>
-    <p class="start-desc">Welcome! Click Start Game to begin and enable music.</p>
-  </div>
-
-  <div id="gameover-screen" class="gameover-screen">
-    <h1 id="gameover-banner" class="gameover-banner">Player X Wins!</h1>
-    <div class="gameover-btn-row">
-      <button id="download-log-btn" class="download-log-btn">Download Game Log</button>
-      <button id="quit-btn" class="quit-btn">Quit</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India Elections Game UI</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="start-screen" class="start-screen">
+      <h1 class="start-title">India Elections Game</h1>
+      <button id="start-game-btn" class="start-game-btn">Start Game</button>
+      <p class="start-desc">Welcome! Click Start Game to begin and enable music.</p>
     </div>
-    <p class="gameover-desc">Would you like to download the game log? If you select No, the game will quit immediately.</p>
-  </div>
 
-  <div class="timer-container">
-    <div class="circle-timer circle-timer-lg">
-      <svg width="180" height="180">
-        <circle
-          cx="90"
-          cy="90"
-          r="80"
-          stroke="#e6e6e6"
-          stroke-width="12"
-          fill="none"
-        />
-        <circle
-          id="timer-progress"
-          cx="90"
-          cy="90"
-          r="80"
-          stroke="#3498db"
-          stroke-width="12"
-          fill="none"
-          stroke-linecap="round"
-          stroke-dasharray="502"
-          stroke-dashoffset="0"
-        />
-      </svg>
-      <div class="timer-text timer-phase" id="timer-phase">Phase 1 / 10</div>
-    </div>
-    <!-- Projected Seats Circle Display -->
-    <div class="circle-seats">
-      <svg width="180" height="180">
-        <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
-        <!-- Arcs for P1, P2, Others will be drawn here by JS -->
-        <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p1" />
-        <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p2" />
-        <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-others" />
-      </svg>
-      <div class="timer-text seats-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
-    </div>
-  </div>
-  <header class="main-header">
-    <h1 class="main-title">India Elections Game</h1>
-    <i class="fas fa-cog main-cog"></i>
-  </header>
-
-
-
-
-
-
-<script type="module" src="js/main.js"></script>
-  <div class="game-container">
-    <div class="player-panel player1-panel">
-      <h2>Player 1</h2>
-      <div id="player1-info" class="player-info">Seats: 0; States: </div>
-      <div id="player1-purse" class="player-purse"></div>
-      <!-- Action Log for Player 1 -->
-      <div class="player1-log-container">
-        <label for="player1-log" class="player1-log-label">Action Log</label>
-        <textarea id="player1-log" readonly class="player1-log"></textarea>
+    <div id="gameover-screen" class="gameover-screen">
+      <h1 id="gameover-banner" class="gameover-banner">Player X Wins!</h1>
+      <p class="gameover-desc">Download the game log?</p>
+      <div class="gameover-btn-row">
+        <button id="download-log-btn" class="download-log-btn">Yes Download</button>
+        <button id="quit-btn" class="quit-btn">Quit Without Saving</button>
       </div>
     </div>
-    <div class="main-panel">
-      <div class="map-container" id="map-container">
-        <!-- Interactive India map goes here -->
+
+    <div class="timer-container">
+      <div class="circle-timer circle-timer-lg">
+        <svg width="180" height="180">
+          <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
+          <circle id="timer-progress" cx="90" cy="90" r="80" stroke="#3498db" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" />
+        </svg>
+        <div class="timer-text timer-phase" id="timer-phase">Phase 1 / 10</div>
       </div>
-      <!-- Category Highlight Buttons -->
-      <div class="category-buttons-container" id="category-buttons-container">
-        <div class="category-btn-row">
-          <button class="category-btn" data-category="CoastalIndia">Coastal India</button>
-          <button class="category-btn" data-category="NortheastIndia">Northeast India</button>
-          <button class="category-btn" data-category="SouthIndia">South India</button>
-          <button class="category-btn" data-category="HindiHeartland">Hindi Heartland</button>
-          <button class="category-btn" data-category="AgriculturalRegion">Agricultural Region</button>
-        </div>
-        <div class="category-btn-row">
-          <button class="category-btn" data-category="BorderLands">Border Lands</button>
-          <button class="category-btn" data-category="Pilgrimage">Pilgrimage</button>
-          <button class="category-btn" data-category="UnionTerritories">Union Territories</button>
-          <button class="category-btn" data-category="IndustrialCorridor">Industrial Corridor</button>
-          <button class="category-btn" data-category="ITHubs">IT Hubs</button>
-        </div>
-        <div class="category-btn-row">
-          <button class="category-btn" data-category="Education">Education</button>
-          <button class="category-btn" data-category="TribalLands">Tribal Lands</button>
-          <button class="category-btn" data-category="TravelAndTourism">Travel & Tourism</button>
-          <button class="category-btn" data-category="NaturalResources">Natural Resources</button>
-          <button class="category-btn" data-category="HighUrbanization">High Urbanization</button>
+      <!-- Projected Seats Circle Display -->
+      <div class="circle-seats">
+        <svg width="180" height="180">
+          <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
+          <!-- Arcs for P1, P2, Others will be drawn here by JS -->
+          <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p1" />
+          <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p2" />
+          <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-others" />
+        </svg>
+        <div class="timer-text seats-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
+      </div>
+    </div>
+    <header class="main-header">
+      <h1 class="main-title">India Elections Game</h1>
+      <i class="fas fa-cog main-cog"></i>
+    </header>
+
+    <script type="module" src="js/main.js"></script>
+    <div class="game-container">
+      <div class="player-panel player1-panel">
+        <h2>Player 1</h2>
+        <div id="player1-info" class="player-info">Seats: 0; States: </div>
+        <div id="player1-purse" class="player-purse"></div>
+        <div class="player1-log-container">
+          <label for="player1-log" class="player1-log-label">Action Log</label>
+          <textarea id="player1-log" readonly class="player1-log"></textarea>
         </div>
       </div>
-
+      <div class="main-panel">
+        <div class="map-container" id="map-container">
+          <!-- Interactive India map goes here -->
+        </div>
+        <div class="category-buttons-container" id="category-buttons-container">
+          <div class="category-btn-row">
+            <button class="category-btn" data-category="CoastalIndia">Coastal India</button>
+            <button class="category-btn" data-category="NortheastIndia">Northeast India</button>
+            <button class="category-btn" data-category="SouthIndia">South India</button>
+            <button class="category-btn" data-category="HindiHeartland">Hindi Heartland</button>
+            <button class="category-btn" data-category="AgriculturalRegion">Agricultural Region</button>
+          </div>
+          <div class="category-btn-row">
+            <button class="category-btn" data-category="BorderLands">Border Lands</button>
+            <button class="category-btn" data-category="Pilgrimage">Pilgrimage</button>
+            <button class="category-btn" data-category="UnionTerritories">Union Territories</button>
+            <button class="category-btn" data-category="IndustrialCorridor">Industrial Corridor</button>
+            <button class="category-btn" data-category="ITHubs">IT Hubs</button>
+          </div>
+          <div class="category-btn-row">
+            <button class="category-btn" data-category="Education">Education</button>
+            <button class="category-btn" data-category="TribalLands">Tribal Lands</button>
+            <button class="category-btn" data-category="TravelAndTourism">Travel & Tourism</button>
+            <button class="category-btn" data-category="NaturalResources">Natural Resources</button>
+            <button class="category-btn" data-category="HighUrbanization">High Urbanization</button>
+          </div>
+        </div>
+      </div>
+      <div class="tech-tree-panel">
+        <h2>Campaign Promises</h2>
+        <div id="tech-tree-rows"></div>
+      </div>
     </div>
-    <!-- Tech Tree Panel replaces Player 2 Panel -->
-    <div class="tech-tree-panel">
-      <h2>Campaign Promises</h2>
-      <div id="tech-tree-rows"></div>
+    <div class="info-container" id="info-container">
+      <!-- Global game info goes here -->
     </div>
-  </div>
-  <div class="info-container" id="info-container">
-    <!-- Global game info goes here -->
-  </div>
 
-  <script type="module" src="js/logger.js"></script>
-  <script type="module" src="js/purse.js"></script>
-  <script type="module" src="js/tech-tree.js"></script>
-  <script type="module" src="js/map.js"></script>
-  <script src="js/progress.js"></script>
-  <script src="js/player1.js"></script>
-  <script src="js/player2.js"></script>
-  <script src="js/selection.js"></script>
-  <script src="js/global.js"></script>
-
-</body>
+    <script type="module" src="js/logger.js"></script>
+    <script type="module" src="js/purse.js"></script>
+    <script type="module" src="js/tech-tree.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/player1.js"></script>
+    <script src="js/player2.js"></script>
+    <script src="js/selection.js"></script>
+    <script src="js/global.js"></script>
+  </body>
 </html>
