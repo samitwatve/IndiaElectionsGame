@@ -732,9 +732,9 @@ header.game-header::after{
 
 /* Highlighted region */
 .region-highlighted{
-  stroke:#1976d2!important; /* blue border */
+  stroke:black!important; /* black border */
   stroke-width:3!important;
-  filter:drop-shadow(0 0 6px #1976d2aa); z-index:2;
+  filter:drop-shadow(0 0 6px #0006); z-index:2;
 }
 
 /* —————————————————————————————————————————————— */
