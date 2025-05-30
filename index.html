@@ -25,25 +25,7 @@
     </div>
 
     <div class="timer-container">
-      <div class="circle-timer circle-timer-lg">
-        <svg width="180" height="180">
-          <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
-          <circle id="timer-progress" cx="90" cy="90" r="80" stroke="#3498db" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" />
-        </svg>
-        <div class="timer-text timer-phase" id="timer-phase">Phase 1 / 10</div>
-      </div>
-      <!-- Projected Seats Circle Display -->
-      <div class="circle-seats">
-        <svg width="180" height="180">
-          <circle cx="90" cy="90" r="80" stroke="#e6e6e6" stroke-width="12" fill="none" />
-          <!-- Arcs for P1, P2, Others will be drawn here by JS -->
-          <circle id="seats-p1" cx="90" cy="90" r="80" stroke="#ff9800" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p1" />
-          <circle id="seats-p2" cx="90" cy="90" r="80" stroke="#43a047" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-p2" />
-          <circle id="seats-others" cx="90" cy="90" r="80" stroke="#bdbdbd" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="0" class="seats-others" />
-        </svg>
-        <div class="timer-text seats-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
-      </div>
-    </div>
+    <!-- Timer and Seats moved inside main-panel below -->
     <header class="main-header">
       <h1 class="main-title">India Elections Game</h1>
       <i class="fas fa-cog main-cog"></i>
@@ -61,6 +43,7 @@
         </div>
       </div>
       <div class="main-panel">
+        <!-- Timer and Seats will be moved to the sidebar below -->
         <div class="map-container" id="map-container">
           <!-- Interactive India map goes here -->
         </div>
@@ -89,7 +72,25 @@
         </div>
       </div>
       <div class="tech-tree-panel">
-        <h2>Campaign Promises</h2>
+        <div class="rings-row" style="display: flex; gap: 24px; justify-content: center; margin-bottom: 24px; margin-top: 0;">
+          <div class="circle-timer circle-timer-sm">
+            <svg width="110" height="110">
+              <circle cx="55" cy="55" r="48" stroke="#e6e6e6" stroke-width="8" fill="none" />
+              <circle id="timer-progress" cx="55" cy="55" r="48" stroke="#3498db" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="302" stroke-dashoffset="0" />
+            </svg>
+            <div class="timer-text timer-phase" id="timer-phase">Phase 1 / 10</div>
+          </div>
+          <div class="circle-seats circle-seats-sm">
+            <svg width="110" height="110">
+              <circle cx="55" cy="55" r="48" stroke="#e6e6e6" stroke-width="8" fill="none" />
+              <circle id="seats-p1" cx="55" cy="55" r="48" stroke="#ff9800" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="302" stroke-dashoffset="0" class="seats-p1" />
+              <circle id="seats-p2" cx="55" cy="55" r="48" stroke="#43a047" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="302" stroke-dashoffset="0" class="seats-p2" />
+              <circle id="seats-others" cx="55" cy="55" r="48" stroke="#bdbdbd" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="302" stroke-dashoffset="0" class="seats-others" />
+            </svg>
+            <div class="timer-text seats-text" id="seats-text">P1: 0 | P2: 0 | Others: 0</div>
+          </div>
+        </div>
+        <h2 style="margin-top: 0;">Campaign Promises</h2>
         <div id="tech-tree-rows"></div>
       </div>
     </div>

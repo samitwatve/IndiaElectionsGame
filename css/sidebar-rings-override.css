@@ -1,0 +1,5 @@
+/* Sidebar Ring Label Size Override */
+.tech-tree-panel .circle-timer-sm .timer-phase,
+.tech-tree-panel .circle-seats-sm .seats-text {
+  font-size: 0.78em;
+}

@@ -4,24 +4,27 @@
 // ----------------------------
 // 5×4 Campaign Tech‑Tree (20)
 // ----------------------------
+// ----------------------------
+// 6×4 Campaign Tech-Tree (24)
+// ----------------------------
 export const policyTree = {
   /* 1 ── Social & Cultural Identity */
-'Social Policy': [
-  'Hindutva',
-  'Uniform Civil Code',
-  'Hindi Education Mandate',
-  'Secularism'
-],
+  'Social Policy': [
+    'Hindutva',
+    'Uniform Civil Code',
+    'Hindi Education Mandate',
+    'Secularism'
+  ],
 
-/* 2 ── Social Justice & Inclusion */
-'Social Justice & Inclusion': [
-  'Mandal Commission',
-  'Women’s Reservation',
-  'Tribal Rights',
-  'Waqf Board Reforms'
-],
+  /* 2 ── Social Justice & Inclusion */
+  'Justice & Inclusion': [
+    'Mandal Commission',
+    'Women’s Reservation',
+    'Tribal Rights',
+    'Waqf Board Reforms'
+  ],
 
-/* 3 ── Infrastructure & Development */
+  /* 3 ── Infrastructure & Development */
   'Infrastructure': [
     'Highways & Airports',
     'Ports Modernisation',
@@ -29,20 +32,28 @@ export const policyTree = {
     'Defense & Border Infra'
   ],
 
-  /* 4 ── Economic & Fiscal Reform */
-  'Economic & Fiscal Reform': [
+  /* 4 ── Economic Policy */
+  'Economic Policy': [
     'MGNREGA Expansion',
     'GST',
-    'Digital India & E-Governance',
-    'Industrial & Mining Corridors'
+    'Digital India',
+    'Industry & Mining'
   ],
 
   /* 5 ── Agriculture & Environment */
   'Agriculture & Environment': [
     'Farm Loan Waivers',
-    'River‑Linking Projects',
+    'River-Linking Projects',
     'GMOs',
     'Farm Bills'
+  ],
+
+  /* 6 ── Public Health & Welfare  ← new card */
+  'Public Health & Welfare': [
+    'Swachh Bharat Mission',
+    'Ayushman Bharat',
+    'P M Jan-Dhan Yojana',
+    'Beti Bachao Beti Padhao'
   ]
 };
 

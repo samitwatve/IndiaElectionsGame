@@ -600,7 +600,14 @@ header.game-header::after{
   padding:0; display:flex; flex-direction:column;
   border-left:1px solid #e0e0e0; box-shadow:-2px 0 8px rgba(0,0,0,.03);
 }
-.tech-tree-panel h2{margin:0 0 12px; font-size:1.08em; color:#1a2a4a; font-weight:700;}
+.tech-tree-panel h2{
+  margin:0 0 12px;
+  font-size:1.08em;
+  color:#1a2a4a;
+  font-weight:700;
+  text-align:center;
+  width:100%;
+}
 
 /* Removed unused .campaign-card-grid and related .campaign-card rules */
 .campaign-card .card-title{font-weight:600; font-size:.96em; color:#2d3a4a;}
