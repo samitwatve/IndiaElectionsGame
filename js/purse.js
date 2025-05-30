@@ -67,6 +67,10 @@ for (const file of soundFiles) {
 }
 
 export function playSound(filename) {
+    // Check global sound toggle
+    if (typeof window !== 'undefined' && typeof window.isSoundOn === 'function' && !window.isSoundOn()) {
+        return; // Sound is OFF
+    }
     const cached = soundCache[filename];
     if (cached) {
         // Clone the audio node to allow overlapping sounds

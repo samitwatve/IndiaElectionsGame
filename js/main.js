@@ -4,6 +4,16 @@ import './map.js';
 import { logAction, saveLogToFile, logGameStart } from './logger.js';
 import { addPhasePurseBonus } from './purse.js';
 import { updateTimer, showGameOverScreen, nextPhase, startTimer } from './game_timer.js';
+import { toggleSound, toggleMusic, showHelp } from './menu.js';
+// Attach menu bar event listeners after DOM is ready
+window.addEventListener('DOMContentLoaded', () => {
+  const soundBtn = document.getElementById('sound-toggle-btn');
+  const musicBtn = document.getElementById('music-toggle-btn');
+  const helpBtn = document.getElementById('help-btn');
+  if (soundBtn) soundBtn.onclick = toggleSound;
+  if (musicBtn) musicBtn.onclick = toggleMusic;
+  if (helpBtn) helpBtn.onclick = showHelp;
+});
 
 // --- Start Screen and Background Music Logic ---
 

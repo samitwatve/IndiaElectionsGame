@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>India Elections Game UI</title>
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Top-right menu bar -->
+    <div class="menu-bar" id="menu-bar">
+      <button id="sound-toggle-btn" title="Toggle Sounds"><i id="sound-toggle-icon" class="fas fa-volume-up"></i></button>
+      <button id="music-toggle-btn" title="Toggle Music"><i id="music-toggle-icon" class="fas fa-music"></i></button>
+      <button id="help-btn" title="Help"><i class="fas fa-question"></i></button>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="help-modal">
+      <div class="help-content">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Each player takes turns to campaign in Indian states and win seats.</li>
+          <li>Use your purse wisely to maximize your seats and influence.</li>
+          <li>Click on a state to campaign. Each campaign costs money based on the number of seats.</li>
+          <li>Use the tech tree to unlock campaign promises and bonuses.</li>
+          <li>The player with the most seats at the end wins!</li>
+        </ul>
+        <button onclick="document.getElementById('help-modal').style.display='none'">Close</button>
+      </div>
+    </div>
   </head>
   <body>
     <div id="start-screen" class="start-screen">
@@ -32,6 +54,13 @@
     </header>
 
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/menu.js"></script>
+    <script>
+      import { toggleSound, toggleMusic, showHelp } from './js/menu.js';
+      document.getElementById('sound-toggle-btn').onclick = toggleSound;
+      document.getElementById('music-toggle-btn').onclick = toggleMusic;
+      document.getElementById('help-btn').onclick = showHelp;
+    </script>
     <div class="game-container">
       <div class="player-panel player1-panel">
         <h2>Player 1</h2>

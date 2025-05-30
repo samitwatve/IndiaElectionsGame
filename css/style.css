@@ -1,3 +1,95 @@
+/* ===== Top-right Menu Bar ===== */
+.menu-bar {
+  position: fixed;
+  top: 12px;
+  right: 24px;
+  z-index: 3000;
+  display: flex;
+  gap: 16px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 6px 14px;
+  align-items: center;
+}
+.menu-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.menu-bar button:hover {
+  background: #e3e9f7;
+  color: #004ba0;
+}
+
+.menu-bar button:active {
+  background: #d1e0f7;
+  color: #004ba0;
+  outline: 2px solid #1976d2;
+  outline-offset: 0px;
+}
+
+.menu-bar button:focus {
+  background: #e3e9f7;
+  color: #004ba0;
+  outline: 2px solid #1976d2;
+  outline-offset: 0px;
+}
+
+/* ===== Help Modal ===== */
+.help-modal {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  align-items: center;
+  justify-content: center;
+}
+.help-modal[style*="display: flex"] {
+  display: flex !important;
+}
+.help-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  max-width: 420px;
+  width: 90vw;
+  text-align: left;
+  position: relative;
+}
+.help-content h2 {
+  margin-top: 0;
+  color: #1976d2;
+  font-size: 1.3em;
+  margin-bottom: 16px;
+}
+.help-content ul {
+  margin: 0 0 18px 0;
+  padding-left: 20px;
+  color: #333;
+  font-size: 1.05em;
+}
+.help-content button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+.help-content button:hover {
+  background: #004ba0;
+}
 /* === Sidebar Ring Overrides === */
 .tech-tree-panel .rings-row {
   display: flex;
