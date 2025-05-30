@@ -4,18 +4,20 @@ import { addPhasePurseBonus } from './purse.js';
 
 let totalPhases = 2;
 window.currentPhase = 1;
+
 let duration = 27;
 let timeLeft = duration;
 window.duration = duration;
 window.timeLeft = timeLeft;
 const circle = document.getElementById('timer-progress');
 const phaseText = document.getElementById('timer-phase');
-const radius = 80;
-const circumference = 2 * Math.PI * radius;
+const radius = 48; // Match SVG r=48
+const circumference = 2 * Math.PI * radius; // ≈ 302
 
 export function updateTimer() {
-  const offset = circumference * (1 - timeLeft / duration);
-  circle.style.strokeDashoffset = circumference - offset;
+  // Progress: 0 (full) to circumference (empty)
+  const progress = timeLeft / duration;
+  circle.style.strokeDashoffset = circumference * (1 - progress);
   phaseText.textContent = `Phase ${window.currentPhase} / ${totalPhases}`;
   window.timeLeft = timeLeft;
   window.duration = duration;

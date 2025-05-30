@@ -40,7 +40,8 @@ function updateProjectedSeatsCircle() {
     }
 
     // Update arcs
-    const circumference = 2 * Math.PI * 80; // r=80 (for bigger circle)
+    const radius = 48; // Match SVG r=48
+    const circumference = 2 * Math.PI * radius; // ≈ 302
     // Proportions
     const p1Prop = p1Seats / totalSeats;
     const p2Prop = p2Seats / totalSeats;
