@@ -8,6 +8,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Top-right menu bar and Help Modal moved to body for valid HTML -->
+  </head>
+
+  <body>
     <!-- Top-right menu bar -->
     <div class="menu-bar" id="menu-bar">
       <button id="sound-toggle-btn" title="Toggle Sounds"><i id="sound-toggle-icon" class="fas fa-volume-up"></i></button>
@@ -29,8 +33,7 @@
         <button onclick="document.getElementById('help-modal').style.display='none'">Close</button>
       </div>
     </div>
-  </head>
-  <body>
+
     <div id="start-screen" class="start-screen">
       <h1 class="start-title">India Elections Game</h1>
       <button id="start-game-btn" class="start-game-btn">Start Game</button>
@@ -47,11 +50,12 @@
     </div>
 
     <div class="timer-container">
-    <!-- Timer and Seats moved inside main-panel below -->
-    <header class="main-header">
-      <h1 class="main-title">India Elections Game</h1>
-      <i class="fas fa-cog main-cog"></i>
-    </header>
+      <!-- Timer and Seats moved inside main-panel below -->
+      <header class="main-header">
+        <h1 class="main-title">India Elections Game</h1>
+        <i class="fas fa-cog main-cog"></i>
+      </header>
+    </div>
 
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/menu.js"></script>
@@ -61,6 +65,7 @@
       document.getElementById('music-toggle-btn').onclick = toggleMusic;
       document.getElementById('help-btn').onclick = showHelp;
     </script>
+
     <div class="game-container">
       <div class="player-panel player1-panel">
         <h2>Player 1</h2>
@@ -78,25 +83,25 @@
         </div>
         <div class="category-buttons-container" id="category-buttons-container">
           <div class="category-btn-row">
+            <button class="category-btn" data-category="UnionTerritory">Union Territories</button>
             <button class="category-btn" data-category="CoastalIndia">Coastal India</button>
             <button class="category-btn" data-category="NortheastIndia">Northeast India</button>
             <button class="category-btn" data-category="SouthIndia">South India</button>
             <button class="category-btn" data-category="HindiHeartland">Hindi Heartland</button>
-            <button class="category-btn" data-category="AgriculturalRegion">Agricultural Region</button>
           </div>
           <div class="category-btn-row">
+            <button class="category-btn" data-category="AgriculturalRegion">Agricultural Region</button>
             <button class="category-btn" data-category="BorderLands">Border Lands</button>
             <button class="category-btn" data-category="Pilgrimage">Pilgrimage</button>
-            <button class="category-btn" data-category="UnionTerritories">Union Territories</button>
             <button class="category-btn" data-category="IndustrialCorridor">Industrial Corridor</button>
-            <button class="category-btn" data-category="ITHubs">IT Hubs</button>
+            <button class="category-btn" data-category="Manufacturing">Manufacturing</button>
           </div>
           <div class="category-btn-row">
             <button class="category-btn" data-category="Education">Education</button>
             <button class="category-btn" data-category="TribalLands">Tribal Lands</button>
-            <button class="category-btn" data-category="TravelAndTourism">Travel & Tourism</button>
+            <button class="category-btn" data-category="TravelAndTourism">Travel &amp; Tourism</button>
             <button class="category-btn" data-category="NaturalResources">Natural Resources</button>
-            <button class="category-btn" data-category="HighUrbanization">High Urbanization</button>
+            <button class="category-btn" data-category="MinorityAreas">Minority Areas</button>
           </div>
         </div>
       </div>
@@ -123,6 +128,7 @@
         <div id="tech-tree-rows"></div>
       </div>
     </div>
+
     <div class="info-container" id="info-container">
       <!-- Global game info goes here -->
     </div>
