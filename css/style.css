@@ -1,3 +1,22 @@
+/*  Layout the six promise “cards” in two columns × three rows */
+#tech-tree-rows {
+  display: grid;
+  /* two 258px-wide columns (original width) */
+  grid-template-columns: repeat(2, 258px);
+  /* three 200px-tall rows (even taller cards) */
+  grid-template-rows: repeat(3, 200px);
+  /* spacing between cards */
+  gap: 22px;
+  /* center the whole grid within the 586px panel */
+  justify-content: center;
+  /* make sure it fills the panel’s width so centering works */
+  width: 100%;
+}
+.tech-tree-section {
+  /* each “card” is exactly 258×200 */
+  width: 258px;
+  height: 200px;
+}
 /* Timer and Seats Ring Layout (from removed <style> in index.html and improved for both rings) */
 .timer-container {
   position: absolute;
@@ -315,7 +334,7 @@
   border-radius: 10px;
   margin-bottom: 18px;
   box-shadow: 0 1px 6px rgba(30,60,120,0.06);
-  padding: 10px 6px 18px 6px;
+  padding: 10px 0 18px 0;
   border: 1.5px solid #e0e7ef;
 }
 .tech-tree-section-header {
@@ -380,10 +399,10 @@ header.game-header::after{
 /* —————————————————————————————————————————————— */
 .game-container{
   display:grid;
-  grid-template-columns:226px 1fr 293px;        /* 3 rectangles from mock‑up */
+  grid-template-columns:226px 1fr 586px;        /* 3 rectangles from mock‑up, right column doubled */
   height:calc(100vh - 38px - 60px);             /* minus header & footer */
   margin:38px auto 0 auto;                      /* push below header */
-  max-width:1064px; background:#fff;
+  max-width:1650px; background:#fff;
   border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,.08);
   overflow:hidden;
 }
@@ -473,22 +492,13 @@ header.game-header::after{
 /*  6.  Tech‑tree right column                    */
 /* —————————————————————————————————————————————— */
 .tech-tree-panel{
-  width:293px; min-width:293px; background:#f4f8fd;
+  width:586px; min-width:586px; background:#f4f8fd;
   padding:18px 12px; display:flex; flex-direction:column;
   border-left:1px solid #e0e0e0; box-shadow:-2px 0 8px rgba(0,0,0,.03);
 }
 .tech-tree-panel h2{margin:0 0 12px; font-size:1.08em; color:#1a2a4a; font-weight:700;}
 
-/* Five fixed slots (258×129) for promise cards */
-.campaign-card-grid{
-  display:flex; flex-direction:column; gap:22px; width:100%;
-}
-.campaign-card{
-  height:129px; background:#f4f3f0; border-radius:12px;
-  box-shadow:0 2px 6px rgba(30,60,120,.08);
-  padding:14px 18px; position:relative;
-  display:flex; flex-direction:column; justify-content:space-between;
-}
+/* Removed unused .campaign-card-grid and related .campaign-card rules */
 .campaign-card .card-title{font-weight:600; font-size:.96em; color:#2d3a4a;}
 
 /* Progress / health bar inside card */
@@ -540,7 +550,7 @@ header.game-header::after{
 @media(max-width:1100px){
   .map-container{width:90vw; height:40vh; min-height:120px;}
   .player-panel{width:90px; min-width:90px; padding:8px 2px;}
-  .tech-tree-panel{width:180px; min-width:180px;}
+  .tech-tree-panel{width:360px; min-width:360px;}
 }
 @media(max-width:800px){
   .player-panel,.tech-tree-panel{width:100%; min-width:0; border:none; box-shadow:none;}
