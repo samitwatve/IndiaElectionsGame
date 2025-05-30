@@ -1,3 +1,19 @@
+// Purse logic for Player 2 (AI)
+let player2Purse = 375; // 1.5x starting value
+
+export function getPlayer2Purse() {
+    return player2Purse;
+}
+
+export function setPlayer2Purse(val) {
+    player2Purse = val;
+}
+
+export function addPhasePurseBonusAI(phase) {
+    player2Purse += 375; // or whatever the per-phase bonus is
+    logAction(`<Player2> received ₹ +375M`, phase);
+    // Optionally, update a Player 2 purse display here
+}
 // Add 100M to Player 1's purse at the end of each phase
 import { logAction } from './logger.js';
 export function addPhasePurseBonus(phase) {

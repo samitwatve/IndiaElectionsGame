@@ -1,6 +1,6 @@
 // game_timer.js - Handles timer, phase, and game over logic
 import { logAction, saveLogToFile, logGameStart } from './logger.js';
-import { addPhasePurseBonus } from './purse.js';
+import { addPhasePurseBonus, addPhasePurseBonusAI } from './purse.js';
 
 let totalPhases = 2;
 window.currentPhase = 1;
@@ -42,6 +42,7 @@ export function nextPhase() {
     timeLeft = duration;
     logAction(`=============PHASE ${window.currentPhase} START============`, window.currentPhase);
     addPhasePurseBonus(window.currentPhase);
+    addPhasePurseBonusAI(window.currentPhase);
     updateTimer();
     phaseText.classList.remove('phase-animate');
     void phaseText.offsetWidth;

@@ -1,6 +1,8 @@
 // main.js - Handles start screen, timer, and game over logic
 
 import './map.js';
+import { startAITakingAction } from './AI_player.js';
+import { policyTree } from './tech-tree.js';
 import { logAction, saveLogToFile, logGameStart } from './logger.js';
 import { addPhasePurseBonus } from './purse.js';
 import { updateTimer, showGameOverScreen, nextPhase, startTimer } from './game_timer.js';
@@ -31,6 +33,25 @@ function startGame() {
   }
   window.bgMusic.play();
   startTimer();
+
+  // Wait for map and states data to be loaded
+  const tryStartAI = () => {
+    if (window.statesDataMap && window.popularityScores) {
+      // Flatten policyTree into an array of campaign promise objects
+      const campaignPromises = Object.entries(policyTree).flatMap(([category, promises]) =>
+        promises.map(name => ({ name, category, cost: 10 }))
+      );
+      // Start AI actions
+      startAITakingAction({
+        player1Purse: 250, // or use getPlayer1Purse() if available
+        states: Object.values(window.statesDataMap),
+        campaignPromises
+      });
+    } else {
+      setTimeout(tryStartAI, 200); // Retry until data is ready
+    }
+  };
+  tryStartAI();
 }
 startBtn.addEventListener('click', startGame);
 

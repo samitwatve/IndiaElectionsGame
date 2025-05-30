@@ -1,15 +1,15 @@
-                  // Helper: refresh all state colors based on current popularity
-                  function refreshAllStateColors() {
-                      Object.entries(window.popularityScores).forEach(([id, popObj]) => {
-                          const region = svg.querySelector(`#${id}`);
-                          if (region) {
-                              region.classList.remove('lean-p1', 'lean-p2', 'lean-none');
-                              region.style.fill = popularityToColor(popObj);
-                          }
-                      });
-                      // Also update projected seats circle
-                      updateProjectedSeatsCircle();
-                  }
+// Helper: refresh all state colors based on current popularity
+function refreshAllStateColors() {
+    Object.entries(window.popularityScores).forEach(([id, popObj]) => {
+        const region = svg.querySelector(`#${id}`);
+        if (region) {
+            region.classList.remove('lean-p1', 'lean-p2', 'lean-none');
+            region.style.fill = popularityToColor(popObj);
+        }
+    });
+    // Also update projected seats circle
+    updateProjectedSeatsCircle();
+}
 // --- Projected Seats Circle Logic ---
 function updateProjectedSeatsCircle() {
     // Get popularityScores and statesDataMap
