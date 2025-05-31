@@ -92,6 +92,15 @@ export function addPhasePurseBonusAI(phase) {
     logAction(`<Player2> received ₹ +375M`, phase);
     // Category bonuses for Player 2
     awardCategoryBonuses(2, phase);
+    // Campaign promise completion bonus for Player 2 (22.5M per completed promise, every phase)
+    if (window.p2PromiseProgress && window.p2PromiseBonusAwarded) {
+        Object.keys(window.p2PromiseBonusAwarded).forEach(leaf => {
+            if (window.p2PromiseBonusAwarded[leaf] && window.p2PromiseProgress[leaf] === 10) {
+                player2Purse += 22.5;
+                logAction(`<Player2> received RECURRING PROMISE BONUS ₹ +22.5M for '${leaf}'`, phase);
+            }
+        });
+    }
     // Optionally, update a Player 2 purse display here
 }
 // Add 100M to Player 1's purse at the end of each phase
@@ -103,6 +112,17 @@ export function addPhasePurseBonus(phase) {
     logAction(`<Player1> received ₹ +250M`, phase);
     // Category bonuses for Player 1
     awardCategoryBonuses(1, phase);
+    // Campaign promise completion bonus for Player 1 (15M per completed promise, every phase)
+    if (window.p1PromiseProgress && window.p1PromiseBonusAwarded) {
+        Object.keys(window.p1PromiseBonusAwarded).forEach(leaf => {
+            if (window.p1PromiseBonusAwarded[leaf] && window.p1PromiseProgress[leaf] === 10) {
+                player1Purse += 15;
+                updatePlayer1PurseDisplay();
+                showPlayer1PurseAddition(15);
+                logAction(`<Player1> received RECURRING PROMISE BONUS ₹ +15M for '${leaf}'`, phase);
+            }
+        });
+    }
 }
 // Show green animation for cash added to purse
 export function showPlayer1PurseAddition(amount) {

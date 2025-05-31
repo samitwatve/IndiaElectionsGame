@@ -127,6 +127,10 @@ function renderTechTreeRows(tree, container) {
           barFill.style.background = color;
         }
 
+        // Track if bonus has been awarded for each player for each promise
+        if (!window.p1PromiseBonusAwarded) window.p1PromiseBonusAwarded = {};
+        if (!window.p2PromiseBonusAwarded) window.p2PromiseBonusAwarded = {};
+
         // Click to increase fill for Player 1 (10M per click)
         barContainer.addEventListener('click', function() {
           const { p1, p2 } = getProgress(leaf);
@@ -146,6 +150,18 @@ function renderTechTreeRows(tree, container) {
               // Log the action
               logAction(`<Player1> spent ₹ 10M on ${leaf}`);
               updateBarUI();
+              // Award bonus if just completed (and not already awarded)
+              if (window.p1PromiseProgress[leaf] === 10 && !window.p1PromiseBonusAwarded[leaf]) {
+                window.p1PromiseBonusAwarded[leaf] = true;
+                let bonus = 15;
+                setPlayer1Purse(getPlayer1Purse() + bonus);
+                updatePlayer1PurseDisplay();
+                import('./purse.js').then(({ showPlayer1PurseAddition, playSound }) => {
+                  showPlayer1PurseAddition(bonus);
+                  playSound('cash_added.mp3');
+                });
+                logAction(`<Player1> COMPLETED campaign promise '${leaf}' and received ₹ +${bonus}M bonus!`);
+              }
               if (window.p1PromiseProgress[leaf] === 10 && window.p1PromiseProgress[leaf] > ((window.p2PromiseProgress && window.p2PromiseProgress[leaf]) || 0)) {
                 barContainer.classList.add('shake');
                 setTimeout(() => barContainer.classList.remove('shake'), 400);
@@ -164,9 +180,22 @@ function renderTechTreeRows(tree, container) {
           }
         });
 
+
         // Listen for AI/Player 2 progress updates (polling or event-based)
-        // For now, use a MutationObserver or polling to update bar UI every 500ms
-        setInterval(updateBarUI, 500);
+        // Also, check for Player 2 bonus award
+        setInterval(() => {
+          updateBarUI();
+          // Award Player 2 bonus if just completed (and not already awarded)
+          if (window.p2PromiseProgress && window.p2PromiseProgress[leaf] === 10 && !window.p2PromiseBonusAwarded[leaf]) {
+            window.p2PromiseBonusAwarded[leaf] = true;
+            // Give Player 2 the bonus
+            import('./purse.js').then(({ getPlayer2Purse, setPlayer2Purse, logAction }) => {
+              let bonus = 22.5;
+              setPlayer2Purse(getPlayer2Purse() + bonus);
+              logAction(`<Player2> COMPLETED campaign promise '${leaf}' and received ₹ +${bonus}M bonus!`);
+            });
+          }
+        }, 500);
         // Initial render
         updateBarUI();
 
