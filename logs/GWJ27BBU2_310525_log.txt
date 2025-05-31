@@ -1,0 +1,174 @@
+===GAME START===
+Game ID: GWJ27BBU2
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ 26M on state: Gujarat
+[00:04] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[00:06] <Player2> spent ₹ 1M on state: Sikkim
+[00:07] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:08] <Player2> spent ₹ 48M on state: Maharashtra
+[00:09] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:09] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:09] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:10] <Player2> spent ₹ 1M on state: Puducherry
+[00:10] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:11] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:11] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:12] <Player2> spent ₹ 5M on state: Jammu And Kashmir
+[00:12] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:14] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:16] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:18] <Player2> spent ₹ 10M on promise: Digital India
+[00:18] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:18] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:19] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:20] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:20] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:20] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:22] <Player2> spent ₹ 2M on state: Meghalaya
+[00:24] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[00:26] <Player2> spent ₹ 26M on state: Gujarat
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹247M | Funds Remaining: ₹3M
+Player 2: Funds Spent: ₹169M | Funds Remaining: ₹206M
+
+Projected Seats: Player 1: 147 | Player 2: 143 | Others: 253
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 41% | 25% | 34%
+Andhra Pradesh: 53% | 15% | 32%
+Arunachal Pradesh: 34% | 45% | 21%
+Assam: 18% | 24% | 58%
+Bihar: 17% | 29% | 54%
+Chandigarh: 33% | 26% | 41%
+Chhattisgarh: 30% | 24% | 46%
+Dadra And Nagar Haveli: 23% | 29% | 48%
+Daman And Diu: 13% | 11% | 76%
+Delhi: 14% | 20% | 66%
+Goa: 29% | 12% | 59%
+Gujarat: 12% | 33% | 55%
+Haryana: 40% | 40% | 20%
+Himachal Pradesh: 51% | 16% | 33%
+Jammu And Kashmir: 23% | 15% | 62%
+Jharkhand: 20% | 15% | 65%
+Karnataka: 55% | 14% | 31%
+Kerala: 11% | 11% | 78%
+Ladakh: 25% | 10% | 65%
+Lakshadweep: 17% | 13% | 70%
+Madhya Pradesh: 13% | 56% | 31%
+Maharashtra: 16% | 16% | 68%
+Manipur: 11% | 11% | 78%
+Meghalaya: 31% | 26% | 43%
+Mizoram: 18% | 50% | 32%
+Nagaland: 26% | 20% | 54%
+Odisha: 22% | 59% | 19%
+Puducherry: 47% | 10% | 43%
+Punjab: 13% | 20% | 67%
+Rajasthan: 16% | 37% | 47%
+Sikkim: 11% | 24% | 65%
+Tamil Nadu: 45% | 33% | 22%
+Telangana: 42% | 15% | 43%
+Tripura: 50% | 12% | 38%
+Uttar Pradesh: 18% | 25% | 57%
+Uttarakhand: 46% | 26% | 28%
+West Bengal: 49% | 22% | 29%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Ayushman Bharat: 1/10
+  Tribal Rights: 2/10
+  Ports Modernisation: 1/10
+  Digital India: 1/10
+  MGNREGA Expansion: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ 1M on state: Chandigarh
+[00:28] <Player1> spent ₹ 20M on a Kerala campaign
+[00:28] <Player1> spent ₹ 20M on a Kerala campaign
+[00:28] <Player1> spent ₹ 20M on a Kerala campaign
+[00:28] <Player1> spent ₹ 20M on a Kerala campaign
+[00:29] <Player2> spent ₹ 80M on state: Uttar Pradesh
+[00:29] <Player1> spent ₹ 20M on a Kerala campaign
+[00:29] <Player1> spent ₹ 20M on a Kerala campaign
+[00:30] <Player1> spent ₹ 20M on a Kerala campaign
+[00:30] <Player1> spent ₹ 20M on a Kerala campaign
+[00:30] <Player1> spent ₹ 20M on a Kerala campaign
+[00:31] <Player2> spent ₹ 10M on promise: Beti Bachao Beti Padhao
+[00:31] <Player1> spent ₹ 17M on a Telangana campaign
+[00:32] <Player1> spent ₹ 17M on a Telangana campaign
+[00:32] <Player1> spent ₹ 17M on a Telangana campaign
+[00:33] <Player2> spent ₹ 10M on promise: Swachh Bharat Mission
+[00:33] <Player1> spent ₹ 17M on a Telangana campaign
+[00:35] <Player2> spent ₹ 10M on promise: Beti Bachao Beti Padhao
+[00:37] <Player2> spent ₹ 10M on promise: P M Jan-Dhan Yojana
+[00:39] <Player2> spent ₹ 5M on state: Uttarakhand
+[00:41] <Player2> spent ₹ 1M on state: Daman And Diu
+[00:43] <Player2> spent ₹ 14M on state: Assam
+[00:45] <Player2> spent ₹ 26M on state: Gujarat
+[00:47] <Player2> spent ₹ 10M on promise: Highways & Airports
+[00:49] <Player2> spent ₹ 10M on promise: GMOs
+[00:51] <Player2> spent ₹ 1M on state: Daman And Diu
+[00:53] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹248M | Funds Remaining: ₹5M
+Player 2: Funds Spent: ₹198M | Funds Remaining: ₹383M
+
+Projected Seats: Player 1: 158 | Player 2: 148 | Others: 237
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 41% | 25% | 34%
+Andhra Pradesh: 53% | 15% | 32%
+Arunachal Pradesh: 34% | 45% | 21%
+Assam: 17% | 29% | 54%
+Bihar: 17% | 29% | 54%
+Chandigarh: 31% | 31% | 38%
+Chhattisgarh: 30% | 24% | 46%
+Dadra And Nagar Haveli: 23% | 29% | 48%
+Daman And Diu: 11% | 21% | 68%
+Delhi: 14% | 20% | 66%
+Goa: 29% | 12% | 59%
+Gujarat: 11% | 38% | 51%
+Haryana: 40% | 40% | 20%
+Himachal Pradesh: 51% | 16% | 33%
+Jammu And Kashmir: 23% | 15% | 62%
+Jharkhand: 20% | 15% | 65%
+Karnataka: 55% | 14% | 31%
+Kerala: 56% | 4% | 40%
+Ladakh: 25% | 10% | 65%
+Lakshadweep: 17% | 13% | 70%
+Madhya Pradesh: 13% | 56% | 31%
+Maharashtra: 16% | 16% | 68%
+Manipur: 11% | 11% | 78%
+Meghalaya: 31% | 26% | 43%
+Mizoram: 18% | 50% | 32%
+Nagaland: 26% | 20% | 54%
+Odisha: 22% | 59% | 19%
+Puducherry: 47% | 10% | 43%
+Punjab: 13% | 20% | 67%
+Rajasthan: 16% | 37% | 47%
+Sikkim: 11% | 24% | 65%
+Tamil Nadu: 45% | 33% | 22%
+Telangana: 62% | 11% | 27%
+Tripura: 50% | 12% | 38%
+Uttar Pradesh: 17% | 30% | 53%
+Uttarakhand: 43% | 31% | 26%
+West Bengal: 49% | 22% | 29%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Ayushman Bharat: 1/10
+  Tribal Rights: 2/10
+  Ports Modernisation: 1/10
+  Digital India: 1/10
+  MGNREGA Expansion: 1/10
+  Beti Bachao Beti Padhao: 2/10
+  Swachh Bharat Mission: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Highways & Airports: 1/10
+  GMOs: 1/10
+  Uniform Civil Code: 1/10
+
+[00:54] <Player2> spent ₹ 28M on state: Karnataka

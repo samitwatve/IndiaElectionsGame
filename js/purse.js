@@ -1,3 +1,62 @@
+// --- CATEGORY DOMINANCE BONUS LOGIC ---
+// Helper: Get all unique categories from statesDataMap
+function getAllCategories() {
+    if (!window.statesDataMap) return [];
+    const sample = Object.values(window.statesDataMap)[0];
+    return Object.keys(sample).filter(k => typeof sample[k] === 'boolean');
+}
+
+// Helper: For a given category, get all SvgIds in that category
+function getSvgIdsForCategory(category) {
+    if (!window.statesDataMap) return [];
+    return Object.values(window.statesDataMap)
+        .filter(d => d[category] === true)
+        .map(d => d.SvgId);
+}
+
+// Helper: For a given category, get total seats in that category
+function getTotalSeatsForCategory(category) {
+    if (!window.statesDataMap) return 0;
+    return Object.values(window.statesDataMap)
+        .filter(d => d[category] === true)
+        .reduce((sum, d) => sum + Number(d.LokSabhaSeats), 0);
+}
+
+// Helper: Check if a player leads in all states in a category
+function playerLeadsInCategory(player, category) {
+    if (!window.statesDataMap || !window.popularityScores) return false;
+    const svgIds = getSvgIdsForCategory(category);
+    if (svgIds.length === 0) return false;
+    return svgIds.every(id => {
+        const pop = window.popularityScores[id];
+        if (!pop) return false;
+        if (player === 1) return pop.p1 > pop.p2 && pop.p1 > pop.others;
+        if (player === 2) return pop.p2 > pop.p1 && pop.p2 > pop.others;
+        return false;
+    });
+}
+
+// Award category bonuses at the start of a phase
+function awardCategoryBonuses(player, phase) {
+    const categories = getAllCategories();
+    categories.forEach(category => {
+        if (playerLeadsInCategory(player, category)) {
+            const totalSeats = getTotalSeatsForCategory(category);
+            if (totalSeats > 0) {
+                const bonus = Math.round(totalSeats / 2);
+                if (player === 1) {
+                    player1Purse += bonus;
+                    updatePlayer1PurseDisplay();
+                    showPlayer1PurseAddition(bonus);
+                    logAction(`<Player1> received CATEGORY BONUS ₹ +${bonus}M for leading all in ${category} (${totalSeats} seats)`, phase);
+                } else if (player === 2) {
+                    player2Purse += bonus;
+                    logAction(`<Player2> received CATEGORY BONUS ₹ +${bonus}M for leading all in ${category} (${totalSeats} seats)`, phase);
+                }
+            }
+        }
+    });
+}
 // Purse logic for Player 2 (AI)
 let player2Purse = 375; // 1.5x starting value
 
@@ -12,6 +71,8 @@ export function setPlayer2Purse(val) {
 export function addPhasePurseBonusAI(phase) {
     player2Purse += 375; // or whatever the per-phase bonus is
     logAction(`<Player2> received ₹ +375M`, phase);
+    // Category bonuses for Player 2
+    awardCategoryBonuses(2, phase);
     // Optionally, update a Player 2 purse display here
 }
 // Add 100M to Player 1's purse at the end of each phase
@@ -21,6 +82,8 @@ export function addPhasePurseBonus(phase) {
     updatePlayer1PurseDisplay();
     showPlayer1PurseAddition(250);
     logAction(`<Player1> received ₹ +250M`, phase);
+    // Category bonuses for Player 1
+    awardCategoryBonuses(1, phase);
 }
 // Show green animation for cash added to purse
 export function showPlayer1PurseAddition(amount) {
