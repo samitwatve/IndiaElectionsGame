@@ -1,0 +1,10 @@
+/* Extra style for fake UT hitboxes */
+.ut-hitbox {
+  pointer-events: all;
+  opacity: 0.01; /* nearly invisible but always interactive */
+  transition: opacity 0.2s;
+}
+.ut-hitbox.region-highlighted {
+  opacity: 0.18;
+  fill: #ff9800;
+}

@@ -159,6 +159,7 @@ function popularityToColor(popObj) {
 
 import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse, shakePlayer1Purse, showPlayer1PurseDeduction } from './purse.js';
 import { logAction } from './logger.js';
+import { smallUTsHitboxes } from './small_uts_hitboxes.js';
 // On app start, load the SVG map into the map container and resize it appropriately
 document.addEventListener('DOMContentLoaded', function () {
     // Recalculate projected seats every 5 seconds
@@ -269,6 +270,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 svg.style.height = '100%';
                 svg.classList.add('india-svg-map');
                 mapContainer.appendChild(svg);
+
+                // --- Inject fake hitboxes for small UTs ---
+                smallUTsHitboxes.forEach(hitbox => {
+                  if (svg.getElementById(hitbox.id)) return; // Avoid duplicates
+                  let el = document.createElementNS('http://www.w3.org/2000/svg', hitbox.type);
+                  el.setAttribute('id', hitbox.id);
+                  el.setAttribute('x', hitbox.cx - hitbox.width / 2);
+                  el.setAttribute('y', hitbox.cy - hitbox.height / 2);
+                  el.setAttribute('width', hitbox.width);
+                  el.setAttribute('height', hitbox.height);
+                  el.setAttribute('rx', hitbox.rx);
+                  el.setAttribute('fill', hitbox.fill);
+                  el.setAttribute('style', hitbox.style);
+                  el.setAttribute('stroke', 'none');
+                  el.setAttribute('pointer-events', 'all');
+                  el.classList.add('ut-hitbox');
+                  svg.appendChild(el);
+                });
 
                 // --- INITIAL LEAN ASSIGNMENT AND EVENT BINDINGS ---
                 import(`./game_logic.js?t=${Date.now()}`).then(mod => {
@@ -451,6 +470,102 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                     lakshadweepBox.style.cursor = 'pointer';
                 }
+
+                // Add hover/click to fake hitboxes for small UTs
+                smallUTsHitboxes.forEach(hitbox => {
+                  const el = svg.getElementById(hitbox.id);
+                  const target = svg.getElementById(hitbox.targetId);
+                  if (!el || !target) return;
+                  // Hover: show info for the real region
+                  el.addEventListener('mouseenter', function (e) {
+                    if (!window.statesDataMap) {
+                      if (regionNameDisplay) regionNameDisplay.textContent = target.getAttribute('name') || target.id;
+                      return;
+                    }
+                    let data = window.statesDataMap[target.id];
+                    let popObj = window.popularityScores ? window.popularityScores[target.id] : undefined;
+                    if (data) {
+                      let popText = 'N/A';
+                      if (popObj && typeof popObj === 'object') {
+                        popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                      }
+                      const info = [
+                        `State: ${data.State}`,
+                        `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                        `Popularity: ${popText}`
+                      ].join(' | ');
+                      if (regionNameDisplay) regionNameDisplay.textContent = info;
+                    } else {
+                      if (regionNameDisplay) regionNameDisplay.textContent = target.getAttribute('name') || target.id;
+                    }
+                  });
+                  el.addEventListener('mouseleave', function (e) {
+                    if (regionNameDisplay) regionNameDisplay.textContent = '';
+                  });
+                  // Click: trigger the same logic as the real region
+                  el.addEventListener('click', function (e) {
+                    if (!window.popularityScores || !window.popularityScores[target.id]) return;
+                    let popObj = window.popularityScores[target.id];
+                    let seats = +window.statesDataMap[target.id].LokSabhaSeats;
+                    if (getPlayer1Purse() < seats) {
+                      shakePlayer1Purse();
+                      if (typeof playSound === 'function') {
+                        playSound('error.mp3');
+                      } else {
+                        const audio = new Audio('static/sounds/error.mp3');
+                        audio.volume = 0.7;
+                        audio.play();
+                      }
+                      return;
+                    }
+                    showRippleOnState(target, '#ff9800');
+                    setPlayer1Purse(getPlayer1Purse() - seats);
+                    updatePlayer1PurseDisplay();
+                    showPlayer1PurseDeduction(seats);
+                    const stateName = window.statesDataMap[target.id]?.State || target.id;
+                    logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
+                    if (typeof window !== 'undefined') {
+                      window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
+                    }
+                    let increase = 5;
+                    let newP1 = Math.min(100, popObj.p1 + increase);
+                    let delta = newP1 - popObj.p1;
+                    if (delta <= 0) return;
+                    let totalOther = popObj.p2 + popObj.others;
+                    let newP2 = popObj.p2;
+                    let newOthers = popObj.others;
+                    if (totalOther > 0) {
+                      newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
+                      newOthers = Math.max(0, 100 - newP1 - newP2);
+                    } else {
+                      newP2 = 0;
+                      newOthers = 100 - newP1;
+                    }
+                    window.popularityScores[target.id] = { p1: newP1, p2: newP2, others: newOthers };
+                    refreshAllStateColors();
+                    if (regionNameDisplay) {
+                      let data = window.statesDataMap[target.id];
+                      let popObj = window.popularityScores[target.id];
+                      let popText = 'N/A';
+                      if (popObj && typeof popObj === 'object') {
+                        popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                      }
+                      const info = [
+                        `State: ${data.State}`,
+                        `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                        `Popularity: ${popText}`
+                      ].join(' | ');
+                      regionNameDisplay.textContent = info;
+                    }
+                    if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
+                    if (lastHighlighted) {
+                      lastHighlighted.classList.remove('region-highlighted');
+                    }
+                    el.classList.add('region-highlighted');
+                    lastHighlighted = el;
+                  });
+                  el.style.cursor = 'pointer';
+                });
             }
         })
         .catch(err => {
