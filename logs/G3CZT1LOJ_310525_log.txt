@@ -1,0 +1,363 @@
+===GAME START===
+Game ID: G3CZT1LOJ
+===PHASE 1 START===
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:02] <Player2> spent ₹ 1M on state: Mizoram
+[00:02] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:04] <Player2> spent ₹ 10M on promise: Mandal Commission
+[00:04] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:04] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:06] <Player2> spent ₹ 2M on state: Tripura
+[00:06] <Player1> spent ₹ 20M on a Kerala campaign
+[00:06] <Player1> spent ₹ 20M on a Kerala campaign
+[00:08] <Player2> spent ₹ 42M on state: West Bengal
+[00:10] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[00:12] <Player2> spent ₹ 20M on state: Kerala
+[00:14] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[00:16] <Player2> spent ₹ 10M on promise: Farm Bills
+[00:18] <Player2> spent ₹ 10M on promise: Beti Bachao Beti Padhao
+[00:20] <Player2> spent ₹ 25M on state: Rajasthan
+[00:22] <Player2> spent ₹ 10M on promise: Digital India
+[00:24] <Player2> spent ₹ 80M on state: Uttar Pradesh
+[00:26] <Player2> spent ₹ 1M on state: Nagaland
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹221M | Funds Remaining: ₹29M
+Player 2: Funds Spent: ₹231M | Funds Remaining: ₹144M
+
+Projected Seats: Player 1: 148 | Player 2: 162 | Others: 233
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 25% | 23% | 52%
+Andhra Pradesh: 48% | 16% | 36%
+Arunachal Pradesh: 20% | 44% | 36%
+Assam: 34% | 31% | 35%
+Bihar: 46% | 12% | 42%
+Chandigarh: 32% | 35% | 33%
+Chhattisgarh: 28% | 32% | 40%
+Dadra And Nagar Haveli: 16% | 20% | 64%
+Daman And Diu: 33% | 40% | 27%
+Delhi: 31% | 39% | 30%
+Goa: 15% | 34% | 51%
+Gujarat: 29% | 57% | 14%
+Haryana: 20% | 12% | 68%
+Himachal Pradesh: 11% | 29% | 60%
+Jammu And Kashmir: 49% | 30% | 21%
+Jharkhand: 33% | 44% | 23%
+Karnataka: 46% | 20% | 34%
+Kerala: 37% | 26% | 37%
+Ladakh: 46% | 37% | 17%
+Lakshadweep: 34% | 41% | 25%
+Madhya Pradesh: 24% | 29% | 47%
+Maharashtra: 10% | 32% | 58%
+Manipur: 11% | 15% | 74%
+Meghalaya: 28% | 16% | 56%
+Mizoram: 13% | 15% | 72%
+Nagaland: 24% | 18% | 58%
+Odisha: 19% | 32% | 49%
+Puducherry: 47% | 15% | 38%
+Punjab: 33% | 31% | 36%
+Rajasthan: 36% | 28% | 36%
+Sikkim: 20% | 28% | 52%
+Tamil Nadu: 13% | 10% | 77%
+Telangana: 15% | 32% | 53%
+Tripura: 19% | 22% | 59%
+Uttar Pradesh: 23% | 47% | 30%
+Uttarakhand: 25% | 44% | 31%
+West Bengal: 21% | 27% | 52%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 1/10
+  Hindi Education Mandate: 1/10
+  Women’s Reservation: 1/10
+  Farm Bills: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Digital India: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ 17M on state: Telangana
+[00:27] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:27] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:28] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:29] <Player2> spent ₹ 1M on state: Dadra And Nagar Haveli
+[00:29] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:29] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:29] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:29] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:31] <Player2> spent ₹ 1M on state: Nagaland
+[00:33] <Player2> spent ₹ 25M on state: Rajasthan
+[00:35] <Player2> spent ₹ 10M on promise: Highways & Airports
+[00:37] <Player2> spent ₹ 10M on promise: Digital India
+[00:39] <Player2> spent ₹ 10M on promise: GMOs
+[00:41] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[00:43] <Player2> spent ₹ 1M on state: Nagaland
+[00:43] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:44] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:45] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:45] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:45] <Player1> spent ₹ 1M on a Puducherry campaign
+[00:47] <Player2> spent ₹ 7M on state: Delhi
+[00:49] <Player2> spent ₹ 10M on promise: Secularism
+[00:51] <Player2> spent ₹ 1M on state: Chandigarh
+[00:53] <Player2> spent ₹ 13M on state: Punjab
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹277M | Funds Remaining: ₹2M
+Player 2: Funds Spent: ₹126M | Funds Remaining: ₹393M
+
+Projected Seats: Player 1: 160 | Player 2: 164 | Others: 219
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 25% | 23% | 52%
+Andhra Pradesh: 48% | 16% | 36%
+Arunachal Pradesh: 20% | 44% | 36%
+Assam: 34% | 31% | 35%
+Bihar: 46% | 12% | 42%
+Chandigarh: 30% | 40% | 30%
+Chhattisgarh: 28% | 32% | 40%
+Dadra And Nagar Haveli: 15% | 25% | 60%
+Daman And Diu: 33% | 40% | 27%
+Delhi: 28% | 44% | 28%
+Goa: 15% | 34% | 51%
+Gujarat: 29% | 57% | 14%
+Haryana: 20% | 12% | 68%
+Himachal Pradesh: 11% | 29% | 60%
+Jammu And Kashmir: 49% | 30% | 21%
+Jharkhand: 33% | 44% | 23%
+Karnataka: 46% | 20% | 34%
+Kerala: 37% | 26% | 37%
+Ladakh: 46% | 37% | 17%
+Lakshadweep: 34% | 41% | 25%
+Madhya Pradesh: 24% | 29% | 47%
+Maharashtra: 10% | 32% | 58%
+Manipur: 11% | 15% | 74%
+Meghalaya: 28% | 16% | 56%
+Mizoram: 13% | 15% | 72%
+Nagaland: 22% | 28% | 50%
+Odisha: 19% | 32% | 49%
+Puducherry: 67% | 10% | 23%
+Punjab: 31% | 36% | 33%
+Rajasthan: 33% | 33% | 34%
+Sikkim: 20% | 28% | 52%
+Tamil Nadu: 48% | 5% | 47%
+Telangana: 14% | 37% | 49%
+Tripura: 19% | 22% | 59%
+Uttar Pradesh: 23% | 47% | 30%
+Uttarakhand: 25% | 44% | 31%
+West Bengal: 21% | 27% | 52%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 1/10
+  Hindi Education Mandate: 1/10
+  Women’s Reservation: 1/10
+  Farm Bills: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Digital India: 2/10
+  Highways & Airports: 1/10
+  GMOs: 1/10
+  Defense & Border Infra: 1/10
+  Ports Modernisation: 1/10
+  Secularism: 1/10
+
+[01:21] =============PHASE 3 START============
+[01:21] <Player1> received ₹ +250M
+[01:21] <Player2> received ₹ +375M
+[00:54] <Player2> spent ₹ 48M on state: Maharashtra
+[00:55] <Player1> spent ₹ 20M on a Kerala campaign
+[00:56] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:56] <Player1> spent ₹ 20M on a Kerala campaign
+[00:56] <Player1> spent ₹ 20M on a Kerala campaign
+[00:57] <Player1> spent ₹ 20M on a Kerala campaign
+[00:58] <Player2> spent ₹ 1M on state: Ladakh
+[00:59] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:59] <Player1> spent ₹ 28M on a Karnataka campaign
+[01:00] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[01:00] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[01:00] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[01:02] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[01:02] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:04] <Player2> spent ₹ 40M on state: Bihar
+[01:06] <Player2> spent ₹ 10M on promise: Secularism
+[01:08] <Player2> spent ₹ 26M on state: Gujarat
+[01:08] <Player1> spent ₹ 17M on a Telangana campaign
+[01:09] <Player1> spent ₹ 17M on a Telangana campaign
+[01:09] <Player1> spent ₹ 17M on a Telangana campaign
+[01:10] <Player2> spent ₹ 10M on promise: GST
+[01:12] <Player2> spent ₹ 11M on state: Chhattisgarh
+[01:14] <Player2> spent ₹ 10M on promise: Mandal Commission
+[01:16] <Player2> spent ₹ 40M on state: Bihar
+[01:18] <Player2> spent ₹ 1M on state: Daman And Diu
+[01:20] <Player2> spent ₹ 10M on promise: Beti Bachao Beti Padhao
+[01:21] --- PHASE 3 SUMMARY ---
+Player 1: Funds Spent: ₹238M | Funds Remaining: ₹14M
+Player 2: Funds Spent: ₹237M | Funds Remaining: ₹531M
+
+Projected Seats: Player 1: 168 | Player 2: 168 | Others: 208
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 25% | 23% | 52%
+Andhra Pradesh: 58% | 13% | 29%
+Arunachal Pradesh: 20% | 44% | 36%
+Assam: 34% | 31% | 35%
+Bihar: 40% | 22% | 38%
+Chandigarh: 30% | 40% | 30%
+Chhattisgarh: 26% | 37% | 37%
+Dadra And Nagar Haveli: 15% | 25% | 60%
+Daman And Diu: 30% | 45% | 25%
+Delhi: 28% | 44% | 28%
+Goa: 15% | 34% | 51%
+Gujarat: 26% | 62% | 12%
+Haryana: 20% | 12% | 68%
+Himachal Pradesh: 11% | 29% | 60%
+Jammu And Kashmir: 49% | 30% | 21%
+Jharkhand: 33% | 44% | 23%
+Karnataka: 56% | 16% | 28%
+Kerala: 57% | 18% | 25%
+Ladakh: 42% | 42% | 16%
+Lakshadweep: 34% | 41% | 25%
+Madhya Pradesh: 24% | 29% | 47%
+Maharashtra: 9% | 37% | 54%
+Manipur: 11% | 15% | 74%
+Meghalaya: 28% | 16% | 56%
+Mizoram: 13% | 15% | 72%
+Nagaland: 22% | 28% | 50%
+Odisha: 19% | 32% | 49%
+Puducherry: 72% | 8% | 20%
+Punjab: 31% | 36% | 33%
+Rajasthan: 33% | 33% | 34%
+Sikkim: 20% | 28% | 52%
+Tamil Nadu: 48% | 5% | 47%
+Telangana: 29% | 31% | 40%
+Tripura: 19% | 22% | 59%
+Uttar Pradesh: 23% | 47% | 30%
+Uttarakhand: 25% | 44% | 31%
+West Bengal: 21% | 27% | 52%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 2/10
+  Hindi Education Mandate: 1/10
+  Women’s Reservation: 1/10
+  Farm Bills: 1/10
+  Beti Bachao Beti Padhao: 2/10
+  Digital India: 2/10
+  Highways & Airports: 1/10
+  GMOs: 1/10
+  Defense & Border Infra: 2/10
+  Ports Modernisation: 1/10
+  Secularism: 2/10
+  River-Linking Projects: 1/10
+  MGNREGA Expansion: 1/10
+  GST: 1/10
+
+[01:48] =============PHASE 4 START============
+[01:48] <Player1> received ₹ +250M
+[01:48] <Player2> received ₹ +375M
+[01:21] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[01:21] <Player1> spent ₹ 17M on a Telangana campaign
+[01:21] <Player1> spent ₹ 17M on a Telangana campaign
+[01:22] <Player1> spent ₹ 17M on a Telangana campaign
+[01:23] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[01:23] <Player1> spent ₹ 17M on a Telangana campaign
+[01:25] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[01:27] <Player2> spent ₹ 10M on promise: Swachh Bharat Mission
+[01:29] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[01:29] <Player1> spent ₹ 17M on a Telangana campaign
+[01:29] <Player1> spent ₹ 17M on a Telangana campaign
+[01:30] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[01:30] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[01:31] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[01:31] <Player1> spent ₹ 28M on a Karnataka campaign
+[01:31] <Player1> spent ₹ 28M on a Karnataka campaign
+[01:32] <Player1> spent ₹ 20M on a Kerala campaign
+[01:32] <Player1> spent ₹ 20M on a Kerala campaign
+[01:33] <Player2> spent ₹ 10M on promise: Secularism
+[01:35] <Player2> spent ₹ 10M on promise: Mandal Commission
+[01:37] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[01:39] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[01:41] <Player2> spent ₹ 14M on state: Assam
+[01:41] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:42] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:42] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:43] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[01:43] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:43] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:44] <Player1> spent ₹ 1M on a Puducherry campaign
+[01:45] <Player2> spent ₹ 10M on promise: Smart Cities
+[01:47] <Player2> spent ₹ 10M on promise: GMOs
+[01:48] --- PHASE 4 SUMMARY ---
+Player 1: Funds Spent: ₹254M | Funds Remaining: ₹10M
+Player 2: Funds Spent: ₹144M | Funds Remaining: ₹762M
+
+Projected Seats: Player 1: 180 | Player 2: 163 | Others: 199
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 25% | 23% | 52%
+Andhra Pradesh: 68% | 10% | 22%
+Arunachal Pradesh: 20% | 44% | 36%
+Assam: 32% | 36% | 32%
+Bihar: 40% | 22% | 38%
+Chandigarh: 30% | 40% | 30%
+Chhattisgarh: 26% | 37% | 37%
+Dadra And Nagar Haveli: 15% | 25% | 60%
+Daman And Diu: 30% | 45% | 25%
+Delhi: 28% | 44% | 28%
+Goa: 15% | 34% | 51%
+Gujarat: 26% | 62% | 12%
+Haryana: 20% | 12% | 68%
+Himachal Pradesh: 11% | 29% | 60%
+Jammu And Kashmir: 49% | 30% | 21%
+Jharkhand: 33% | 44% | 23%
+Karnataka: 66% | 12% | 22%
+Kerala: 67% | 14% | 19%
+Ladakh: 42% | 42% | 16%
+Lakshadweep: 34% | 41% | 25%
+Madhya Pradesh: 24% | 29% | 47%
+Maharashtra: 9% | 37% | 54%
+Manipur: 11% | 15% | 74%
+Meghalaya: 28% | 16% | 56%
+Mizoram: 13% | 15% | 72%
+Nagaland: 22% | 28% | 50%
+Odisha: 19% | 32% | 49%
+Puducherry: 100% | 0% | 0%
+Punjab: 31% | 36% | 33%
+Rajasthan: 33% | 33% | 34%
+Sikkim: 20% | 28% | 52%
+Tamil Nadu: 48% | 5% | 47%
+Telangana: 59% | 19% | 22%
+Tripura: 19% | 22% | 59%
+Uttar Pradesh: 23% | 47% | 30%
+Uttarakhand: 25% | 44% | 31%
+West Bengal: 21% | 27% | 52%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 3/10
+  Hindi Education Mandate: 1/10
+  Women’s Reservation: 2/10
+  Farm Bills: 1/10
+  Beti Bachao Beti Padhao: 2/10
+  Digital India: 2/10
+  Highways & Airports: 1/10
+  GMOs: 2/10
+  Defense & Border Infra: 5/10
+  Ports Modernisation: 1/10
+  Secularism: 3/10
+  River-Linking Projects: 2/10
+  MGNREGA Expansion: 2/10
+  GST: 1/10
+  Uniform Civil Code: 1/10
+  Swachh Bharat Mission: 1/10
+  Ayushman Bharat: 1/10
+  Smart Cities: 1/10
+
+[01:48] <Player2> spent ₹ 10M on promise: Secularism

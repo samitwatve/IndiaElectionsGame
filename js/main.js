@@ -6,7 +6,7 @@ window.logPhaseSummary = logPhaseSummary;
 window.p1SpentThisPhase = 0;
 window.p2SpentThisPhase = 0;
 // Track starting purse for each phase
-import { getPlayer1Purse, getPlayer2Purse } from './purse.js';
+import { getPlayer1Purse, getPlayer2Purse, updateCategoryButtonBorders } from './purse.js';
 // Expose purse getters to global window for logger
 window.getPlayer1Purse = getPlayer1Purse;
 window.getPlayer2Purse = getPlayer2Purse;
@@ -16,6 +16,8 @@ window.p2PhaseStartPurse = 375;
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof getPlayer1Purse === 'function') window.p1PhaseStartPurse = getPlayer1Purse();
   if (typeof getPlayer2Purse === 'function') window.p2PhaseStartPurse = getPlayer2Purse();
+  // Update category button borders on load
+  if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
 });
 
 // Helper: Track campaign promise progress for both players

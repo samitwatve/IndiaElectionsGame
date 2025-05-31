@@ -157,7 +157,7 @@ function popularityToColor(popObj) {
     }
 }
 
-import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse, shakePlayer1Purse, showPlayer1PurseDeduction } from './purse.js';
+import { getPlayer1Purse, updatePlayer1PurseDisplay, setPlayer1Purse, shakePlayer1Purse, showPlayer1PurseDeduction, updateCategoryButtonBorders } from './purse.js';
 import { logAction } from './logger.js';
 import { smallUTsHitboxes } from './small_uts_hitboxes.js';
 // On app start, load the SVG map into the map container and resize it appropriately
@@ -404,6 +404,8 @@ document.addEventListener('DOMContentLoaded', function () {
                           window.popularityScores[region.id] = { p1: newP1, p2: newP2, others: newOthers };
                           // Refresh all state colors based on current popularity
                           refreshAllStateColors();
+                          // Update category button borders for bonus
+                          if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
 
                           // Always update hover label for this region (instant feedback)
                           if (regionNameDisplay) {
@@ -510,6 +512,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         window.popularityScores['INLD'] = { p1: newP1, p2: newP2, others: newOthers };
                         // Refresh all state colors based on current popularity
                         refreshAllStateColors();
+                        // Update category button borders for bonus
+                        if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
                         // Always update hover label for this region (instant feedback)
                         if (regionNameDisplay) {
                             const data = window.statesDataMap['INLD'];
@@ -608,6 +612,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     window.popularityScores[target.id] = { p1: newP1, p2: newP2, others: newOthers };
                     refreshAllStateColors();
+                    // Update category button borders for bonus
+                    if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
                     if (regionNameDisplay) {
                       let data = window.statesDataMap[target.id];
                       let popObj = window.popularityScores[target.id];

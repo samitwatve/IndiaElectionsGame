@@ -57,6 +57,25 @@ function awardCategoryBonuses(player, phase) {
         }
     });
 }
+
+// === Update Category Button Borders for Bonus ===
+export function updateCategoryButtonBorders() {
+    const categories = getAllCategories();
+    categories.forEach(category => {
+        // Assume each button has id like 'category-btn-<category>'
+        const btn = document.getElementById(`category-btn-${category}`);
+        if (!btn) return;
+        const p1 = playerLeadsInCategory(1, category);
+        const p2 = playerLeadsInCategory(2, category);
+        btn.classList.remove('p1-bonus', 'p2-bonus');
+        if (p1 && !p2) {
+            btn.classList.add('p1-bonus');
+        } else if (p2 && !p1) {
+            btn.classList.add('p2-bonus');
+        }
+        // If neither or both, no border
+    });
+}
 // Purse logic for Player 2 (AI)
 let player2Purse = 375; // 1.5x starting value
 

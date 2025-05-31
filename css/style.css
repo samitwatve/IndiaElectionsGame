@@ -701,6 +701,14 @@ header.game-header::after{
   opacity: 1;
 }
 
+/* === Category Bonus Border for Dominance === */
+.category-btn.p1-bonus {
+  border: 3px solid #ff9800 !important; /* Player 1 color (orange) */
+}
+.category-btn.p2-bonus {
+  border: 3px solid #388e3c !important; /* Player 2 color (green) */
+}
+
 /* Campaign promise buttons row */
 .promises-buttons-container{
   width:60vw; max-width:1000px; min-width:350px;
