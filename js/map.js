@@ -1,3 +1,47 @@
+// Expose a global function for AI to trigger a ripple on a state
+window.showAIRippleOnState = function(stateId) {
+    let svg = document.querySelector('.india-svg-map');
+    if (!svg) {
+        const mapContainer = document.getElementById('map-container');
+        if (mapContainer) svg = mapContainer.querySelector('svg');
+    }
+    if (svg) {
+        const region = svg.querySelector(`#${stateId}`);
+        if (region) showRippleOnState(region, '#43a047'); // bright green
+    }
+};
+// --- Ripple/Splash Effect Helper ---
+// color: string (CSS color), e.g. '#ff9800' for P1, '#4caf50' for P2
+// region: SVGElement (the state path or shape)
+export function showRippleOnState(region, color = '#ff9800') {
+    if (!region || !region.ownerSVGElement) return;
+    const svg = region.ownerSVGElement;
+    // Get region's bounding box center
+    const bbox = region.getBBox();
+    const cx = bbox.x + bbox.width / 2;
+    const cy = bbox.y + bbox.height / 2;
+    // Create ripple circle
+    const ripple = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    ripple.setAttribute('cx', cx);
+    ripple.setAttribute('cy', cy);
+    ripple.setAttribute('r', 1);
+    ripple.setAttribute('fill', color);
+    ripple.setAttribute('fill-opacity', '0.85'); // More visible
+    ripple.setAttribute('stroke', '#fff');
+    ripple.setAttribute('stroke-width', '2');
+    ripple.setAttribute('pointer-events', 'none');
+    ripple.style.transition = 'r 0.8s cubic-bezier(0.4,0,0.2,1), opacity 0.8s';
+    svg.appendChild(ripple);
+    // Animate
+    setTimeout(() => {
+        ripple.setAttribute('r', Math.max(bbox.width, bbox.height) * 0.85);
+        ripple.style.opacity = '0';
+    }, 10);
+    // Remove after animation
+    setTimeout(() => {
+        if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+    }, 900);
+}
 // Helper: refresh all state colors based on current popularity
 function refreshAllStateColors() {
     Object.entries(window.popularityScores).forEach(([id, popObj]) => {
@@ -301,6 +345,8 @@ document.addEventListener('DOMContentLoaded', function () {
                               }
                               return;
                           }
+                          // Show ripple for Player 1 (orange)
+                          showRippleOnState(region, '#ff9800');
                           setPlayer1Purse(getPlayer1Purse() - seats);
                           updatePlayer1PurseDisplay();
                           showPlayer1PurseDeduction(seats);

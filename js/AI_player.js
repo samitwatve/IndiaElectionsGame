@@ -1,6 +1,7 @@
 // Example: player1Purse should be provided from the game context
 import { logAction } from './logger.js';
 import { getPlayer2Purse, setPlayer2Purse } from './purse.js';
+import { showRippleOnState } from './map.js';
 // AI spend on state: updates popularity and purse for Player 2
 function spendOnStateAI(state, cost) {
     if (getPlayer2Purse() < cost) {
@@ -12,6 +13,10 @@ function spendOnStateAI(state, cost) {
     const id = state.SvgId || state.id;
     let popObj = window.popularityScores[id];
     if (!popObj) return;
+    // Show ripple for Player 2 (green) using global function in map.js
+    if (typeof window.showAIRippleOnState === 'function') {
+        window.showAIRippleOnState(id);
+    }
     // Increase P2 popularity by 5%, max 100
     let increase = 5;
     let newP2 = Math.min(100, popObj.p2 + increase);
