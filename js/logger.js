@@ -3,6 +3,7 @@ export function logPhaseSummary(phase) {
   const logBox = document.getElementById('player1-log');
   if (!logBox) return;
   let summary = `--- PHASE ${phase} SUMMARY ---\n`;
+
   // Funds
   // Always use the global purse getter functions for accurate values
   const p1Funds = (typeof window.getPlayer1Purse === 'function') ? window.getPlayer1Purse() : 0;
@@ -12,6 +13,24 @@ export function logPhaseSummary(phase) {
   const p2Spent = window.p2SpentThisPhase || 0;
   summary += `Player 1: Funds Spent: ₹${p1Spent}M | Funds Remaining: ₹${p1Funds}M\n`;
   summary += `Player 2: Funds Spent: ₹${p2Spent}M | Funds Remaining: ₹${p2Funds}M\n`;
+
+  // Projected Seats
+  if (window.statesDataMap && window.popularityScores) {
+    let p1Seats = 0, p2Seats = 0, othersSeats = 0, totalSeats = 0;
+    Object.entries(window.statesDataMap).forEach(([id, data]) => {
+      const seats = Number(data.LokSabhaSeats);
+      totalSeats += seats;
+      const pop = window.popularityScores[id];
+      if (!pop) return;
+      p1Seats += seats * (pop.p1 / 100);
+      p2Seats += seats * (pop.p2 / 100);
+      othersSeats += seats * (pop.others / 100);
+    });
+    p1Seats = Math.round(p1Seats);
+    p2Seats = Math.round(p2Seats);
+    othersSeats = Math.round(othersSeats);
+    summary += `\nProjected Seats: Player 1: ${p1Seats} | Player 2: ${p2Seats} | Others: ${othersSeats}\n`;
+  }
 
   // Popularity by state
   summary += `\nPopularity by State (P1 | P2 | Others):\n`;
