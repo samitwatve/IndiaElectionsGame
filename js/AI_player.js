@@ -105,7 +105,10 @@ function startAITakingAction({
     }
 
     // Start the interval
+    let paused = false;
+    function setPaused(p) { paused = p; }
     const intervalId = setInterval(() => {
+        if (paused) return;
         if (getPlayer2Purse() <= 0) {
             clearInterval(intervalId);
             logAction("<Player2> is out of funds.");
@@ -114,6 +117,10 @@ function startAITakingAction({
         takeAction();
     }, actionFrequency * 1000);
 
+    // Expose pause control globally for menu.js
+    if (typeof window !== 'undefined') {
+      window.setAIPaused = setPaused;
+    }
     // Return a way to stop the AI
     return () => clearInterval(intervalId);
 }

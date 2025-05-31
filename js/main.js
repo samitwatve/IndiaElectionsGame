@@ -31,15 +31,17 @@ import { policyTree } from './tech-tree.js';
 import { logAction, saveLogToFile, logGameStart } from './logger.js';
 import { addPhasePurseBonus } from './purse.js';
 import { updateTimer, showGameOverScreen, nextPhase, startTimer } from './game_timer.js';
-import { toggleSound, toggleMusic, showHelp } from './menu.js';
+import { toggleSound, toggleMusic, showHelp, togglePausePlay } from './menu.js';
 // Attach menu bar event listeners after DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
   const soundBtn = document.getElementById('sound-toggle-btn');
   const musicBtn = document.getElementById('music-toggle-btn');
   const helpBtn = document.getElementById('help-btn');
+  const pausePlayBtn = document.getElementById('pause-play-btn');
   if (soundBtn) soundBtn.onclick = toggleSound;
   if (musicBtn) musicBtn.onclick = toggleMusic;
   if (helpBtn) helpBtn.onclick = showHelp;
+  if (pausePlayBtn) pausePlayBtn.onclick = togglePausePlay;
 });
 
 // --- Start Screen and Background Music Logic ---
@@ -67,11 +69,13 @@ function startGame() {
         promises.map(name => ({ name, category, cost: 10 }))
       );
       // Start AI actions
-      startAITakingAction({
+      // Store AI stop function globally so we can pause/resume
+      window._aiStopFn = startAITakingAction({
         player1Purse: 250, // or use getPlayer1Purse() if available
         states: Object.values(window.statesDataMap),
         campaignPromises
       });
+      window._aiPaused = false;
     } else {
       setTimeout(tryStartAI, 200); // Retry until data is ready
     }

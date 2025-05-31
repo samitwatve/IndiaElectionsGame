@@ -1,3 +1,45 @@
+// Play/Pause logic
+
+let gamePaused = false;
+export function togglePausePlay() {
+  gamePaused = !gamePaused;
+  setPauseState(gamePaused);
+}
+
+function setPauseState(paused) {
+  gamePaused = paused;
+  const icon = document.getElementById('pause-play-icon');
+  if (icon) {
+    icon.className = gamePaused ? 'fas fa-play' : 'fas fa-pause';
+  }
+  if (typeof window.setGamePaused === 'function') {
+    window.setGamePaused(gamePaused);
+  }
+  if (typeof window.setAIPaused === 'function') {
+    window.setAIPaused(gamePaused);
+  }
+  // Show/hide overlay
+  const overlay = document.getElementById('pause-overlay');
+  if (overlay) {
+    overlay.classList.toggle('hidden', !gamePaused);
+  }
+  // Disable pointer events for everything except overlay when paused
+  if (gamePaused) {
+    document.body.style.pointerEvents = 'none';
+    if (overlay) overlay.style.pointerEvents = 'auto';
+  } else {
+    document.body.style.pointerEvents = '';
+  }
+}
+
+// Resume button handler
+window.addEventListener('DOMContentLoaded', () => {
+  const resumeBtn = document.getElementById('resume-btn');
+  if (resumeBtn) {
+    resumeBtn.onclick = () => setPauseState(false);
+  }
+});
+
 // menu.js - Handles top-right menu bar logic for sound/music/help
 
 let soundOn = true;
@@ -44,3 +86,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Expose soundOn for other modules
 window.isSoundOn = () => soundOn;
+
+// Expose pause state for other modules
+window.isGamePaused = () => gamePaused;

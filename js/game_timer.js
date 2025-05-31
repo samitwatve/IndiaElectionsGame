@@ -95,10 +95,18 @@ circle.style.strokeDasharray = circumference;
 circle.style.strokeDashoffset = circumference;
 updateTimer();
 
+
 let timerInterval = null;
+let paused = false;
+
+export function setGamePaused(pause) {
+  paused = pause;
+}
+
 export function startTimer() {
   if (timerInterval) return;
   timerInterval = setInterval(() => {
+    if (paused) return;
     if (timeLeft > 0) {
       timeLeft--;
       updateTimer();
@@ -107,3 +115,6 @@ export function startTimer() {
     }
   }, 1000);
 }
+
+// Expose pause setter for menu.js
+window.setGamePaused = setGamePaused;
