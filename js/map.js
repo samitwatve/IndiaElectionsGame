@@ -179,14 +179,22 @@ document.addEventListener('DOMContentLoaded', function () {
     if (categoryButtonsContainer) {
         categoryButtonsContainer.addEventListener('click', function (e) {
             if (e.target.classList.contains('category-btn')) {
+                const isActive = e.target.classList.contains('active');
                 // Remove active from all category-btns (including those in all rows)
                 const allBtns = categoryButtonsContainer.querySelectorAll('.category-btn');
                 allBtns.forEach(btn => btn.classList.remove('active'));
-                // Toggle active only for the clicked button
-                e.target.classList.add('active');
-                const category = e.target.getAttribute('data-category');
-                lastCategory = category;
-                highlightCategoryStates(category);
+                const svg = mapContainer.querySelector('svg');
+                if (svg) svg.querySelectorAll('.region-highlighted').forEach(el => el.classList.remove('region-highlighted'));
+                if (!isActive) {
+                    // Only activate if it was not already active
+                    e.target.classList.add('active');
+                    const category = e.target.getAttribute('data-category');
+                    lastCategory = category;
+                    highlightCategoryStates(category);
+                } else {
+                    // If deactivating, clear lastCategory
+                    lastCategory = null;
+                }
             }
         });
     }

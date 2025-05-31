@@ -93,50 +93,60 @@ function renderTechTreeRows(tree, container) {
         barLabel.textContent = leaf;
         cell.appendChild(barLabel);
 
-        // Completion bar
+        // Completion bar with race mechanic
         const barContainer = document.createElement('div');
         barContainer.className = 'tech-tree-leaf health-bar';
-        barContainer.setAttribute('data-progress', '0');
+        barContainer.setAttribute('data-leaf', leaf);
 
         const barFill = document.createElement('div');
         barFill.className = 'health-bar-fill';
         barFill.style.width = '0%';
         barContainer.appendChild(barFill);
 
-        // Click to increase fill (10 clicks to full, 10M rupees per click, free after full)
+        // Helper to get progress for both players
+        function getProgress(leaf) {
+          const p1 = (window.p1PromiseProgress && window.p1PromiseProgress[leaf]) || 0;
+          const p2 = (window.p2PromiseProgress && window.p2PromiseProgress[leaf]) || 0;
+          return { p1, p2 };
+        }
+
+        // Helper to update the bar UI based on both players' progress
+        function updateBarUI() {
+          const { p1, p2 } = getProgress(leaf);
+          let progress = Math.max(p1, p2) * 10;
+          barContainer.setAttribute('data-progress', progress);
+          barFill.style.width = progress + '%';
+          // Determine leader and set color
+          let color = '#b0bec5'; // neutral
+          if (p1 > p2) color = '#ff9800'; // Player 1 (orange)
+          else if (p2 > p1) color = '#43a047'; // Player 2 (green)
+          else if (p1 === p2 && p1 > 0) color = '#757575'; // tie, but not zero
+          // Completed: color of the winner
+          if (p1 === 10 && p1 > p2) color = '#ff9800'; // Player 1 completed (orange)
+          if (p2 === 10 && p2 > p1) color = '#43a047'; // Player 2 completed (green)
+          barFill.style.background = color;
+        }
+
+        // Click to increase fill for Player 1 (10M per click)
         barContainer.addEventListener('click', function() {
-          let progress = parseInt(barContainer.getAttribute('data-progress'));
-          if (progress < 100) {
-            // Check purse
+          const { p1, p2 } = getProgress(leaf);
+          if (p1 < 10 && (p1 <= p2 || p2 < 10)) { // Only allow if not already maxed
             let purse = getPlayer1Purse();
             if (purse >= 10) {
               purse -= 10;
               setPlayer1Purse(purse);
               updatePlayer1PurseDisplay();
               showPlayer1PurseDeduction(10);
-              progress += 10;
-              if (progress > 100) progress = 100;
-              barContainer.setAttribute('data-progress', progress);
-              barFill.style.width = progress + '%';
-              // Color transition
-              if (progress < 50) {
-                barFill.style.background = '#b0bec5';
-              } else if (progress < 100) {
-                barFill.style.background = '#64b5f6';
-              } else {
-                barFill.style.background = '#43a047';
-              }
+              // Update Player 1 progress
+              if (!window.p1PromiseProgress) window.p1PromiseProgress = {};
+              window.p1PromiseProgress[leaf] = (window.p1PromiseProgress[leaf] || 0) + 1;
+              if (window.p1PromiseProgress[leaf] > 10) window.p1PromiseProgress[leaf] = 10;
+              // Track funds spent
+              window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + 10;
               // Log the action
               logAction(`<Player1> spent ₹ 10M on ${leaf}`);
-              // Track funds spent and promise progress for Player 1
-              if (typeof window !== 'undefined') {
-                window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + 10;
-                if (!window.p1PromiseProgress) window.p1PromiseProgress = {};
-                window.p1PromiseProgress[leaf] = (window.p1PromiseProgress[leaf] || 0) + 1;
-                if (window.p1PromiseProgress[leaf] > 10) window.p1PromiseProgress[leaf] = 10;
-              }
-              if (progress === 100) {
-                // Shake the promise bar to indicate it's maxed out
+              updateBarUI();
+              if (window.p1PromiseProgress[leaf] === 10 && window.p1PromiseProgress[leaf] > ((window.p2PromiseProgress && window.p2PromiseProgress[leaf]) || 0)) {
                 barContainer.classList.add('shake');
                 setTimeout(() => barContainer.classList.remove('shake'), 400);
               }
@@ -144,7 +154,6 @@ function renderTechTreeRows(tree, container) {
               // Not enough money, show a warning (shake)
               barContainer.classList.add('shake');
               shakePlayer1Purse();
-              // Play error sound for not enough money
               import('./purse.js').then(({ playSound }) => playSound('error.mp3'));
               setTimeout(() => barContainer.classList.remove('shake'), 400);
             }
@@ -154,6 +163,12 @@ function renderTechTreeRows(tree, container) {
             setTimeout(() => barContainer.classList.remove('shake'), 400);
           }
         });
+
+        // Listen for AI/Player 2 progress updates (polling or event-based)
+        // For now, use a MutationObserver or polling to update bar UI every 500ms
+        setInterval(updateBarUI, 500);
+        // Initial render
+        updateBarUI();
 
         cell.appendChild(barContainer);
         row.appendChild(cell);

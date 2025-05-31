@@ -1,0 +1,839 @@
+===GAME START===
+Game ID: GGH8VNHEV
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ 10M on promise: Mandal Commission
+[00:04] <Player2> spent ₹ 80M on state: Uttar Pradesh
+[00:05] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[00:06] <Player2> spent ₹ 40M on state: Bihar
+[00:08] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[00:10] <Player2> spent ₹ 10M on promise: Digital India
+[00:12] <Player2> spent ₹ 2M on state: Manipur
+[00:14] <Player2> spent ₹ 10M on promise: Hindutva
+[00:16] <Player2> spent ₹ 2M on state: Manipur
+[00:18] <Player2> spent ₹ 5M on state: Jammu And Kashmir
+[00:20] <Player2> spent ₹ 1M on state: Ladakh
+[00:22] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[00:24] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:26] <Player2> spent ₹ 14M on state: Assam
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹39M | Funds Remaining: ₹211M
+Player 2: Funds Spent: ₹204M | Funds Remaining: ₹171M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 49% | 39% | 12%
+Andhra Pradesh: 51% | 34% | 15%
+Arunachal Pradesh: 31% | 14% | 55%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 16% | 53% | 31%
+Chhattisgarh: 28% | 10% | 62%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 13% | 18% | 69%
+Delhi: 31% | 22% | 47%
+Goa: 34% | 37% | 29%
+Gujarat: 13% | 32% | 55%
+Haryana: 36% | 10% | 54%
+Himachal Pradesh: 43% | 11% | 46%
+Jammu And Kashmir: 42% | 27% | 31%
+Jharkhand: 19% | 15% | 66%
+Karnataka: 30% | 38% | 32%
+Kerala: 50% | 16% | 34%
+Ladakh: 23% | 59% | 18%
+Lakshadweep: 25% | 14% | 61%
+Madhya Pradesh: 18% | 33% | 49%
+Maharashtra: 11% | 42% | 47%
+Manipur: 48% | 30% | 22%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 33% | 28% | 39%
+Nagaland: 25% | 20% | 55%
+Odisha: 40% | 36% | 24%
+Puducherry: 19% | 31% | 50%
+Punjab: 46% | 36% | 18%
+Rajasthan: 44% | 23% | 33%
+Sikkim: 58% | 13% | 29%
+Tamil Nadu: 37% | 30% | 33%
+Telangana: 19% | 27% | 54%
+Tripura: 27% | 54% | 19%
+Uttar Pradesh: 25% | 38% | 37%
+Uttarakhand: 16% | 31% | 53%
+West Bengal: 28% | 45% | 27%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 1/10
+  Waqf Board Reforms: 1/10
+  Digital India: 1/10
+  Hindutva: 1/10
+  Uniform Civil Code: 1/10
+  Ports Modernisation: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ 1M on state: Nagaland
+[00:29] <Player2> spent ₹ 42M on state: West Bengal
+[00:31] <Player2> spent ₹ 11M on state: Chhattisgarh
+[00:33] <Player2> spent ₹ 2M on state: Manipur
+[00:35] <Player2> spent ₹ 20M on state: Kerala
+[00:37] <Player2> spent ₹ 1M on state: Andaman And Nicobar Islands
+[00:39] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[00:41] <Player2> spent ₹ 10M on promise: Farm Loan Waivers
+[00:43] <Player2> spent ₹ 2M on state: Tripura
+[00:45] <Player2> spent ₹ 25M on state: Rajasthan
+[00:47] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:49] <Player2> spent ₹ 1M on state: Daman And Diu
+[00:51] <Player2> spent ₹ 25M on state: Andhra Pradesh
+[00:53] <Player2> spent ₹ 10M on promise: Smart Cities
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹0M | Funds Remaining: ₹461M
+Player 2: Funds Spent: ₹170M | Funds Remaining: ₹376M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 31% | 14% | 55%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 16% | 53% | 31%
+Chhattisgarh: 26% | 15% | 59%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 12% | 23% | 65%
+Delhi: 31% | 22% | 47%
+Goa: 34% | 37% | 29%
+Gujarat: 13% | 32% | 55%
+Haryana: 36% | 10% | 54%
+Himachal Pradesh: 43% | 11% | 46%
+Jammu And Kashmir: 42% | 27% | 31%
+Jharkhand: 19% | 15% | 66%
+Karnataka: 30% | 38% | 32%
+Kerala: 47% | 21% | 32%
+Ladakh: 23% | 59% | 18%
+Lakshadweep: 25% | 14% | 61%
+Madhya Pradesh: 18% | 33% | 49%
+Maharashtra: 11% | 42% | 47%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 33% | 28% | 39%
+Nagaland: 23% | 25% | 52%
+Odisha: 40% | 36% | 24%
+Puducherry: 19% | 31% | 50%
+Punjab: 46% | 36% | 18%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 58% | 13% | 29%
+Tamil Nadu: 37% | 30% | 33%
+Telangana: 19% | 27% | 54%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 25% | 38% | 37%
+Uttarakhand: 16% | 31% | 53%
+West Bengal: 25% | 50% | 25%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Mandal Commission: 1/10
+  Waqf Board Reforms: 1/10
+  Digital India: 1/10
+  Hindutva: 1/10
+  Uniform Civil Code: 1/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 1/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 1/10
+  Smart Cities: 1/10
+
+[01:21] =============PHASE 3 START============
+[01:21] <Player1> received ₹ +250M
+[01:21] <Player2> received ₹ +375M
+[00:54] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[00:56] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[00:57] <Player1> spent ₹ 10M on Highways & Airports
+[00:57] <Player1> spent ₹ 10M on Highways & Airports
+[00:57] <Player1> spent ₹ 10M on Highways & Airports
+[00:58] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[00:58] <Player1> spent ₹ 10M on Ports Modernisation
+[00:58] <Player1> spent ₹ 10M on Ports Modernisation
+[00:58] <Player1> spent ₹ 10M on Ports Modernisation
+[00:59] <Player1> spent ₹ 10M on Smart Cities
+[00:59] <Player1> spent ₹ 10M on Smart Cities
+[00:59] <Player1> spent ₹ 10M on Smart Cities
+[01:00] <Player2> spent ₹ 29M on state: Madhya Pradesh
+[01:01] <Player1> spent ₹ 10M on Hindutva
+[01:01] <Player1> spent ₹ 10M on Hindutva
+[01:01] <Player1> spent ₹ 10M on Hindutva
+[01:02] <Player2> spent ₹ 5M on state: Uttarakhand
+[01:02] <Player1> spent ₹ 10M on Uniform Civil Code
+[01:02] <Player1> spent ₹ 10M on Uniform Civil Code
+[01:02] <Player1> spent ₹ 10M on Uniform Civil Code
+[01:03] <Player1> spent ₹ 10M on Hindi Education Mandate
+[01:03] <Player1> spent ₹ 10M on Hindi Education Mandate
+[01:03] <Player1> spent ₹ 10M on Hindi Education Mandate
+[01:04] <Player2> spent ₹ 10M on promise: Tribal Rights
+[01:04] <Player1> spent ₹ 10M on Waqf Board Reforms
+[01:05] <Player1> spent ₹ 10M on Waqf Board Reforms
+[01:05] <Player1> spent ₹ 10M on Waqf Board Reforms
+[01:06] <Player2> spent ₹ 1M on state: Mizoram
+[01:06] <Player1> spent ₹ 10M on Secularism
+[01:06] <Player1> spent ₹ 10M on Secularism
+[01:06] <Player1> spent ₹ 10M on Secularism
+[01:08] <Player2> spent ₹ 10M on promise: Tribal Rights
+[01:08] <Player1> spent ₹ 10M on MGNREGA Expansion
+[01:08] <Player1> spent ₹ 10M on MGNREGA Expansion
+[01:08] <Player1> spent ₹ 10M on MGNREGA Expansion
+[01:10] <Player2> spent ₹ 2M on state: Goa
+[01:10] <Player1> spent ₹ 10M on GST
+[01:10] <Player1> spent ₹ 10M on GST
+[01:11] <Player1> spent ₹ 10M on Defense & Border Infra
+[01:11] <Player1> spent ₹ 10M on Defense & Border Infra
+[01:11] <Player1> spent ₹ 10M on Defense & Border Infra
+[01:12] <Player2> spent ₹ 10M on promise: Smart Cities
+[01:12] <Player1> spent ₹ 10M on Farm Loan Waivers
+[01:12] <Player1> spent ₹ 10M on Farm Loan Waivers
+[01:14] <Player2> spent ₹ 21M on state: Odisha
+[01:14] <Player1> spent ₹ 48M on a Maharashtra campaign
+[01:14] <Player1> spent ₹ 48M on a Maharashtra campaign
+[01:16] <Player2> spent ₹ 10M on promise: Swachh Bharat Mission
+[01:16] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[01:16] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[01:18] <Player2> spent ₹ 10M on state: Haryana
+[01:18] <Player1> spent ₹ 26M on a Gujarat campaign
+[01:18] <Player1> spent ₹ 26M on a Gujarat campaign
+[01:18] <Player1> spent ₹ 26M on a Gujarat campaign
+[01:20] <Player2> spent ₹ 10M on promise: Farm Bills
+[01:20] <Player1> spent ₹ 17M on a Telangana campaign
+[01:20] <Player1> spent ₹ 17M on a Telangana campaign
+[01:21] <Player1> spent ₹ 28M on a Karnataka campaign
+[01:21] --- PHASE 3 SUMMARY ---
+Player 1: Funds Spent: ₹634M | Funds Remaining: ₹77M
+Player 2: Funds Spent: ₹148M | Funds Remaining: ₹603M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 31% | 14% | 55%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 16% | 53% | 31%
+Chhattisgarh: 26% | 15% | 59%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 12% | 23% | 65%
+Delhi: 31% | 22% | 47%
+Goa: 31% | 42% | 27%
+Gujarat: 28% | 26% | 46%
+Haryana: 34% | 15% | 51%
+Himachal Pradesh: 43% | 11% | 46%
+Jammu And Kashmir: 42% | 27% | 31%
+Jharkhand: 19% | 15% | 66%
+Karnataka: 35% | 35% | 30%
+Kerala: 47% | 21% | 32%
+Ladakh: 23% | 59% | 18%
+Lakshadweep: 25% | 14% | 61%
+Madhya Pradesh: 27% | 34% | 39%
+Maharashtra: 21% | 38% | 41%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 23% | 25% | 52%
+Odisha: 37% | 41% | 22%
+Puducherry: 19% | 31% | 50%
+Punjab: 46% | 36% | 18%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 58% | 13% | 29%
+Tamil Nadu: 37% | 30% | 33%
+Telangana: 29% | 23% | 48%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 25% | 38% | 37%
+Uttarakhand: 15% | 36% | 49%
+West Bengal: 25% | 50% | 25%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+Player 2:
+  Mandal Commission: 1/10
+  Waqf Board Reforms: 1/10
+  Digital India: 1/10
+  Hindutva: 1/10
+  Uniform Civil Code: 2/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 2/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 1/10
+  Smart Cities: 2/10
+  Women’s Reservation: 1/10
+  Tribal Rights: 2/10
+  Swachh Bharat Mission: 1/10
+  Farm Bills: 1/10
+
+[01:48] =============PHASE 4 START============
+[01:48] <Player1> received ₹ +250M
+[01:48] <Player2> received ₹ +375M
+[01:21] <Player2> spent ₹ 10M on promise: Digital India
+[01:21] <Player1> spent ₹ 28M on a Karnataka campaign
+[01:23] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[01:24] <Player1> spent ₹ 2M on a Goa campaign
+[01:24] <Player1> spent ₹ 2M on a Goa campaign
+[01:25] <Player2> spent ₹ 10M on promise: Tribal Rights
+[01:25] <Player1> spent ₹ 21M on a Odisha campaign
+[01:26] <Player1> spent ₹ 21M on a Odisha campaign
+[01:26] <Player1> spent ₹ 42M on a West Bengal campaign
+[01:27] <Player2> spent ₹ 26M on state: Gujarat
+[01:27] <Player1> spent ₹ 42M on a West Bengal campaign
+[01:28] <Player1> spent ₹ 80M on a Uttar Pradesh campaign
+[01:28] <Player1> spent ₹ 80M on a Uttar Pradesh campaign
+[01:29] <Player2> spent ₹ 1M on state: Daman And Diu
+[01:30] <Player1> spent ₹ 1M on a Ladakh campaign
+[01:30] <Player1> spent ₹ 1M on a Ladakh campaign
+[01:30] <Player1> spent ₹ 1M on a Ladakh campaign
+[01:31] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[01:32] <Player1> spent ₹ 1M on a Ladakh campaign
+[01:32] <Player1> spent ₹ 1M on a Ladakh campaign
+[01:33] <Player2> spent ₹ 1M on state: Lakshadweep
+[01:35] <Player2> spent ₹ 10M on promise: GST
+[01:36] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[01:36] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[01:37] <Player2> spent ₹ 1M on state: Lakshadweep
+[01:39] <Player2> spent ₹ 10M on promise: Industry & Mining
+[01:41] <Player2> spent ₹ 13M on state: Punjab
+[01:43] <Player2> spent ₹ 26M on state: Gujarat
+[01:45] <Player2> spent ₹ 10M on promise: Mandal Commission
+[01:47] <Player2> spent ₹ 1M on state: Sikkim
+[01:48] --- PHASE 4 SUMMARY ---
+Player 1: Funds Spent: ₹327M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹139M | Funds Remaining: ₹839M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 41% | 12% | 47%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 16% | 53% | 31%
+Chhattisgarh: 26% | 15% | 59%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 11% | 28% | 61%
+Delhi: 31% | 22% | 47%
+Goa: 41% | 36% | 23%
+Gujarat: 24% | 36% | 40%
+Haryana: 34% | 15% | 51%
+Himachal Pradesh: 43% | 11% | 46%
+Jammu And Kashmir: 42% | 27% | 31%
+Jharkhand: 19% | 15% | 66%
+Karnataka: 40% | 32% | 28%
+Kerala: 47% | 21% | 32%
+Ladakh: 48% | 39% | 13%
+Lakshadweep: 23% | 24% | 53%
+Madhya Pradesh: 27% | 34% | 39%
+Maharashtra: 21% | 38% | 41%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 23% | 25% | 52%
+Odisha: 47% | 35% | 18%
+Puducherry: 19% | 31% | 50%
+Punjab: 42% | 41% | 17%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 55% | 18% | 27%
+Tamil Nadu: 37% | 30% | 33%
+Telangana: 29% | 23% | 48%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 35% | 32% | 33%
+Uttarakhand: 15% | 36% | 49%
+West Bengal: 35% | 44% | 21%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+Player 2:
+  Mandal Commission: 2/10
+  Waqf Board Reforms: 2/10
+  Digital India: 2/10
+  Hindutva: 1/10
+  Uniform Civil Code: 2/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 2/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 1/10
+  Smart Cities: 2/10
+  Women’s Reservation: 1/10
+  Tribal Rights: 3/10
+  Swachh Bharat Mission: 1/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 1/10
+  GST: 1/10
+  Industry & Mining: 1/10
+
+[02:15] =============PHASE 5 START============
+[02:15] <Player1> received ₹ +250M
+[02:15] <Player2> received ₹ +375M
+[01:48] <Player2> spent ₹ 10M on promise: P M Jan-Dhan Yojana
+[01:50] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[01:52] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[01:52] <Player1> spent ₹ 17M on a Telangana campaign
+[01:52] <Player1> spent ₹ 17M on a Telangana campaign
+[01:53] <Player1> spent ₹ 48M on a Maharashtra campaign
+[01:53] <Player1> spent ₹ 48M on a Maharashtra campaign
+[01:54] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[01:56] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[01:58] <Player2> spent ₹ 10M on promise: Swachh Bharat Mission
+[01:58] <Player1> spent ₹ 39M on a Tamil Nadu campaign
+[02:00] <Player2> spent ₹ 28M on state: Karnataka
+[02:00] <Player1> spent ₹ 17M on a Telangana campaign
+[02:00] <Player1> spent ₹ 17M on a Telangana campaign
+[02:02] <Player2> spent ₹ 14M on state: Jharkhand
+[02:04] <Player2> spent ₹ 1M on state: Nagaland
+[02:04] <Player1> spent ₹ 26M on a Gujarat campaign
+[02:06] <Player2> spent ₹ 1M on state: Chandigarh
+[02:08] <Player2> spent ₹ 5M on state: Jammu And Kashmir
+[02:10] <Player2> spent ₹ 29M on state: Madhya Pradesh
+[02:10] <Player1> spent ₹ 4M on a Himachal Pradesh campaign
+[02:10] <Player1> spent ₹ 4M on a Himachal Pradesh campaign
+[02:12] <Player2> spent ₹ 10M on promise: Digital India
+[02:14] <Player2> spent ₹ 1M on state: Ladakh
+[02:15] --- PHASE 5 SUMMARY ---
+Player 1: Funds Spent: ₹237M | Funds Remaining: ₹13M
+Player 2: Funds Spent: ₹149M | Funds Remaining: ₹1065M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 41% | 12% | 47%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 14% | 58% | 28%
+Chhattisgarh: 26% | 15% | 59%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 11% | 28% | 61%
+Delhi: 31% | 22% | 47%
+Goa: 41% | 36% | 23%
+Gujarat: 29% | 34% | 37%
+Haryana: 34% | 15% | 51%
+Himachal Pradesh: 53% | 9% | 38%
+Jammu And Kashmir: 39% | 32% | 29%
+Jharkhand: 18% | 20% | 62%
+Karnataka: 37% | 37% | 26%
+Kerala: 47% | 21% | 32%
+Ladakh: 44% | 44% | 12%
+Lakshadweep: 23% | 24% | 53%
+Madhya Pradesh: 25% | 39% | 36%
+Maharashtra: 31% | 34% | 35%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 21% | 30% | 49%
+Odisha: 47% | 35% | 18%
+Puducherry: 19% | 31% | 50%
+Punjab: 42% | 41% | 17%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 55% | 18% | 27%
+Tamil Nadu: 42% | 28% | 30%
+Telangana: 49% | 15% | 36%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 35% | 32% | 33%
+Uttarakhand: 15% | 36% | 49%
+West Bengal: 35% | 44% | 21%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+Player 2:
+  Mandal Commission: 2/10
+  Waqf Board Reforms: 2/10
+  Digital India: 3/10
+  Hindutva: 1/10
+  Uniform Civil Code: 2/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 3/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 2/10
+  Smart Cities: 2/10
+  Women’s Reservation: 2/10
+  Tribal Rights: 3/10
+  Swachh Bharat Mission: 2/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 1/10
+  GST: 1/10
+  Industry & Mining: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Hindi Education Mandate: 1/10
+
+[02:42] =============PHASE 6 START============
+[02:42] <Player1> received ₹ +250M
+[02:42] <Player2> received ₹ +375M
+[02:15] <Player2> spent ₹ 10M on promise: GMOs
+[02:17] <Player2> spent ₹ 1M on state: Daman And Diu
+[02:18] <Player1> spent ₹ 10M on GMOs
+[02:18] <Player1> spent ₹ 10M on GMOs
+[02:19] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[02:21] <Player2> spent ₹ 1M on state: Lakshadweep
+[02:21] <Player1> spent ₹ 10M on Farm Bills
+[02:21] <Player1> spent ₹ 10M on Farm Bills
+[02:22] <Player1> spent ₹ 10M on Beti Bachao Beti Padhao
+[02:22] <Player1> spent ₹ 10M on Beti Bachao Beti Padhao
+[02:23] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[02:25] <Player2> spent ₹ 10M on promise: Highways & Airports
+[02:27] <Player2> spent ₹ 10M on promise: Smart Cities
+[02:29] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[02:29] <Player1> spent ₹ 10M on GMOs
+[02:29] <Player1> spent ₹ 10M on GMOs
+[02:31] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[02:31] <Player1> spent ₹ 10M on Swachh Bharat Mission
+[02:31] <Player1> spent ₹ 10M on Swachh Bharat Mission
+[02:33] <Player2> spent ₹ 48M on state: Maharashtra
+[02:35] <Player2> spent ₹ 28M on state: Karnataka
+[02:35] <Player1> spent ₹ 48M on a Maharashtra campaign
+[02:35] <Player1> spent ₹ 48M on a Maharashtra campaign
+[02:36] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[02:36] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[02:37] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[02:37] <Player1> spent ₹ 26M on a Gujarat campaign
+[02:39] <Player2> spent ₹ 1M on state: Chandigarh
+[02:41] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[02:42] --- PHASE 6 SUMMARY ---
+Player 1: Funds Spent: ₹244M | Funds Remaining: ₹19M
+Player 2: Funds Spent: ₹169M | Funds Remaining: ₹1271M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 41% | 12% | 47%
+Assam: 26% | 23% | 51%
+Bihar: 10% | 27% | 63%
+Chandigarh: 12% | 63% | 25%
+Chhattisgarh: 36% | 13% | 51%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 10% | 33% | 57%
+Delhi: 31% | 22% | 47%
+Goa: 41% | 36% | 23%
+Gujarat: 34% | 32% | 34%
+Haryana: 34% | 15% | 51%
+Himachal Pradesh: 53% | 9% | 38%
+Jammu And Kashmir: 39% | 32% | 29%
+Jharkhand: 18% | 20% | 62%
+Karnataka: 34% | 42% | 24%
+Kerala: 47% | 21% | 32%
+Ladakh: 44% | 44% | 12%
+Lakshadweep: 21% | 29% | 50%
+Madhya Pradesh: 25% | 39% | 36%
+Maharashtra: 39% | 33% | 28%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 21% | 30% | 49%
+Odisha: 47% | 35% | 18%
+Puducherry: 19% | 31% | 50%
+Punjab: 42% | 41% | 17%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 55% | 18% | 27%
+Tamil Nadu: 42% | 28% | 30%
+Telangana: 49% | 15% | 36%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 35% | 32% | 33%
+Uttarakhand: 15% | 36% | 49%
+West Bengal: 35% | 44% | 21%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+  GMOs: 4/10
+  Farm Bills: 2/10
+  Beti Bachao Beti Padhao: 2/10
+  Swachh Bharat Mission: 2/10
+Player 2:
+  Mandal Commission: 2/10
+  Waqf Board Reforms: 3/10
+  Digital India: 3/10
+  Hindutva: 1/10
+  Uniform Civil Code: 3/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 3/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 5/10
+  Smart Cities: 3/10
+  Women’s Reservation: 2/10
+  Tribal Rights: 3/10
+  Swachh Bharat Mission: 2/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 2/10
+  GST: 1/10
+  Industry & Mining: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Hindi Education Mandate: 1/10
+  GMOs: 1/10
+  Highways & Airports: 1/10
+
+[03:09] =============PHASE 7 START============
+[03:09] <Player1> received ₹ +250M
+[03:09] <Player2> received ₹ +375M
+[02:42] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[02:44] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[02:45] <Player1> spent ₹ 10M on a Haryana campaign
+[02:46] <Player2> spent ₹ 7M on state: Delhi
+[02:46] <Player1> spent ₹ 10M on a Haryana campaign
+[02:46] <Player1> spent ₹ 5M on a Uttarakhand campaign
+[02:47] <Player1> spent ₹ 5M on a Uttarakhand campaign
+[02:47] <Player1> spent ₹ 5M on a Uttarakhand campaign
+[02:48] <Player2> spent ₹ 21M on state: Odisha
+[02:48] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[02:48] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[02:48] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[02:49] <Player1> spent ₹ 14M on a Jharkhand campaign
+[02:49] <Player1> spent ₹ 14M on a Jharkhand campaign
+[02:49] <Player1> spent ₹ 14M on a Jharkhand campaign
+[02:50] <Player2> spent ₹ 10M on promise: Hindutva
+[02:50] <Player1> spent ₹ 40M on a Bihar campaign
+[02:50] <Player1> spent ₹ 40M on a Bihar campaign
+[02:52] <Player2> spent ₹ 1M on state: Chandigarh
+[02:52] <Player1> spent ₹ 14M on a Jharkhand campaign
+[02:52] <Player1> spent ₹ 14M on a Jharkhand campaign
+[02:52] <Player1> spent ₹ 40M on a Bihar campaign
+[02:54] <Player2> spent ₹ 10M on promise: Mandal Commission
+[02:56] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[02:58] <Player2> spent ₹ 80M on state: Uttar Pradesh
+[03:00] <Player2> spent ₹ 2M on state: Arunachal Pradesh
+[03:02] <Player2> spent ₹ 17M on state: Telangana
+[03:04] <Player2> spent ₹ 20M on state: Kerala
+[03:06] <Player2> spent ₹ 5M on state: Jammu And Kashmir
+[03:08] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[03:09] --- PHASE 7 SUMMARY ---
+Player 1: Funds Spent: ₹258M | Funds Remaining: ₹11M
+Player 2: Funds Spent: ₹213M | Funds Remaining: ₹1433M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 39% | 17% | 44%
+Assam: 26% | 23% | 51%
+Bihar: 25% | 22% | 53%
+Chandigarh: 10% | 68% | 22%
+Chhattisgarh: 51% | 10% | 39%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 10% | 33% | 57%
+Delhi: 29% | 27% | 44%
+Goa: 41% | 36% | 23%
+Gujarat: 34% | 32% | 34%
+Haryana: 44% | 13% | 43%
+Himachal Pradesh: 53% | 9% | 38%
+Jammu And Kashmir: 36% | 37% | 27%
+Jharkhand: 43% | 15% | 42%
+Karnataka: 34% | 42% | 24%
+Kerala: 44% | 26% | 30%
+Ladakh: 44% | 44% | 12%
+Lakshadweep: 21% | 29% | 50%
+Madhya Pradesh: 25% | 39% | 36%
+Maharashtra: 39% | 33% | 28%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 21% | 30% | 49%
+Odisha: 43% | 40% | 17%
+Puducherry: 19% | 31% | 50%
+Punjab: 42% | 41% | 17%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 55% | 18% | 27%
+Tamil Nadu: 42% | 28% | 30%
+Telangana: 46% | 20% | 34%
+Tripura: 24% | 59% | 17%
+Uttar Pradesh: 32% | 37% | 31%
+Uttarakhand: 30% | 30% | 40%
+West Bengal: 35% | 44% | 21%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+  GMOs: 4/10
+  Farm Bills: 2/10
+  Beti Bachao Beti Padhao: 2/10
+  Swachh Bharat Mission: 2/10
+Player 2:
+  Mandal Commission: 3/10
+  Waqf Board Reforms: 4/10
+  Digital India: 3/10
+  Hindutva: 2/10
+  Uniform Civil Code: 4/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 3/10
+  Farm Loan Waivers: 1/10
+  River-Linking Projects: 6/10
+  Smart Cities: 3/10
+  Women’s Reservation: 3/10
+  Tribal Rights: 3/10
+  Swachh Bharat Mission: 2/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 2/10
+  GST: 1/10
+  Industry & Mining: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Hindi Education Mandate: 1/10
+  GMOs: 1/10
+  Highways & Airports: 1/10
+
+[03:36] =============PHASE 8 START============
+[03:36] <Player1> received ₹ +250M
+[03:36] <Player2> received ₹ +375M
+[03:09] <Player2> spent ₹ 2M on state: Tripura
+[03:11] <Player2> spent ₹ 39M on state: Tamil Nadu
+[03:13] <Player2> spent ₹ 10M on promise: Secularism
+[03:13] <Player1> spent ₹ 40M on a Bihar campaign
+[03:14] <Player1> spent ₹ 40M on a Bihar campaign
+[03:14] <Player1> spent ₹ 40M on a Bihar campaign
+[03:14] <Player1> spent ₹ 40M on a Bihar campaign
+[03:15] <Player2> spent ₹ 2M on state: Arunachal Pradesh
+[03:16] <Player1> spent ₹ 40M on a Bihar campaign
+[03:16] <Player1> spent ₹ 40M on a Bihar campaign
+[03:17] <Player2> spent ₹ 1M on state: Ladakh
+[03:17] <Player1> spent ₹ 14M on a Jharkhand campaign
+[03:19] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[03:20] <Player1> spent ₹ 1M on a Ladakh campaign
+[03:21] <Player2> spent ₹ 10M on promise: Secularism
+[03:21] <Player1> spent ₹ 1M on a Ladakh campaign
+[03:22] <Player1> spent ₹ 5M on a Jammu And Kashmir campaign
+[03:23] <Player2> spent ₹ 1M on state: Daman And Diu
+[03:25] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[03:27] <Player2> spent ₹ 10M on promise: Farm Loan Waivers
+[03:29] <Player2> spent ₹ 1M on state: Nagaland
+[03:31] <Player2> spent ₹ 48M on state: Maharashtra
+[03:33] <Player2> spent ₹ 10M on promise: GST
+[03:35] <Player2> spent ₹ 20M on state: Kerala
+[03:36] --- PHASE 8 SUMMARY ---
+Player 1: Funds Spent: ₹261M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹174M | Funds Remaining: ₹1634M
+
+Popularity by State (P1 | P2 | Others):
+Andaman And Nicobar Islands: 45% | 44% | 11%
+Andhra Pradesh: 47% | 39% | 14%
+Arunachal Pradesh: 37% | 22% | 41%
+Assam: 26% | 23% | 51%
+Bihar: 55% | 13% | 32%
+Chandigarh: 10% | 68% | 22%
+Chhattisgarh: 51% | 10% | 39%
+Dadra And Nagar Haveli: 24% | 24% | 52%
+Daman And Diu: 9% | 38% | 53%
+Delhi: 29% | 27% | 44%
+Goa: 41% | 36% | 23%
+Gujarat: 34% | 32% | 34%
+Haryana: 44% | 13% | 43%
+Himachal Pradesh: 53% | 9% | 38%
+Jammu And Kashmir: 41% | 34% | 25%
+Jharkhand: 48% | 14% | 38%
+Karnataka: 34% | 42% | 24%
+Kerala: 41% | 31% | 28%
+Ladakh: 50% | 41% | 9%
+Lakshadweep: 21% | 29% | 50%
+Madhya Pradesh: 25% | 39% | 36%
+Maharashtra: 36% | 38% | 26%
+Manipur: 45% | 35% | 20%
+Meghalaya: 18% | 26% | 56%
+Mizoram: 31% | 33% | 36%
+Nagaland: 19% | 35% | 46%
+Odisha: 43% | 40% | 17%
+Puducherry: 19% | 31% | 50%
+Punjab: 42% | 41% | 17%
+Rajasthan: 41% | 28% | 31%
+Sikkim: 55% | 18% | 27%
+Tamil Nadu: 39% | 33% | 28%
+Telangana: 46% | 20% | 34%
+Tripura: 21% | 64% | 15%
+Uttar Pradesh: 32% | 37% | 31%
+Uttarakhand: 30% | 30% | 40%
+West Bengal: 35% | 44% | 21%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Highways & Airports: 3/10
+  Ports Modernisation: 3/10
+  Smart Cities: 3/10
+  Hindutva: 3/10
+  Uniform Civil Code: 3/10
+  Hindi Education Mandate: 3/10
+  Waqf Board Reforms: 3/10
+  Secularism: 3/10
+  MGNREGA Expansion: 3/10
+  GST: 2/10
+  Defense & Border Infra: 3/10
+  Farm Loan Waivers: 2/10
+  GMOs: 4/10
+  Farm Bills: 2/10
+  Beti Bachao Beti Padhao: 2/10
+  Swachh Bharat Mission: 2/10
+Player 2:
+  Mandal Commission: 3/10
+  Waqf Board Reforms: 5/10
+  Digital India: 3/10
+  Hindutva: 2/10
+  Uniform Civil Code: 4/10
+  Ports Modernisation: 1/10
+  Ayushman Bharat: 3/10
+  Farm Loan Waivers: 2/10
+  River-Linking Projects: 6/10
+  Smart Cities: 3/10
+  Women’s Reservation: 3/10
+  Tribal Rights: 3/10
+  Swachh Bharat Mission: 2/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 3/10
+  GST: 2/10
+  Industry & Mining: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Hindi Education Mandate: 1/10
+  GMOs: 1/10
+  Highways & Airports: 1/10
+  Secularism: 2/10
+
+[03:36] <Player2> spent ₹ 26M on state: Gujarat
+[03:36] <Player2> spent ₹ 10M on promise: Defense & Border Infra
