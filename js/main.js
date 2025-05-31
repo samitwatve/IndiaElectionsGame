@@ -49,10 +49,33 @@ window.addEventListener('DOMContentLoaded', () => {
 // --- Start Screen and Background Music Logic ---
 
 window.bgMusic = undefined;
+
 const startScreen = document.getElementById('start-screen');
 const startBtn = document.getElementById('start-game-btn');
+const playerIdInput = document.getElementById('player-id-input');
 document.body.style.overflow = 'hidden';
+
+
+// Store player ID globally
+window.playerID = 'Player1';
+
+// Update Player 1 label in sidebar when playerID changes
+function updatePlayer1Label() {
+  const label = document.querySelector('.player1-panel h2');
+  if (label) {
+    label.innerHTML = `${window.playerID} (<span class="bjp-orange">BJP</span>)`;
+  }
+}
+window.updatePlayer1Label = updatePlayer1Label;
+
 function startGame() {
+  // Get player ID from input, fallback to 'Player1' if empty
+  let pid = playerIdInput && playerIdInput.value.trim();
+  if (!pid) pid = 'Player1';
+  if (pid.length > 12) pid = pid.slice(0, 12);
+  window.playerID = pid;
+  updatePlayer1Label();
+
   startScreen.style.display = 'none';
   document.body.style.overflow = '';
   if (!window.bgMusic) {
@@ -108,6 +131,7 @@ if (quitBtn) {
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  updatePlayer1Label();
   logGameStart();
 });
 

@@ -115,10 +115,14 @@ function generateGameID() {
 // Store the Game ID for this session
 export const GAME_ID = generateGameID();
 
+
 // Helper to append a line to the log, with in-game timestamp
 export function logAction(text) {
   const logBox = document.getElementById('player1-log');
   if (!logBox) return;
+  // Replace <Player1> with playerID if present
+  let playerID = (typeof window !== 'undefined' && window.playerID) ? window.playerID : 'Player1';
+  let msg = text.replace(/<Player1>/g, `<${playerID}>`);
   // Get in-game time from window.timeLeft and window.duration
   let timestamp = '';
   if (typeof window !== 'undefined' && typeof window.timeLeft === 'number' && typeof window.duration === 'number') {
@@ -129,7 +133,7 @@ export function logAction(text) {
     let sec = Math.floor(totalSeconds % 60).toString().padStart(2, '0');
     timestamp = `[${min}:${sec}] `;
   }
-  logBox.value += (timestamp ? timestamp : '') + text + '\n';
+  logBox.value += (timestamp ? timestamp : '') + msg + '\n';
   logBox.scrollTop = logBox.scrollHeight;
 }
 
@@ -137,9 +141,11 @@ export function logAction(text) {
 export function logGameStart() {
   const logBox = document.getElementById('player1-log');
   if (!logBox) return;
+  let playerID = (typeof window !== 'undefined' && window.playerID) ? window.playerID : 'Player1';
   logBox.value =
     '===GAME START===\n' +
     'Game ID: ' + GAME_ID + '\n' +
+    'Player: ' + playerID + ' (BJP)\n' +
     '===PHASE 1 START===\n';
   logBox.scrollTop = logBox.scrollHeight;
 }

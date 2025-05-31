@@ -29,24 +29,28 @@
     </div>
 
     <!-- Help Modal -->
+
     <div id="help-modal" class="help-modal">
       <div class="help-content">
         <h2>How to Play</h2>
         <ul>
-          <li>Each player takes turns to campaign in Indian states and win seats.</li>
-          <li>Use your purse wisely to maximize your seats and influence.</li>
-          <li>Click on a state to campaign. Each campaign costs money based on the number of seats.</li>
-          <li>Use the tech tree to unlock campaign promises and bonuses.</li>
-          <li>The player with the most seats at the end wins!</li>
+          <li>Campaign in states to win seats. Each campaign costs money based on seats.</li>
+          <li>Use your purse wisely to maximize your total seats.</li>
+          <li>Max out campaign promises before the other player to receive bonus funds</li>
+          <li>Control all states in a group for extra funds every phase.</li>
+          <li>First to 272+ seats wins!</li>
         </ul>
         <button onclick="document.getElementById('help-modal').style.display='none'">Close</button>
       </div>
     </div>
 
     <div id="start-screen" class="start-screen">
-      <h1 class="start-title">India Elections Game</h1>
+      <h1 class="start-title">Welcome to the India Elections Game</h1>
+      <!-- Title moved above, no duplicate needed here -->
+      <input id="player-id-input" class="player-id-input" type="text" maxlength="12" placeholder="Your name or ID" autocomplete="off" style="margin: 10px 0 18px 0; font-size: 1.1em; padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc; width: 220px; text-align: center; display: block;" />
+      <p class="start-desc" style="margin-bottom: 8px; font-size: 1.85em; font-weight: bold; white-space: nowrap; text-align: center;">You will represent the <span class="bjp-orange">BJP</span>.</p>
+      <p class="start-desc" style="margin-bottom: 24px; font-size: 1.5em; font-weight: bold; white-space: nowrap; text-align: center;">Click Start Game to begin.</p>
       <button id="start-game-btn" class="start-game-btn">Start Game</button>
-      <p class="start-desc">Welcome! Click Start Game to begin</p>
     </div>
 
     <div id="gameover-screen" class="gameover-screen">
