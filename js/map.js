@@ -437,29 +437,94 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Add hover and click events to Lakshadweep bounding box
                 const lakshadweepBox = svg.querySelector('#bbox-lakshadweep');
                 if (lakshadweepBox) {
+                    // Hover: show info for Lakshadweep in the same format as other states
                     lakshadweepBox.addEventListener('mouseenter', function (e) {
-                        // Try to show Lakshadweep info
-                        let info = 'Lakshadweep';
-                        if (window.statesDataMap && window.statesDataMap['INLD']) {
-                            const data = window.statesDataMap['INLD'];
-                            info = [
-                                `State: ${data.State}`,
-                                `UT: ${data.UnionTerritory ? 'T' : 'F'}`,
-                                `CI: ${data.CoastalIndia ? 'T' : 'F'}`,
-                                `NE: ${data.NortheastIndia ? 'T' : 'F'}`,
-                                `SI: ${data.SouthIndia ? 'T' : 'F'}`,
-                                `HH: ${data.HindiHeartland ? 'T' : 'F'}`,
-                                `AR: ${data.AgriculturalRegion ? 'T' : 'F'}`,
-                                `BL: ${data.BorderLands ? 'T' : 'F'}`,
-                                `LS: ${data.LokSabhaSeats}`
-                            ].join('; ');
+                        if (!window.statesDataMap || !window.popularityScores) {
+                            if (regionNameDisplay) regionNameDisplay.textContent = 'Lakshadweep';
+                            return;
                         }
+                        const data = window.statesDataMap['INLD'];
+                        const popObj = window.popularityScores['INLD'];
+                        let popText = 'N/A';
+                        if (popObj && typeof popObj === 'object') {
+                            popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                        }
+                        const info = [
+                            `State: ${data.State}`,
+                            `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                            `Popularity: ${popText}`
+                        ].join(' | ');
                         if (regionNameDisplay) regionNameDisplay.textContent = info;
                     });
                     lakshadweepBox.addEventListener('mouseleave', function (e) {
                         if (regionNameDisplay) regionNameDisplay.textContent = '';
                     });
+                    // Click: same as other states
                     lakshadweepBox.addEventListener('click', function (e) {
+                        // Only update if popularityScores exists for Lakshadweep
+                        if (!window.popularityScores || !window.popularityScores['INLD']) return;
+                        const popObj = window.popularityScores['INLD'];
+                        // Purse logic: cost = number of seats
+                        const seats = +window.statesDataMap['INLD'].LokSabhaSeats;
+                        if (getPlayer1Purse() < seats) {
+                            shakePlayer1Purse();
+                            // Play error sound if not enough cash
+                            if (typeof playSound === 'function') {
+                                playSound('error.mp3');
+                            } else {
+                                const audio = new Audio('static/sounds/error.mp3');
+                                audio.volume = 0.7;
+                                audio.play();
+                            }
+                            return;
+                        }
+                        // Show ripple for Player 1 (orange)
+                        showRippleOnState(lakshadweepBox, '#ff9800');
+                        setPlayer1Purse(getPlayer1Purse() - seats);
+                        updatePlayer1PurseDisplay();
+                        showPlayer1PurseDeduction(seats);
+                        // Log Player 1 spending on state campaign
+                        const stateName = window.statesDataMap['INLD']?.State || 'Lakshadweep';
+                        logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
+                        // Track funds spent for Player 1
+                        if (typeof window !== 'undefined') {
+                            window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
+                        }
+                        // Increase P1 popularity by 5%, max 100
+                        let increase = 5;
+                        let newP1 = Math.min(100, popObj.p1 + increase);
+                        let delta = newP1 - popObj.p1;
+                        if (delta <= 0) return; // Already at max
+                        // Decrease P2 and Others proportionally
+                        let totalOther = popObj.p2 + popObj.others;
+                        let newP2 = popObj.p2;
+                        let newOthers = popObj.others;
+                        if (totalOther > 0) {
+                            newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
+                            newOthers = Math.max(0, 100 - newP1 - newP2);
+                        } else {
+                            newP2 = 0;
+                            newOthers = 100 - newP1;
+                        }
+                        // Update the popularity object
+                        window.popularityScores['INLD'] = { p1: newP1, p2: newP2, others: newOthers };
+                        // Refresh all state colors based on current popularity
+                        refreshAllStateColors();
+                        // Always update hover label for this region (instant feedback)
+                        if (regionNameDisplay) {
+                            const data = window.statesDataMap['INLD'];
+                            const popObj = window.popularityScores['INLD'];
+                            let popText = 'N/A';
+                            if (popObj && typeof popObj === 'object') {
+                                popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                            }
+                            const info = [
+                                `State: ${data.State}`,
+                                `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                                `Popularity: ${popText}`
+                            ].join(' | ');
+                            regionNameDisplay.textContent = info;
+                        }
                         // If a category is active, ignore single highlight
                         if (categoryButtonsContainer && categoryButtonsContainer.querySelector('.active')) return;
                         if (lastHighlighted) {
