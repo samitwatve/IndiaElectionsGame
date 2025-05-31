@@ -1,0 +1,171 @@
+===GAME START===
+Game ID: GMZSTY4U6
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ 17M on state: Telangana
+[00:02] <Player1> spent ₹ 25M on a Rajasthan campaign
+[00:02] <Player1> spent ₹ 25M on a Rajasthan campaign
+[00:03] <Player1> spent ₹ 10M on a Haryana campaign
+[00:03] <Player1> spent ₹ 10M on a Haryana campaign
+[00:03] <Player1> spent ₹ 13M on a Punjab campaign
+[00:03] <Player1> spent ₹ 13M on a Punjab campaign
+[00:04] <Player2> spent ₹ 17M on state: Telangana
+[00:05] <Player1> spent ₹ 7M on a Delhi campaign
+[00:05] <Player1> spent ₹ 7M on a Delhi campaign
+[00:05] <Player1> spent ₹ 13M on a Punjab campaign
+[00:06] <Player2> spent ₹ 17M on state: Telangana
+[00:06] <Player1> spent ₹ 13M on a Punjab campaign
+[00:07] <Player1> spent ₹ 13M on a Punjab campaign
+[00:07] <Player1> spent ₹ 13M on a Punjab campaign
+[00:07] <Player1> spent ₹ 4M on a Himachal Pradesh campaign
+[00:08] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:08] <Player1> spent ₹ 4M on a Himachal Pradesh campaign
+[00:08] <Player1> spent ₹ 4M on a Himachal Pradesh campaign
+[00:08] <Player1> spent ₹ 26M on a Gujarat campaign
+[00:09] <Player1> spent ₹ 26M on a Gujarat campaign
+[00:10] <Player2> spent ₹ 10M on promise: Hindutva
+[00:12] <Player2> spent ₹ 17M on state: Telangana
+[00:14] <Player2> spent ₹ 10M on promise: Farm Loan Waivers
+[00:14] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:14] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:15] <Player1> spent ₹ 14M on a Assam campaign
+[00:16] <Player2> spent ₹ 10M on promise: Industry & Mining
+[00:18] <Player2> spent ₹ 10M on promise: Uniform Civil Code
+[00:20] <Player2> spent ₹ 10M on promise: Secularism
+[00:22] <Player2> spent ₹ 17M on state: Telangana
+[00:24] <Player2> spent ₹ 17M on state: Telangana
+[00:26] <Player2> spent ₹ 17M on state: Telangana
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹244M | Funds Remaining: ₹6M
+Player 2: Funds Spent: ₹179M | Funds Remaining: ₹196M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 18% | 14% | 68%
+INAP: 29% | 11% | 60%
+INAR: 70% | 10% | 20%
+INAS: 29% | 24% | 47%
+INBR: 34% | 10% | 56%
+INCH: 57% | 29% | 14%
+INCT: 20% | 20% | 60%
+INDH: 42% | 12% | 46%
+INDD: 54% | 13% | 33%
+INDL: 55% | 8% | 37%
+INGA: 34% | 15% | 51%
+INGJ: 34% | 27% | 39%
+INHR: 20% | 24% | 56%
+INHP: 36% | 19% | 45%
+INJK: 52% | 15% | 33%
+INJH: 44% | 30% | 26%
+INKA: 39% | 25% | 36%
+INKL: 23% | 48% | 29%
+INLA: 28% | 26% | 46%
+INLD: 40% | 26% | 34%
+INMP: 17% | 26% | 57%
+INMH: 36% | 15% | 49%
+INMN: 21% | 40% | 39%
+INML: 14% | 28% | 58%
+INMZ: 36% | 22% | 42%
+INNL: 53% | 28% | 19%
+INOR: 35% | 36% | 29%
+INPY: 24% | 29% | 47%
+INPB: 52% | 13% | 35%
+INRJ: 44% | 28% | 28%
+INSK: 11% | 27% | 62%
+INTN: 34% | 26% | 40%
+INTG: 19% | 59% | 22%
+INTR: 58% | 31% | 11%
+INUP: 15% | 51% | 34%
+INUT: 21% | 29% | 50%
+INWB: 24% | 47% | 29%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Tribal Rights: 1/10
+  Hindutva: 1/10
+  Farm Loan Waivers: 1/10
+  Industry & Mining: 1/10
+  Uniform Civil Code: 1/10
+  Secularism: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ 10M on promise: Farm Loan Waivers
+[00:29] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[00:31] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:33] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[00:35] <Player2> spent ₹ 17M on state: Telangana
+[00:37] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[00:39] <Player2> spent ₹ 10M on promise: Hindutva
+[00:41] <Player2> spent ₹ 10M on promise: P M Jan-Dhan Yojana
+[00:43] <Player2> spent ₹ 17M on state: Telangana
+[00:45] <Player2> spent ₹ 10M on promise: Mandal Commission
+[00:47] <Player2> spent ₹ 17M on state: Telangana
+[00:49] <Player2> spent ₹ 10M on promise: Hindutva
+[00:51] <Player2> spent ₹ 17M on state: Telangana
+[00:53] <Player2> spent ₹ 17M on state: Telangana
+[00:53] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:53] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:54] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:54] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹116M | Funds Remaining: ₹140M
+Player 2: Funds Spent: ₹175M | Funds Remaining: ₹396M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 18% | 14% | 68%
+INAP: 29% | 11% | 60%
+INAR: 70% | 10% | 20%
+INAS: 29% | 24% | 47%
+INBR: 34% | 10% | 56%
+INCH: 57% | 29% | 14%
+INCT: 20% | 20% | 60%
+INDH: 42% | 12% | 46%
+INDD: 54% | 13% | 33%
+INDL: 55% | 8% | 37%
+INGA: 34% | 15% | 51%
+INGJ: 34% | 27% | 39%
+INHR: 20% | 24% | 56%
+INHP: 36% | 19% | 45%
+INJK: 52% | 15% | 33%
+INJH: 44% | 30% | 26%
+INKA: 39% | 25% | 36%
+INKL: 23% | 48% | 29%
+INLA: 28% | 26% | 46%
+INLD: 40% | 26% | 34%
+INMP: 37% | 19% | 44%
+INMH: 36% | 15% | 49%
+INMN: 21% | 40% | 39%
+INML: 14% | 28% | 58%
+INMZ: 36% | 22% | 42%
+INNL: 53% | 28% | 19%
+INOR: 35% | 36% | 29%
+INPY: 24% | 29% | 47%
+INPB: 52% | 13% | 35%
+INRJ: 44% | 28% | 28%
+INSK: 11% | 27% | 62%
+INTN: 34% | 26% | 40%
+INTG: 8% | 84% | 8%
+INTR: 58% | 31% | 11%
+INUP: 15% | 51% | 34%
+INUT: 21% | 29% | 50%
+INWB: 24% | 47% | 29%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Tribal Rights: 1/10
+  Hindutva: 3/10
+  Farm Loan Waivers: 2/10
+  Industry & Mining: 1/10
+  Uniform Civil Code: 1/10
+  Secularism: 1/10
+  Waqf Board Reforms: 1/10
+  River-Linking Projects: 1/10
+  Hindi Education Mandate: 1/10
+  MGNREGA Expansion: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Mandal Commission: 1/10
+
+[00:54] <Player2> spent ₹ 17M on state: Telangana
+[00:54] <Player2> spent ₹ 17M on state: Telangana

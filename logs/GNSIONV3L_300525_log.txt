@@ -1,0 +1,180 @@
+===GAME START===
+Game ID: GNSIONV3L
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ 10M on promise: Ayushman Bharat
+[00:02] <Player1> spent ₹ 14M on a Assam campaign
+[00:02] <Player1> spent ₹ 14M on a Assam campaign
+[00:04] <Player2> spent ₹ 10M on promise: Waqf Board Reforms
+[00:04] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:04] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:05] <Player1> spent ₹ 2M on a Manipur campaign
+[00:06] <Player2> spent ₹ 10M on promise: GST
+[00:06] <Player1> spent ₹ 2M on a Manipur campaign
+[00:06] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:07] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:08] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:08] <Player1> spent ₹ 2M on a Tripura campaign
+[00:08] <Player1> spent ₹ 2M on a Tripura campaign
+[00:09] <Player1> spent ₹ 2M on a Meghalaya campaign
+[00:09] <Player1> spent ₹ 2M on a Meghalaya campaign
+[00:10] <Player2> spent ₹ 10M on promise: Mandal Commission
+[00:10] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:11] <Player1> spent ₹ 10M on Uniform Civil Code
+[00:11] <Player1> spent ₹ 10M on Uniform Civil Code
+[00:12] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:12] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[00:12] <Player1> spent ₹ 11M on a Chhattisgarh campaign
+[00:13] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:14] <Player2> spent ₹ 10M on promise: GMOs
+[00:14] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:16] <Player2> spent ₹ 14M on state: Jharkhand
+[00:16] <Player1> spent ₹ 25M on a Rajasthan campaign
+[00:16] <Player1> spent ₹ 25M on a Rajasthan campaign
+[00:18] <Player2> spent ₹ 2M on state: Tripura
+[00:20] <Player2> spent ₹ 1M on state: Puducherry
+[00:22] <Player2> spent ₹ 2M on state: Meghalaya
+[00:24] <Player2> spent ₹ 10M on promise: Beti Bachao Beti Padhao
+[00:26] <Player2> spent ₹ 1M on state: Ladakh
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹238M | Funds Remaining: ₹12M
+Player 2: Funds Spent: ₹100M | Funds Remaining: ₹275M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 30% | 17% | 53%
+INAP: 21% | 17% | 62%
+INAR: 20% | 25% | 55%
+INAS: 33% | 26% | 41%
+INBR: 46% | 18% | 36%
+INCH: 26% | 18% | 56%
+INCT: 36% | 29% | 35%
+INDH: 14% | 24% | 62%
+INDD: 26% | 27% | 47%
+INDL: 26% | 45% | 29%
+INGA: 24% | 20% | 56%
+INGJ: 19% | 27% | 54%
+INHR: 29% | 12% | 59%
+INHP: 41% | 28% | 31%
+INJK: 15% | 24% | 61%
+INJH: 20% | 36% | 44%
+INKA: 28% | 17% | 55%
+INKL: 27% | 29% | 44%
+INLA: 20% | 59% | 21%
+INLD: 21% | 15% | 64%
+INMP: 40% | 13% | 47%
+INMH: 37% | 18% | 45%
+INMN: 23% | 24% | 53%
+INML: 25% | 26% | 49%
+INMZ: 36% | 8% | 56%
+INNL: 29% | 24% | 47%
+INOR: 19% | 23% | 58%
+INPY: 29% | 15% | 56%
+INPB: 10% | 31% | 59%
+INRJ: 29% | 9% | 62%
+INSK: 32% | 11% | 57%
+INTN: 44% | 10% | 46%
+INTG: 18% | 37% | 45%
+INTR: 38% | 17% | 45%
+INUP: 39% | 41% | 20%
+INUT: 28% | 34% | 38%
+INWB: 34% | 13% | 53%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Uniform Civil Code: 2/10
+Player 2:
+  Ayushman Bharat: 1/10
+  Waqf Board Reforms: 1/10
+  GST: 1/10
+  River-Linking Projects: 2/10
+  Mandal Commission: 1/10
+  GMOs: 1/10
+  Beti Bachao Beti Padhao: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:28] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:28] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:29] <Player2> spent ₹ 1M on state: Sikkim
+[00:29] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:29] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:30] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:31] <Player2> spent ₹ 10M on promise: River-Linking Projects
+[00:32] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:32] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:32] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:33] <Player2> spent ₹ 10M on promise: P M Jan-Dhan Yojana
+[00:34] <Player1> spent ₹ 48M on a Maharashtra campaign
+[00:35] <Player2> spent ₹ 42M on state: West Bengal
+[00:37] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:39] <Player2> spent ₹ 1M on state: Ladakh
+[00:41] <Player2> spent ₹ 4M on state: Himachal Pradesh
+[00:43] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:44] <Player1> spent ₹ 5M on a Jammu And Kashmir campaign
+[00:45] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:47] <Player2> spent ₹ 10M on promise: Highways & Airports
+[00:49] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[00:51] <Player2> spent ₹ 39M on state: Tamil Nadu
+[00:53] <Player2> spent ₹ 10M on promise: GST
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹262M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹177M | Funds Remaining: ₹473M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 30% | 17% | 53%
+INAP: 46% | 12% | 42%
+INAR: 20% | 25% | 55%
+INAS: 33% | 26% | 41%
+INBR: 46% | 18% | 36%
+INCH: 26% | 18% | 56%
+INCT: 36% | 29% | 35%
+INDH: 14% | 24% | 62%
+INDD: 26% | 27% | 47%
+INDL: 26% | 45% | 29%
+INGA: 24% | 20% | 56%
+INGJ: 19% | 27% | 54%
+INHR: 29% | 12% | 59%
+INHP: 38% | 33% | 29%
+INJK: 20% | 23% | 57%
+INJH: 20% | 36% | 44%
+INKA: 43% | 14% | 43%
+INKL: 27% | 29% | 44%
+INLA: 18% | 64% | 18%
+INLD: 21% | 15% | 64%
+INMP: 40% | 13% | 47%
+INMH: 42% | 17% | 41%
+INMN: 23% | 24% | 53%
+INML: 25% | 26% | 49%
+INMZ: 36% | 8% | 56%
+INNL: 29% | 24% | 47%
+INOR: 19% | 23% | 58%
+INPY: 29% | 15% | 56%
+INPB: 10% | 31% | 59%
+INRJ: 29% | 9% | 62%
+INSK: 30% | 16% | 54%
+INTN: 42% | 15% | 43%
+INTG: 18% | 37% | 45%
+INTR: 38% | 17% | 45%
+INUP: 39% | 41% | 20%
+INUT: 28% | 34% | 38%
+INWB: 32% | 18% | 50%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Uniform Civil Code: 2/10
+Player 2:
+  Ayushman Bharat: 1/10
+  Waqf Board Reforms: 1/10
+  GST: 2/10
+  River-Linking Projects: 3/10
+  Mandal Commission: 1/10
+  GMOs: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Tribal Rights: 2/10
+  P M Jan-Dhan Yojana: 1/10
+  Ports Modernisation: 2/10
+  Highways & Airports: 1/10
+  Hindi Education Mandate: 1/10
+
+[00:54] <Player2> spent ₹ 10M on promise: GMOs

@@ -18,8 +18,10 @@ export function logPhaseSummary(phase) {
   if (window.statesDataMap && window.popularityScores) {
     Object.entries(window.statesDataMap).forEach(([id, state]) => {
       const pop = window.popularityScores[id];
+      // Prefer 'State' property, fallback to 'StateName', fallback to code
+      const displayName = state.State || state.StateName || id;
       if (pop) {
-        summary += `${state.StateName || id}: ${pop.p1}% | ${pop.p2}% | ${pop.others}%\n`;
+        summary += `${displayName}: ${pop.p1}% | ${pop.p2}% | ${pop.others}%\n`;
       }
     });
   }

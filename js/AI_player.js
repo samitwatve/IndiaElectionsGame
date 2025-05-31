@@ -54,7 +54,7 @@ function startAITakingAction({
     actionFrequency = 2, // seconds
     states = [],
     campaignPromises = [],
-    // spendOnState = spendOnStateAI,
+    spendOnState = spendOnStateAI,
     spendOnPromise = spendOnPromiseAI
 }) {
     // Set the global purse for Player 2 at the start
@@ -72,10 +72,11 @@ function startAITakingAction({
 
         if (actionType === 'state' && states.length > 0) {
             const state = getRandomItem(states);
-            const cost = state.cost || 10; // Example cost
+            // Cost is number of Lok Sabha seats if available, else fallback
+            const cost = state.LokSabhaSeats ? Number(state.LokSabhaSeats) : (state.cost || 10);
             if (getPlayer2Purse() >= cost) {
                 spendOnState(state, cost);
-                logAction(`<Player2> spent ₹ ${cost}M on state: ${state.name}`);
+                logAction(`<Player2> spent ₹ ${cost}M on state: ${state.State}`);
                 // Track funds spent for Player 2
                 if (typeof window !== 'undefined') {
                   window.p2SpentThisPhase = (window.p2SpentThisPhase || 0) + cost;
