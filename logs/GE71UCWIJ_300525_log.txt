@@ -1,0 +1,165 @@
+===GAME START===
+Game ID: GE71UCWIJ
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ -10M on promise: P M Jan-Dhan Yojana
+[00:04] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:04] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:06] <Player2> spent ₹ -10M on promise: Smart Cities
+[00:06] <Player1> spent ₹ -40M on a Bihar campaign
+[00:06] <Player1> spent ₹ -40M on a Bihar campaign
+[00:07] <Player1> spent ₹ -14M on a Assam campaign
+[00:08] <Player2> spent ₹ -10M on promise: Hindi Education Mandate
+[00:08] <Player1> spent ₹ -14M on a Assam campaign
+[00:08] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:09] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:09] <Player1> spent ₹ -2M on a Meghalaya campaign
+[00:10] <Player2> spent ₹ -10M on promise: Hindi Education Mandate
+[00:10] <Player1> spent ₹ -13M on a Punjab campaign
+[00:10] <Player1> spent ₹ -13M on a Punjab campaign
+[00:12] <Player2> spent ₹ -10M on promise: Ayushman Bharat
+[00:16] <Player2> spent ₹ -10M on promise: GST
+[00:26] <Player2> spent ₹ -10M on promise: Women’s Reservation
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹0M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹70M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 10% | 43% | 47%
+INAP: 26% | 50% | 24%
+INAR: 22% | 49% | 29%
+INAS: 28% | 33% | 39%
+INBR: 42% | 23% | 35%
+INCH: 19% | 53% | 28%
+INCT: 25% | 29% | 46%
+INDH: 25% | 26% | 49%
+INDD: 55% | 17% | 28%
+INDL: 18% | 37% | 45%
+INGA: 30% | 15% | 55%
+INGJ: 19% | 19% | 62%
+INHR: 25% | 51% | 24%
+INHP: 34% | 30% | 36%
+INJK: 47% | 12% | 41%
+INJH: 49% | 25% | 26%
+INKA: 15% | 28% | 57%
+INKL: 51% | 28% | 21%
+INLA: 24% | 32% | 44%
+INLD: 54% | 14% | 32%
+INMP: 21% | 19% | 60%
+INMH: 18% | 15% | 67%
+INMN: 15% | 57% | 28%
+INML: 47% | 16% | 37%
+INMZ: 18% | 24% | 58%
+INNL: 58% | 36% | 6%
+INOR: 40% | 37% | 23%
+INPY: 37% | 37% | 26%
+INPB: 32% | 26% | 42%
+INRJ: 43% | 26% | 31%
+INSK: 24% | 26% | 50%
+INTN: 27% | 33% | 40%
+INTG: 34% | 39% | 27%
+INTR: 17% | 20% | 63%
+INUP: 54% | 23% | 23%
+INUT: 32% | 52% | 16%
+INWB: 51% | 22% | 27%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  P M Jan-Dhan Yojana: 1/10
+  Smart Cities: 1/10
+  Hindi Education Mandate: 2/10
+  Ayushman Bharat: 1/10
+  GST: 1/10
+  Women’s Reservation: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ -10M on promise: Ayushman Bharat
+[00:28] <Player1> spent ₹ -10M on Hindutva
+[00:28] <Player1> spent ₹ -10M on Hindutva
+[00:29] <Player1> spent ₹ -10M on Women’s Reservation
+[00:29] <Player1> spent ₹ -10M on Women’s Reservation
+[00:30] <Player1> spent ₹ -10M on Tribal Rights
+[00:30] <Player1> spent ₹ -10M on Tribal Rights
+[00:31] <Player1> spent ₹ -10M on Secularism
+[00:31] <Player1> spent ₹ -10M on Secularism
+[00:32] <Player1> spent ₹ -10M on Highways & Airports
+[00:33] <Player2> spent ₹ -10M on promise: Waqf Board Reforms
+[00:33] <Player1> spent ₹ -10M on Highways & Airports
+[00:33] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:34] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:34] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:35] <Player1> spent ₹ -48M on a Maharashtra campaign
+[00:39] <Player2> spent ₹ -10M on promise: Mandal Commission
+[00:41] <Player1> spent ₹ -10M on GST
+[00:45] <Player2> spent ₹ -10M on promise: Highways & Airports
+[00:47] <Player2> spent ₹ -10M on promise: P M Jan-Dhan Yojana
+[00:51] <Player2> spent ₹ -10M on promise: P M Jan-Dhan Yojana
+[00:53] <Player2> spent ₹ -10M on promise: GMOs
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹110M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹70M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 10% | 43% | 47%
+INAP: 26% | 50% | 24%
+INAR: 22% | 49% | 29%
+INAS: 28% | 33% | 39%
+INBR: 42% | 23% | 35%
+INCH: 19% | 53% | 28%
+INCT: 25% | 29% | 46%
+INDH: 25% | 26% | 49%
+INDD: 55% | 17% | 28%
+INDL: 18% | 37% | 45%
+INGA: 30% | 15% | 55%
+INGJ: 19% | 19% | 62%
+INHR: 25% | 51% | 24%
+INHP: 34% | 30% | 36%
+INJK: 47% | 12% | 41%
+INJH: 49% | 25% | 26%
+INKA: 15% | 28% | 57%
+INKL: 51% | 28% | 21%
+INLA: 24% | 32% | 44%
+INLD: 54% | 14% | 32%
+INMP: 36% | 16% | 48%
+INMH: 23% | 14% | 63%
+INMN: 15% | 57% | 28%
+INML: 47% | 16% | 37%
+INMZ: 18% | 24% | 58%
+INNL: 58% | 36% | 6%
+INOR: 40% | 37% | 23%
+INPY: 37% | 37% | 26%
+INPB: 32% | 26% | 42%
+INRJ: 43% | 26% | 31%
+INSK: 24% | 26% | 50%
+INTN: 27% | 33% | 40%
+INTG: 34% | 39% | 27%
+INTR: 17% | 20% | 63%
+INUP: 54% | 23% | 23%
+INUT: 32% | 52% | 16%
+INWB: 51% | 22% | 27%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Hindutva: 2/10
+  Women’s Reservation: 2/10
+  Tribal Rights: 2/10
+  Secularism: 2/10
+  Highways & Airports: 2/10
+  GST: 1/10
+Player 2:
+  P M Jan-Dhan Yojana: 3/10
+  Smart Cities: 1/10
+  Hindi Education Mandate: 2/10
+  Ayushman Bharat: 2/10
+  GST: 1/10
+  Women’s Reservation: 1/10
+  Waqf Board Reforms: 1/10
+  Mandal Commission: 1/10
+  Highways & Airports: 1/10
+  GMOs: 1/10
+
+[00:54] <Player2> spent ₹ -10M on promise: Ayushman Bharat

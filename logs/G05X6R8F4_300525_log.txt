@@ -1,0 +1,145 @@
+===GAME START===
+Game ID: G05X6R8F4
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ -10M on promise: P M Jan-Dhan Yojana
+[00:02] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:02] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:03] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:03] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:03] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:04] <Player2> spent ₹ -10M on promise: Industry & Mining
+[00:04] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:04] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:04] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:04] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:06] <Player2> spent ₹ -10M on promise: Hindi Education Mandate
+[00:12] <Player2> spent ₹ -10M on promise: Defense & Border Infra
+[00:16] <Player2> spent ₹ -10M on promise: P M Jan-Dhan Yojana
+[00:20] <Player2> spent ₹ -10M on promise: Beti Bachao Beti Padhao
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 31% | 25% | 44%
+INAP: 16% | 34% | 50%
+INAR: 15% | 16% | 69%
+INAS: 44% | 19% | 37%
+INBR: 21% | 26% | 53%
+INCH: 28% | 37% | 35%
+INCT: 31% | 14% | 55%
+INDH: 20% | 28% | 52%
+INDD: 10% | 26% | 64%
+INDL: 33% | 32% | 35%
+INGA: 12% | 31% | 57%
+INGJ: 19% | 11% | 70%
+INHR: 25% | 34% | 41%
+INHP: 12% | 32% | 56%
+INJK: 12% | 22% | 66%
+INJH: 11% | 14% | 75%
+INKA: 19% | 50% | 31%
+INKL: 38% | 47% | 15%
+INLA: 22% | 24% | 54%
+INLD: 23% | 31% | 46%
+INMP: 26% | 38% | 36%
+INMH: 54% | 11% | 35%
+INMN: 10% | 15% | 75%
+INML: 19% | 20% | 61%
+INMZ: 13% | 13% | 74%
+INNL: 30% | 24% | 46%
+INOR: 25% | 31% | 44%
+INPY: 26% | 32% | 42%
+INPB: 32% | 41% | 27%
+INRJ: 64% | 11% | 25%
+INSK: 29% | 34% | 37%
+INTN: 47% | 33% | 20%
+INTG: 27% | 58% | 15%
+INTR: 24% | 15% | 61%
+INUP: 28% | 25% | 47%
+INUT: 16% | 26% | 58%
+INWB: 34% | 15% | 51%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  P M Jan-Dhan Yojana: 2/10
+  Industry & Mining: 1/10
+  Hindi Education Mandate: 1/10
+  Defense & Border Infra: 1/10
+  Beti Bachao Beti Padhao: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:31] <Player2> spent ₹ -10M on promise: Tribal Rights
+[00:33] <Player2> spent ₹ -10M on promise: River-Linking Projects
+[00:35] <Player2> spent ₹ -10M on promise: Highways & Airports
+[00:37] <Player2> spent ₹ -10M on promise: River-Linking Projects
+[00:39] <Player2> spent ₹ -10M on promise: Digital India
+[00:45] <Player2> spent ₹ -10M on promise: GST
+[00:47] <Player2> spent ₹ -10M on promise: Highways & Airports
+[00:51] <Player2> spent ₹ -10M on promise: Hindi Education Mandate
+[00:52] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:52] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:53] <Player2> spent ₹ -10M on promise: Farm Loan Waivers
+[00:53] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 31% | 25% | 44%
+INAP: 16% | 34% | 50%
+INAR: 15% | 16% | 69%
+INAS: 44% | 19% | 37%
+INBR: 21% | 26% | 53%
+INCH: 28% | 37% | 35%
+INCT: 31% | 14% | 55%
+INDH: 20% | 28% | 52%
+INDD: 10% | 26% | 64%
+INDL: 33% | 32% | 35%
+INGA: 12% | 31% | 57%
+INGJ: 19% | 11% | 70%
+INHR: 25% | 34% | 41%
+INHP: 12% | 32% | 56%
+INJK: 12% | 22% | 66%
+INJH: 11% | 14% | 75%
+INKA: 19% | 50% | 31%
+INKL: 38% | 47% | 15%
+INLA: 22% | 24% | 54%
+INLD: 23% | 31% | 46%
+INMP: 26% | 38% | 36%
+INMH: 54% | 11% | 35%
+INMN: 10% | 15% | 75%
+INML: 19% | 20% | 61%
+INMZ: 13% | 13% | 74%
+INNL: 30% | 24% | 46%
+INOR: 25% | 31% | 44%
+INPY: 26% | 32% | 42%
+INPB: 32% | 41% | 27%
+INRJ: 79% | 6% | 15%
+INSK: 29% | 34% | 37%
+INTN: 47% | 33% | 20%
+INTG: 27% | 58% | 15%
+INTR: 24% | 15% | 61%
+INUP: 28% | 25% | 47%
+INUT: 16% | 26% | 58%
+INWB: 34% | 15% | 51%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  P M Jan-Dhan Yojana: 2/10
+  Industry & Mining: 1/10
+  Hindi Education Mandate: 2/10
+  Defense & Border Infra: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Tribal Rights: 1/10
+  River-Linking Projects: 2/10
+  Highways & Airports: 2/10
+  Digital India: 1/10
+  GST: 1/10
+  Farm Loan Waivers: 1/10
+
+[00:54] <Player2> spent ₹ -10M on promise: Defense & Border Infra

@@ -1,0 +1,169 @@
+===GAME START===
+Game ID: GJ7QYVTEW
+===PHASE 1 START===
+[00:04] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[00:08] <Player2> spent ₹ 10M on promise: Industry & Mining
+[00:11] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:12] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:13] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:15] <Player1> spent ₹ 48M on a Maharashtra campaign
+[00:16] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:17] <Player1> spent ₹ 26M on a Gujarat campaign
+[00:18] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:21] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:26] <Player2> spent ₹ 10M on promise: Secularism
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:54] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹237M | Funds Remaining: ₹263M
+Player 2: Funds Spent: ₹30M | Funds Remaining: ₹720M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 12% | 25% | 63%
+INAP: 31% | 8% | 61%
+INAR: 23% | 34% | 43%
+INAS: 55% | 24% | 21%
+INBR: 48% | 12% | 40%
+INCH: 14% | 29% | 57%
+INCT: 58% | 15% | 27%
+INDH: 38% | 35% | 27%
+INDD: 25% | 19% | 56%
+INDL: 20% | 31% | 49%
+INGA: 12% | 57% | 31%
+INGJ: 26% | 15% | 59%
+INHR: 11% | 19% | 70%
+INHP: 15% | 16% | 69%
+INJK: 26% | 33% | 41%
+INJH: 18% | 21% | 61%
+INKA: 42% | 19% | 39%
+INKL: 29% | 39% | 32%
+INLA: 26% | 59% | 15%
+INLD: 56% | 31% | 13%
+INMP: 37% | 16% | 47%
+INMH: 37% | 31% | 32%
+INMN: 23% | 54% | 23%
+INML: 40% | 45% | 15%
+INMZ: 24% | 10% | 66%
+INNL: 44% | 10% | 46%
+INOR: 60% | 24% | 16%
+INPY: 17% | 19% | 64%
+INPB: 18% | 34% | 48%
+INRJ: 26% | 39% | 35%
+INSK: 24% | 31% | 45%
+INTN: 34% | 24% | 42%
+INTG: 54% | 14% | 32%
+INTR: 10% | 25% | 65%
+INUP: 24% | 50% | 26%
+INUT: 12% | 21% | 67%
+INWB: 25% | 16% | 59%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Hindi Education Mandate: 1/10
+  Industry & Mining: 1/10
+  Secularism: 1/10
+
+[00:27] <Player2> spent ₹ 10M on promise: Hindutva
+[00:28] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:29] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[00:29] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:29] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:30] <Player1> spent ₹ 14M on a Jharkhand campaign
+[00:30] <Player1> spent ₹ 14M on a Jharkhand campaign
+[00:31] <Player2> spent ₹ 10M on promise: Ports Modernisation
+[00:31] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:32] <Player1> spent ₹ 42M on a West Bengal campaign
+[00:33] <Player2> spent ₹ 10M on promise: GST
+[00:33] <Player1> spent ₹ 1M on a Sikkim campaign
+[00:33] <Player1> spent ₹ 1M on a Sikkim campaign
+[00:34] <Player1> spent ₹ 1M on a Sikkim campaign
+[00:34] <Player1> spent ₹ 1M on a Sikkim campaign
+[00:35] <Player2> spent ₹ 10M on promise: GST
+[00:36] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:36] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:36] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:37] <Player2> spent ₹ 10M on promise: Secularism
+[00:37] <Player1> spent ₹ 2M on a Arunachal Pradesh campaign
+[00:37] <Player1> spent ₹ 1M on a Nagaland campaign
+[00:38] <Player1> spent ₹ 1M on a Nagaland campaign
+[00:38] <Player1> spent ₹ 1M on a Nagaland campaign
+[00:39] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[00:39] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:39] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:39] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:41] <Player2> spent ₹ 10M on promise: P M Jan-Dhan Yojana
+[00:41] <Player1> spent ₹ 1M on a Andaman And Nicobar Islands campaign
+[00:41] <Player1> spent ₹ 1M on a Andaman And Nicobar Islands campaign
+[00:42] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:42] <Player1> spent ₹ 1M on a Mizoram campaign
+[00:43] <Player2> spent ₹ 10M on promise: Digital India
+[00:43] <Player1> spent ₹ 2M on a Tripura campaign
+[00:45] <Player2> spent ₹ 10M on promise: Farm Bills
+[00:47] <Player2> spent ₹ 10M on promise: Swachh Bharat Mission
+[00:48] <Player1> spent ₹ 1M on a Andaman And Nicobar Islands campaign
+[00:49] <Player2> spent ₹ 10M on promise: Digital India
+[00:51] <Player2> spent ₹ 10M on promise: Tribal Rights
+[00:53] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹263M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹140M | Funds Remaining: ₹580M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 27% | 22% | 51%
+INAP: 31% | 8% | 61%
+INAR: 43% | 26% | 31%
+INAS: 55% | 24% | 21%
+INBR: 48% | 12% | 40%
+INCH: 14% | 29% | 57%
+INCT: 58% | 15% | 27%
+INDH: 38% | 35% | 27%
+INDD: 25% | 19% | 56%
+INDL: 20% | 31% | 49%
+INGA: 12% | 57% | 31%
+INGJ: 26% | 15% | 59%
+INHR: 11% | 19% | 70%
+INHP: 15% | 16% | 69%
+INJK: 26% | 33% | 41%
+INJH: 28% | 19% | 53%
+INKA: 42% | 19% | 39%
+INKL: 29% | 39% | 32%
+INLA: 26% | 59% | 15%
+INLD: 56% | 31% | 13%
+INMP: 37% | 16% | 47%
+INMH: 37% | 31% | 32%
+INMN: 23% | 54% | 23%
+INML: 40% | 45% | 15%
+INMZ: 49% | 5% | 46%
+INNL: 59% | 7% | 34%
+INOR: 60% | 24% | 16%
+INPY: 17% | 19% | 64%
+INPB: 18% | 34% | 48%
+INRJ: 26% | 39% | 35%
+INSK: 44% | 23% | 33%
+INTN: 34% | 24% | 42%
+INTG: 54% | 14% | 32%
+INTR: 15% | 24% | 61%
+INUP: 24% | 50% | 26%
+INUT: 12% | 21% | 67%
+INWB: 50% | 11% | 39%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Hindi Education Mandate: 1/10
+  Industry & Mining: 1/10
+  Secularism: 2/10
+  Hindutva: 1/10
+  Women’s Reservation: 2/10
+  Ports Modernisation: 1/10
+  GST: 2/10
+  MGNREGA Expansion: 1/10
+  P M Jan-Dhan Yojana: 1/10
+  Digital India: 2/10
+  Farm Bills: 1/10
+  Swachh Bharat Mission: 1/10
+  Tribal Rights: 1/10
+
+[00:54] <Player2> spent ₹ 10M on promise: Defense & Border Infra

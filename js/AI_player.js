@@ -47,6 +47,7 @@ function spendOnPromiseAI(promise, cost) {
     // Example: window.player2PromiseProgress[promise.name] = ...
 }
 
+
 function startAITakingAction({
     player1Purse,
     startingFunds = player1Purse * 1.5,
@@ -56,7 +57,10 @@ function startAITakingAction({
     // spendOnState = spendOnStateAI,
     spendOnPromise = spendOnPromiseAI
 }) {
-    let aiFunds = startingFunds;
+    // Set the global purse for Player 2 at the start
+    if (typeof window.setPlayer2Purse === 'function') {
+      window.setPlayer2Purse(startingFunds);
+    }
 
     function getRandomItem(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
@@ -69,25 +73,34 @@ function startAITakingAction({
         if (actionType === 'state' && states.length > 0) {
             const state = getRandomItem(states);
             const cost = state.cost || 10; // Example cost
-            if (aiFunds >= cost) {
+            if (getPlayer2Purse() >= cost) {
                 spendOnState(state, cost);
-                aiFunds -= cost;
-                logAction(`<Player2> spent ₹ -${cost}M on state: ${state.name}`);
+                logAction(`<Player2> spent ₹ ${cost}M on state: ${state.name}`);
+                // Track funds spent for Player 2
+                if (typeof window !== 'undefined') {
+                  window.p2SpentThisPhase = (window.p2SpentThisPhase || 0) + cost;
+                }
             }
         } else if (actionType === 'promise' && campaignPromises.length > 0) {
             const promise = getRandomItem(campaignPromises);
             const cost = promise.cost || 10; // Example cost
-            if (aiFunds >= cost) {
+            if (getPlayer2Purse() >= cost) {
                 spendOnPromise(promise, cost);
-                aiFunds -= cost;
-                logAction(`<Player2> spent ₹ -${cost}M on promise: ${promise.name}`);
+                logAction(`<Player2> spent ₹ ${cost}M on promise: ${promise.name}`);
+                // Track funds spent and promise progress for Player 2
+                if (typeof window !== 'undefined') {
+                  window.p2SpentThisPhase = (window.p2SpentThisPhase || 0) + cost;
+                  if (!window.p2PromiseProgress) window.p2PromiseProgress = {};
+                  window.p2PromiseProgress[promise.name] = (window.p2PromiseProgress[promise.name] || 0) + 1;
+                  if (window.p2PromiseProgress[promise.name] > 10) window.p2PromiseProgress[promise.name] = 10;
+                }
             }
         }
     }
 
     // Start the interval
     const intervalId = setInterval(() => {
-        if (aiFunds <= 0) {
+        if (getPlayer2Purse() <= 0) {
             clearInterval(intervalId);
             logAction("<Player2> is out of funds.");
             return;

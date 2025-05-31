@@ -38,16 +38,30 @@ export function showGameOverScreen(winner) {
 
 export function nextPhase() {
   if (window.currentPhase < totalPhases) {
+    // Log summary BEFORE bonuses and phase increment
+    if (typeof window.logPhaseSummary === 'function') {
+      window.logPhaseSummary(window.currentPhase);
+    }
+    // Next phase
     window.currentPhase++;
     timeLeft = duration;
     logAction(`=============PHASE ${window.currentPhase} START============`, window.currentPhase);
     addPhasePurseBonus(window.currentPhase);
     addPhasePurseBonusAI(window.currentPhase);
+    // Now record the new phase's starting purse and reset counters
+    if (typeof window.getPlayer1Purse === 'function') window.p1PhaseStartPurse = window.getPlayer1Purse();
+    if (typeof window.getPlayer2Purse === 'function') window.p2PhaseStartPurse = window.getPlayer2Purse();
+    window.p1SpentThisPhase = 0;
+    window.p2SpentThisPhase = 0;
     updateTimer();
     phaseText.classList.remove('phase-animate');
     void phaseText.offsetWidth;
     phaseText.classList.add('phase-animate');
   } else {
+    // End of last phase: log summary before game over
+    if (typeof window.logPhaseSummary === 'function') {
+      window.logPhaseSummary(window.currentPhase);
+    }
     phaseText.textContent = "Game Over";
     clearInterval(timerInterval);
     circle.style.stroke = '#aaa';

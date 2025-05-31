@@ -127,7 +127,14 @@ function renderTechTreeRows(tree, container) {
                 barFill.style.background = '#43a047';
               }
               // Log the action
-              logAction(`<Player1> spent ₹ -10M on ${leaf}`);
+              logAction(`<Player1> spent ₹ 10M on ${leaf}`);
+              // Track funds spent and promise progress for Player 1
+              if (typeof window !== 'undefined') {
+                window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + 10;
+                if (!window.p1PromiseProgress) window.p1PromiseProgress = {};
+                window.p1PromiseProgress[leaf] = (window.p1PromiseProgress[leaf] || 0) + 1;
+                if (window.p1PromiseProgress[leaf] > 10) window.p1PromiseProgress[leaf] = 10;
+              }
               if (progress === 100) {
                 // Shake the promise bar to indicate it's maxed out
                 barContainer.classList.add('shake');

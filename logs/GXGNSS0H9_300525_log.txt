@@ -1,0 +1,165 @@
+===GAME START===
+Game ID: GXGNSS0H9
+===PHASE 1 START===
+[00:01] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:02] <Player2> spent ₹ -10M on promise: Ports Modernisation
+[00:03] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:03] <Player1> spent ₹ -29M on a Madhya Pradesh campaign
+[00:04] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:05] <Player1> spent ₹ -10M on a Haryana campaign
+[00:05] <Player1> spent ₹ -10M on a Haryana campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:06] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:07] <Player1> spent ₹ -2M on a Arunachal Pradesh campaign
+[00:07] <Player1> spent ₹ -2M on a Arunachal Pradesh campaign
+[00:08] <Player2> spent ₹ -10M on promise: Swachh Bharat Mission
+[00:09] <Player1> spent ₹ -1M on a Sikkim campaign
+[00:10] <Player2> spent ₹ -10M on promise: Mandal Commission
+[00:10] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:20] <Player2> spent ₹ -10M on promise: Hindutva
+[00:22] <Player2> spent ₹ -10M on promise: Smart Cities
+[00:24] <Player2> spent ₹ -10M on promise: MGNREGA Expansion
+[00:24] <Player1> spent ₹ -1M on a Andaman And Nicobar Islands campaign
+[00:25] <Player1> spent ₹ -1M on a Andaman And Nicobar Islands campaign
+[00:26] <Player2> spent ₹ -10M on promise: GST
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 20% | 24% | 56%
+INAP: 31% | 51% | 18%
+INAR: 35% | 11% | 54%
+INAS: 58% | 25% | 17%
+INBR: 41% | 28% | 31%
+INCH: 18% | 52% | 30%
+INCT: 22% | 25% | 53%
+INDH: 38% | 22% | 40%
+INDD: 14% | 15% | 71%
+INDL: 27% | 33% | 40%
+INGA: 28% | 33% | 39%
+INGJ: 13% | 60% | 27%
+INHR: 40% | 19% | 41%
+INHP: 52% | 28% | 20%
+INJK: 47% | 18% | 35%
+INJH: 54% | 32% | 14%
+INKA: 15% | 11% | 74%
+INKL: 30% | 18% | 52%
+INLA: 14% | 29% | 57%
+INLD: 12% | 51% | 37%
+INMP: 30% | 26% | 44%
+INMH: 15% | 31% | 54%
+INMN: 25% | 26% | 49%
+INML: 38% | 13% | 49%
+INMZ: 16% | 30% | 54%
+INNL: 32% | 12% | 56%
+INOR: 17% | 10% | 73%
+INPY: 14% | 18% | 68%
+INPB: 57% | 20% | 23%
+INRJ: 45% | 18% | 37%
+INSK: 26% | 9% | 65%
+INTN: 40% | 42% | 18%
+INTG: 30% | 60% | 10%
+INTR: 53% | 14% | 33%
+INUP: 21% | 16% | 63%
+INUT: 37% | 28% | 35%
+INWB: 20% | 21% | 59%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Uniform Civil Code: 1/10
+Player 2:
+  Ports Modernisation: 1/10
+  Swachh Bharat Mission: 1/10
+  Mandal Commission: 1/10
+  Hindutva: 1/10
+  Smart Cities: 1/10
+  MGNREGA Expansion: 1/10
+  GST: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:27] <Player2> spent ₹ -10M on promise: Secularism
+[00:28] <Player1> spent ₹ -21M on a Odisha campaign
+[00:28] <Player1> spent ₹ -21M on a Odisha campaign
+[00:29] <Player2> spent ₹ -10M on promise: Uniform Civil Code
+[00:29] <Player1> spent ₹ -17M on a Telangana campaign
+[00:29] <Player1> spent ₹ -17M on a Telangana campaign
+[00:30] <Player1> spent ₹ -25M on a Andhra Pradesh campaign
+[00:30] <Player1> spent ₹ -25M on a Andhra Pradesh campaign
+[00:31] <Player2> spent ₹ -10M on promise: Highways & Airports
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:31] <Player1> spent ₹ -28M on a Karnataka campaign
+[00:33] <Player2> spent ₹ -10M on promise: Swachh Bharat Mission
+[00:33] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:35] <Player2> spent ₹ -10M on promise: Digital India
+[00:36] <Player1> spent ₹ -10M on Hindi Education Mandate
+[00:37] <Player2> spent ₹ -10M on promise: Mandal Commission
+[00:39] <Player2> spent ₹ -10M on promise: Secularism
+[00:41] <Player2> spent ₹ -10M on promise: Smart Cities
+[00:43] <Player2> spent ₹ -10M on promise: Industry & Mining
+[00:45] <Player2> spent ₹ -10M on promise: Swachh Bharat Mission
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 20% | 24% | 56%
+INAP: 41% | 43% | 16%
+INAR: 35% | 11% | 54%
+INAS: 58% | 25% | 17%
+INBR: 41% | 28% | 31%
+INCH: 18% | 52% | 30%
+INCT: 22% | 25% | 53%
+INDH: 38% | 22% | 40%
+INDD: 14% | 15% | 71%
+INDL: 27% | 33% | 40%
+INGA: 28% | 33% | 39%
+INGJ: 13% | 60% | 27%
+INHR: 40% | 19% | 41%
+INHP: 52% | 28% | 20%
+INJK: 47% | 18% | 35%
+INJH: 54% | 32% | 14%
+INKA: 30% | 8% | 62%
+INKL: 30% | 18% | 52%
+INLA: 14% | 29% | 57%
+INLD: 12% | 51% | 37%
+INMP: 30% | 26% | 44%
+INMH: 15% | 31% | 54%
+INMN: 25% | 26% | 49%
+INML: 38% | 13% | 49%
+INMZ: 16% | 30% | 54%
+INNL: 32% | 12% | 56%
+INOR: 27% | 8% | 65%
+INPY: 14% | 18% | 68%
+INPB: 57% | 20% | 23%
+INRJ: 50% | 16% | 34%
+INSK: 26% | 9% | 65%
+INTN: 40% | 42% | 18%
+INTG: 40% | 52% | 8%
+INTR: 53% | 14% | 33%
+INUP: 21% | 16% | 63%
+INUT: 37% | 28% | 35%
+INWB: 20% | 21% | 59%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Uniform Civil Code: 1/10
+  Hindi Education Mandate: 1/10
+Player 2:
+  Ports Modernisation: 1/10
+  Swachh Bharat Mission: 3/10
+  Mandal Commission: 2/10
+  Hindutva: 1/10
+  Smart Cities: 2/10
+  MGNREGA Expansion: 1/10
+  GST: 1/10
+  Secularism: 2/10
+  Uniform Civil Code: 1/10
+  Highways & Airports: 1/10
+  Digital India: 1/10
+  Industry & Mining: 1/10
+
+[00:54] <Player2> spent ₹ -10M on promise: Tribal Rights

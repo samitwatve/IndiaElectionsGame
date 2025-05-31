@@ -1,0 +1,173 @@
+===GAME START===
+Game ID: GJ64UJ3JY
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ -10M on promise: Ayushman Bharat
+[00:04] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:04] <Player1> spent ₹ -26M on a Gujarat campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:05] <Player1> spent ₹ -25M on a Rajasthan campaign
+[00:06] <Player2> spent ₹ -10M on promise: Smart Cities
+[00:06] <Player1> spent ₹ -13M on a Punjab campaign
+[00:06] <Player1> spent ₹ -13M on a Punjab campaign
+[00:07] <Player1> spent ₹ -13M on a Punjab campaign
+[00:07] <Player1> spent ₹ -13M on a Punjab campaign
+[00:07] <Player1> spent ₹ -13M on a Punjab campaign
+[00:08] <Player2> spent ₹ -10M on promise: MGNREGA Expansion
+[00:08] <Player1> spent ₹ -13M on a Punjab campaign
+[00:08] <Player1> spent ₹ -13M on a Punjab campaign
+[00:08] <Player1> spent ₹ -13M on a Punjab campaign
+[00:09] <Player1> spent ₹ -13M on a Punjab campaign
+[00:10] <Player2> spent ₹ -10M on promise: Waqf Board Reforms
+[00:12] <Player2> spent ₹ -10M on promise: Beti Bachao Beti Padhao
+[00:18] <Player2> spent ₹ -10M on promise: Farm Bills
+[00:20] <Player2> spent ₹ -10M on promise: GMOs
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 40% | 55% | 5%
+INAP: 20% | 44% | 36%
+INAR: 32% | 57% | 11%
+INAS: 32% | 26% | 42%
+INBR: 26% | 52% | 22%
+INCH: 38% | 16% | 46%
+INCT: 21% | 36% | 43%
+INDH: 46% | 38% | 16%
+INDD: 34% | 24% | 42%
+INDL: 25% | 56% | 19%
+INGA: 18% | 59% | 23%
+INGJ: 30% | 16% | 54%
+INHR: 10% | 19% | 71%
+INHP: 11% | 25% | 64%
+INJK: 26% | 43% | 31%
+INJH: 23% | 28% | 49%
+INKA: 10% | 59% | 31%
+INKL: 11% | 21% | 68%
+INLA: 49% | 23% | 28%
+INLD: 36% | 28% | 36%
+INMP: 47% | 34% | 19%
+INMH: 46% | 40% | 14%
+INMN: 28% | 23% | 49%
+INML: 31% | 23% | 46%
+INMZ: 32% | 20% | 48%
+INNL: 29% | 24% | 47%
+INOR: 10% | 19% | 71%
+INPY: 19% | 13% | 68%
+INPB: 59% | 5% | 36%
+INRJ: 41% | 24% | 35%
+INSK: 31% | 49% | 20%
+INTN: 32% | 25% | 43%
+INTG: 13% | 26% | 61%
+INTR: 32% | 16% | 52%
+INUP: 17% | 10% | 73%
+INUT: 46% | 31% | 23%
+INWB: 51% | 21% | 28%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Ayushman Bharat: 1/10
+  Smart Cities: 1/10
+  MGNREGA Expansion: 1/10
+  Waqf Board Reforms: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Farm Bills: 1/10
+  GMOs: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:28] <Player1> spent ₹ -10M on Secularism
+[00:28] <Player1> spent ₹ -10M on Secularism
+[00:28] <Player1> spent ₹ -10M on Secularism
+[00:29] <Player1> spent ₹ -10M on Secularism
+[00:29] <Player1> spent ₹ -10M on Secularism
+[00:29] <Player1> spent ₹ -10M on Secularism
+[00:29] <Player1> spent ₹ -10M on Secularism
+[00:30] <Player1> spent ₹ -10M on Secularism
+[00:30] <Player1> spent ₹ -10M on Secularism
+[00:31] <Player2> spent ₹ -10M on promise: Tribal Rights
+[00:32] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:32] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:32] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:32] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:32] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:33] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:33] <Player1> spent ₹ -10M on Uniform Civil Code
+[00:34] <Player1> spent ₹ -10M on Hindutva
+[00:34] <Player1> spent ₹ -10M on Hindutva
+[00:34] <Player1> spent ₹ -10M on Hindutva
+[00:34] <Player1> spent ₹ -10M on Hindutva
+[00:36] <Player1> spent ₹ -10M on Tribal Rights
+[00:36] <Player1> spent ₹ -10M on Tribal Rights
+[00:37] <Player1> spent ₹ -10M on Tribal Rights
+[00:37] <Player1> spent ₹ -10M on Tribal Rights
+[00:37] <Player1> spent ₹ -10M on Tribal Rights
+[00:41] <Player2> spent ₹ -10M on promise: Industry & Mining
+[00:43] <Player2> spent ₹ -10M on promise: Secularism
+[00:51] <Player2> spent ₹ -10M on promise: River-Linking Projects
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹250M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹375M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 40% | 55% | 5%
+INAP: 20% | 44% | 36%
+INAR: 32% | 57% | 11%
+INAS: 32% | 26% | 42%
+INBR: 26% | 52% | 22%
+INCH: 38% | 16% | 46%
+INCT: 21% | 36% | 43%
+INDH: 46% | 38% | 16%
+INDD: 34% | 24% | 42%
+INDL: 25% | 56% | 19%
+INGA: 18% | 59% | 23%
+INGJ: 30% | 16% | 54%
+INHR: 10% | 19% | 71%
+INHP: 11% | 25% | 64%
+INJK: 26% | 43% | 31%
+INJH: 23% | 28% | 49%
+INKA: 10% | 59% | 31%
+INKL: 11% | 21% | 68%
+INLA: 49% | 23% | 28%
+INLD: 36% | 28% | 36%
+INMP: 47% | 34% | 19%
+INMH: 46% | 40% | 14%
+INMN: 28% | 23% | 49%
+INML: 31% | 23% | 46%
+INMZ: 32% | 20% | 48%
+INNL: 29% | 24% | 47%
+INOR: 10% | 19% | 71%
+INPY: 19% | 13% | 68%
+INPB: 59% | 5% | 36%
+INRJ: 41% | 24% | 35%
+INSK: 31% | 49% | 20%
+INTN: 32% | 25% | 43%
+INTG: 13% | 26% | 61%
+INTR: 32% | 16% | 52%
+INUP: 17% | 10% | 73%
+INUT: 46% | 31% | 23%
+INWB: 51% | 21% | 28%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Secularism: 9/10
+  Uniform Civil Code: 7/10
+  Hindutva: 4/10
+  Tribal Rights: 5/10
+Player 2:
+  Ayushman Bharat: 1/10
+  Smart Cities: 1/10
+  MGNREGA Expansion: 1/10
+  Waqf Board Reforms: 1/10
+  Beti Bachao Beti Padhao: 1/10
+  Farm Bills: 1/10
+  GMOs: 1/10
+  Tribal Rights: 1/10
+  Industry & Mining: 1/10
+  Secularism: 1/10
+  River-Linking Projects: 1/10
+
+[00:54] <Player2> spent ₹ -10M on promise: GMOs

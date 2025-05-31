@@ -306,7 +306,11 @@ document.addEventListener('DOMContentLoaded', function () {
                           showPlayer1PurseDeduction(seats);
                           // Log Player 1 spending on state campaign
                           const stateName = window.statesDataMap[region.id]?.State || region.id;
-                          logAction(`<Player1> spent ₹ -${seats}M on a ${stateName} campaign`);
+                          logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
+                          // Track funds spent for Player 1
+                          if (typeof window !== 'undefined') {
+                            window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
+                          }
                           // Increase P1 popularity by 5%, max 100
                           let increase = 5;
                           let newP1 = Math.min(100, popObj.p1 + increase);

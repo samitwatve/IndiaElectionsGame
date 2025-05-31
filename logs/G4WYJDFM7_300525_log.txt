@@ -1,0 +1,140 @@
+===GAME START===
+Game ID: G4WYJDFM7
+===PHASE 1 START===
+[00:02] <Player2> spent ₹ -10M on promise: Hindutva
+[00:02] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:03] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:03] <Player1> spent ₹ -80M on a Uttar Pradesh campaign
+[00:04] <Player2> spent ₹ -10M on promise: Ayushman Bharat
+[00:06] <Player2> spent ₹ -10M on promise: MGNREGA Expansion
+[00:10] <Player2> spent ₹ -10M on promise: GST
+[00:18] <Player2> spent ₹ -10M on promise: Ayushman Bharat
+[00:22] <Player2> spent ₹ -10M on promise: Farm Bills
+[00:24] <Player2> spent ₹ -10M on promise: Swachh Bharat Mission
+[00:26] <Player2> spent ₹ -10M on promise: Industry & Mining
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:54] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹240M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹80M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 27% | 11% | 62%
+INAP: 50% | 28% | 22%
+INAR: 36% | 48% | 16%
+INAS: 14% | 54% | 32%
+INBR: 29% | 11% | 60%
+INCH: 33% | 42% | 25%
+INCT: 56% | 19% | 25%
+INDH: 31% | 34% | 35%
+INDD: 27% | 24% | 49%
+INDL: 13% | 11% | 76%
+INGA: 44% | 13% | 43%
+INGJ: 19% | 49% | 32%
+INHR: 12% | 32% | 56%
+INHP: 40% | 58% | 2%
+INJK: 26% | 18% | 56%
+INJH: 19% | 23% | 58%
+INKA: 15% | 42% | 43%
+INKL: 42% | 10% | 48%
+INLA: 14% | 33% | 53%
+INLD: 12% | 49% | 39%
+INMP: 34% | 29% | 37%
+INMH: 15% | 35% | 50%
+INMN: 16% | 24% | 60%
+INML: 19% | 27% | 54%
+INMZ: 36% | 17% | 47%
+INNL: 13% | 31% | 56%
+INOR: 33% | 33% | 34%
+INPY: 56% | 39% | 5%
+INPB: 22% | 18% | 60%
+INRJ: 43% | 23% | 34%
+INSK: 15% | 19% | 66%
+INTN: 32% | 32% | 36%
+INTG: 52% | 30% | 18%
+INTR: 23% | 24% | 53%
+INUP: 34% | 20% | 46%
+INUT: 33% | 21% | 46%
+INWB: 26% | 26% | 48%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Hindutva: 1/10
+  Ayushman Bharat: 2/10
+  MGNREGA Expansion: 1/10
+  GST: 1/10
+  Farm Bills: 1/10
+  Swachh Bharat Mission: 1/10
+  Industry & Mining: 1/10
+
+[00:27] <Player2> spent ₹ -10M on promise: Ports Modernisation
+[00:29] <Player2> spent ₹ -10M on promise: Hindi Education Mandate
+[00:31] <Player2> spent ₹ -10M on promise: Secularism
+[00:37] <Player2> spent ₹ -10M on promise: Uniform Civil Code
+[00:39] <Player2> spent ₹ -10M on promise: Mandal Commission
+[00:43] <Player2> spent ₹ -10M on promise: Swachh Bharat Mission
+[00:49] <Player2> spent ₹ -10M on promise: Defense & Border Infra
+[00:53] <Player2> spent ₹ -10M on promise: River-Linking Projects
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹0M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹80M | Funds Remaining: ₹0M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 27% | 11% | 62%
+INAP: 50% | 28% | 22%
+INAR: 36% | 48% | 16%
+INAS: 14% | 54% | 32%
+INBR: 29% | 11% | 60%
+INCH: 33% | 42% | 25%
+INCT: 56% | 19% | 25%
+INDH: 31% | 34% | 35%
+INDD: 27% | 24% | 49%
+INDL: 13% | 11% | 76%
+INGA: 44% | 13% | 43%
+INGJ: 19% | 49% | 32%
+INHR: 12% | 32% | 56%
+INHP: 40% | 58% | 2%
+INJK: 26% | 18% | 56%
+INJH: 19% | 23% | 58%
+INKA: 15% | 42% | 43%
+INKL: 42% | 10% | 48%
+INLA: 14% | 33% | 53%
+INLD: 12% | 49% | 39%
+INMP: 34% | 29% | 37%
+INMH: 15% | 35% | 50%
+INMN: 16% | 24% | 60%
+INML: 19% | 27% | 54%
+INMZ: 36% | 17% | 47%
+INNL: 13% | 31% | 56%
+INOR: 33% | 33% | 34%
+INPY: 56% | 39% | 5%
+INPB: 22% | 18% | 60%
+INRJ: 43% | 23% | 34%
+INSK: 15% | 19% | 66%
+INTN: 32% | 32% | 36%
+INTG: 52% | 30% | 18%
+INTR: 23% | 24% | 53%
+INUP: 34% | 20% | 46%
+INUT: 33% | 21% | 46%
+INWB: 26% | 26% | 48%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Hindutva: 1/10
+  Ayushman Bharat: 2/10
+  MGNREGA Expansion: 1/10
+  GST: 1/10
+  Farm Bills: 1/10
+  Swachh Bharat Mission: 2/10
+  Industry & Mining: 1/10
+  Ports Modernisation: 1/10
+  Hindi Education Mandate: 1/10
+  Secularism: 1/10
+  Uniform Civil Code: 1/10
+  Mandal Commission: 1/10
+  Defense & Border Infra: 1/10
+  River-Linking Projects: 1/10
+

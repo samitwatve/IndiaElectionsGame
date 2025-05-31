@@ -1,3 +1,54 @@
+// Log a phase summary with funds, popularity, and campaign promise progress
+export function logPhaseSummary(phase) {
+  const logBox = document.getElementById('player1-log');
+  if (!logBox) return;
+  let summary = `--- PHASE ${phase} SUMMARY ---\n`;
+  // Funds
+  // Always use the global purse getter functions for accurate values
+  const p1Funds = (typeof window.getPlayer1Purse === 'function') ? window.getPlayer1Purse() : 0;
+  const p2Funds = (typeof window.getPlayer2Purse === 'function') ? window.getPlayer2Purse() : 0;
+  // Use tracked spending for accuracy
+  const p1Spent = window.p1SpentThisPhase || 0;
+  const p2Spent = window.p2SpentThisPhase || 0;
+  summary += `Player 1: Funds Spent: ₹${p1Spent}M | Funds Remaining: ₹${p1Funds}M\n`;
+  summary += `Player 2: Funds Spent: ₹${p2Spent}M | Funds Remaining: ₹${p2Funds}M\n`;
+
+  // Popularity by state
+  summary += `\nPopularity by State (P1 | P2 | Others):\n`;
+  if (window.statesDataMap && window.popularityScores) {
+    Object.entries(window.statesDataMap).forEach(([id, state]) => {
+      const pop = window.popularityScores[id];
+      if (pop) {
+        summary += `${state.StateName || id}: ${pop.p1}% | ${pop.p2}% | ${pop.others}%\n`;
+      }
+    });
+  }
+
+  // Campaign promises progress
+  summary += `\nCampaign Promises Progress (max 10):\n`;
+  // Player 1 (from DOM bars or JS object)
+  summary += `Player 1:\n`;
+  if (window.getP1PromiseProgress) {
+    const p1Progress = window.getP1PromiseProgress();
+    Object.entries(p1Progress).forEach(([name, count]) => {
+      summary += `  ${name}: ${count}/10\n`;
+    });
+  } else {
+    summary += '  (progress not available)\n';
+  }
+  // Player 2 (from JS object)
+  summary += `Player 2:\n`;
+  if (window.getP2PromiseProgress) {
+    const p2Progress = window.getP2PromiseProgress();
+    Object.entries(p2Progress).forEach(([name, count]) => {
+      summary += `  ${name}: ${count}/10\n`;
+    });
+  } else {
+    summary += '  (progress not available)\n';
+  }
+
+  logAction(summary);
+}
 // Save log to file (Node.js only, for Electron or dev use)
 export function saveLogToFile() {
   const logBox = document.getElementById('player1-log');

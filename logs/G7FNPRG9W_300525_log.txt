@@ -1,0 +1,158 @@
+===GAME START===
+Game ID: G7FNPRG9W
+===PHASE 1 START===
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:01] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:02] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:02] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:02] <Player1> spent ₹ 28M on a Karnataka campaign
+[00:03] <Player1> spent ₹ 17M on a Telangana campaign
+[00:03] <Player1> spent ₹ 17M on a Telangana campaign
+[00:03] <Player1> spent ₹ 17M on a Telangana campaign
+[00:04] <Player1> spent ₹ 21M on a Odisha campaign
+[00:04] <Player1> spent ₹ 21M on a Odisha campaign
+[00:05] <Player1> spent ₹ 14M on a Jharkhand campaign
+[00:06] <Player2> spent ₹ 10M on promise: Digital India
+[00:08] <Player2> spent ₹ 10M on promise: Farm Bills
+[00:14] <Player2> spent ₹ 10M on promise: Defense & Border Infra
+[00:16] <Player2> spent ₹ 10M on promise: Highways & Airports
+[00:18] <Player2> spent ₹ 10M on promise: Hindi Education Mandate
+[00:22] <Player2> spent ₹ 10M on promise: MGNREGA Expansion
+[00:24] <Player2> spent ₹ 10M on promise: Hindutva
+[00:26] <Player2> spent ₹ 10M on promise: GMOs
+[00:27] --- PHASE 1 SUMMARY ---
+Player 1: Funds Spent: ₹241M | Funds Remaining: ₹9M
+Player 2: Funds Spent: ₹80M | Funds Remaining: ₹295M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 18% | 32% | 50%
+INAP: 35% | 12% | 53%
+INAR: 30% | 11% | 59%
+INAS: 29% | 20% | 51%
+INBR: 12% | 36% | 52%
+INCH: 41% | 39% | 20%
+INCT: 34% | 57% | 9%
+INDH: 57% | 19% | 24%
+INDD: 48% | 15% | 37%
+INDL: 32% | 18% | 50%
+INGA: 24% | 21% | 55%
+INGJ: 20% | 10% | 70%
+INHR: 18% | 40% | 42%
+INHP: 22% | 13% | 65%
+INJK: 21% | 16% | 63%
+INJH: 21% | 24% | 55%
+INKA: 45% | 25% | 30%
+INKL: 35% | 51% | 14%
+INLA: 19% | 32% | 49%
+INLD: 13% | 32% | 55%
+INMP: 11% | 33% | 56%
+INMH: 45% | 33% | 22%
+INMN: 52% | 27% | 21%
+INML: 16% | 15% | 69%
+INMZ: 19% | 42% | 39%
+INNL: 17% | 59% | 24%
+INOR: 35% | 13% | 52%
+INPY: 55% | 14% | 31%
+INPB: 39% | 27% | 34%
+INRJ: 13% | 46% | 41%
+INSK: 29% | 46% | 25%
+INTN: 36% | 10% | 54%
+INTG: 37% | 9% | 54%
+INTR: 58% | 37% | 5%
+INUP: 30% | 23% | 47%
+INUT: 38% | 38% | 24%
+INWB: 17% | 11% | 72%
+
+Campaign Promises Progress (max 10):
+Player 1:
+Player 2:
+  Digital India: 1/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 1/10
+  Highways & Airports: 1/10
+  Hindi Education Mandate: 1/10
+  MGNREGA Expansion: 1/10
+  Hindutva: 1/10
+  GMOs: 1/10
+
+[00:54] =============PHASE 2 START============
+[00:54] <Player1> received ₹ +250M
+[00:54] <Player2> received ₹ +375M
+[00:31] <Player2> spent ₹ 10M on promise: Women’s Reservation
+[00:31] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:31] <Player1> spent ₹ 25M on a Andhra Pradesh campaign
+[00:32] <Player1> spent ₹ 2M on a Goa campaign
+[00:32] <Player1> spent ₹ 2M on a Goa campaign
+[00:34] <Player1> spent ₹ 2M on a Goa campaign
+[00:34] <Player1> spent ₹ 2M on a Goa campaign
+[00:34] <Player1> spent ₹ 2M on a Goa campaign
+[00:35] <Player1> spent ₹ 17M on a Telangana campaign
+[00:35] <Player1> spent ₹ 17M on a Telangana campaign
+[00:35] <Player1> spent ₹ 17M on a Telangana campaign
+[00:36] <Player1> spent ₹ 17M on a Telangana campaign
+[00:36] <Player1> spent ₹ 21M on a Odisha campaign
+[00:37] <Player1> spent ₹ 21M on a Odisha campaign
+[00:37] <Player1> spent ₹ 21M on a Odisha campaign
+[00:38] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:38] <Player1> spent ₹ 29M on a Madhya Pradesh campaign
+[00:43] <Player2> spent ₹ 10M on promise: GST
+[00:44] <Player1> spent ₹ 10M on Secularism
+[00:45] <Player2> spent ₹ 10M on promise: Digital India
+[00:54] --- PHASE 2 SUMMARY ---
+Player 1: Funds Spent: ₹259M | Funds Remaining: ₹0M
+Player 2: Funds Spent: ₹30M | Funds Remaining: ₹640M
+
+Popularity by State (P1 | P2 | Others):
+INAN: 18% | 32% | 50%
+INAP: 45% | 10% | 45%
+INAR: 30% | 11% | 59%
+INAS: 29% | 20% | 51%
+INBR: 12% | 36% | 52%
+INCH: 41% | 39% | 20%
+INCT: 34% | 57% | 9%
+INDH: 57% | 19% | 24%
+INDD: 48% | 15% | 37%
+INDL: 32% | 18% | 50%
+INGA: 49% | 15% | 36%
+INGJ: 20% | 10% | 70%
+INHR: 18% | 40% | 42%
+INHP: 22% | 13% | 65%
+INJK: 21% | 16% | 63%
+INJH: 21% | 24% | 55%
+INKA: 45% | 25% | 30%
+INKL: 35% | 51% | 14%
+INLA: 19% | 32% | 49%
+INLD: 13% | 32% | 55%
+INMP: 21% | 29% | 50%
+INMH: 45% | 33% | 22%
+INMN: 52% | 27% | 21%
+INML: 16% | 15% | 69%
+INMZ: 19% | 42% | 39%
+INNL: 17% | 59% | 24%
+INOR: 50% | 10% | 40%
+INPY: 55% | 14% | 31%
+INPB: 39% | 27% | 34%
+INRJ: 13% | 46% | 41%
+INSK: 29% | 46% | 25%
+INTN: 36% | 10% | 54%
+INTG: 57% | 5% | 38%
+INTR: 58% | 37% | 5%
+INUP: 30% | 23% | 47%
+INUT: 38% | 38% | 24%
+INWB: 17% | 11% | 72%
+
+Campaign Promises Progress (max 10):
+Player 1:
+  Secularism: 1/10
+Player 2:
+  Digital India: 2/10
+  Farm Bills: 1/10
+  Defense & Border Infra: 1/10
+  Highways & Airports: 1/10
+  Hindi Education Mandate: 1/10
+  MGNREGA Expansion: 1/10
+  Hindutva: 1/10
+  GMOs: 1/10
+  Women’s Reservation: 1/10
+  GST: 1/10
+

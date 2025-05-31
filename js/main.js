@@ -1,3 +1,28 @@
+// Expose phase summary logger to window for use in game_timer
+import { logPhaseSummary } from './logger.js';
+window.logPhaseSummary = logPhaseSummary;
+
+// Helper: Track funds spent per phase for both players
+window.p1SpentThisPhase = 0;
+window.p2SpentThisPhase = 0;
+// Track starting purse for each phase
+import { getPlayer1Purse, getPlayer2Purse } from './purse.js';
+// Expose purse getters to global window for logger
+window.getPlayer1Purse = getPlayer1Purse;
+window.getPlayer2Purse = getPlayer2Purse;
+// Set phase start purse to actual purse after DOM is ready
+window.p1PhaseStartPurse = 250;
+window.p2PhaseStartPurse = 375;
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof getPlayer1Purse === 'function') window.p1PhaseStartPurse = getPlayer1Purse();
+  if (typeof getPlayer2Purse === 'function') window.p2PhaseStartPurse = getPlayer2Purse();
+});
+
+// Helper: Track campaign promise progress for both players
+window.p1PromiseProgress = {};
+window.p2PromiseProgress = {};
+window.getP1PromiseProgress = () => window.p1PromiseProgress;
+window.getP2PromiseProgress = () => window.p2PromiseProgress;
 // main.js - Handles start screen, timer, and game over logic
 
 import './map.js';
