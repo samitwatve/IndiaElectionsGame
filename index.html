@@ -46,7 +46,7 @@
     <div id="start-screen" class="start-screen">
       <h1 class="start-title">India Elections Game</h1>
       <button id="start-game-btn" class="start-game-btn">Start Game</button>
-      <p class="start-desc">Welcome! Click Start Game to begin and enable music.</p>
+      <p class="start-desc">Welcome! Click Start Game to begin</p>
     </div>
 
     <div id="gameover-screen" class="gameover-screen">
@@ -76,13 +76,13 @@
 
     <div class="game-container">
       <div class="player-panel player1-panel">
-        <h2>Player 1</h2>
-        <div id="player1-info" class="player-info">Seats: 0; States: </div>
+        <h2>Player 1 (<span class="bjp-orange">BJP</span>)</h2>
         <div id="player1-purse" class="player-purse"></div>
         <div class="player1-log-container">
           <label for="player1-log" class="player1-log-label">Action Log</label>
           <textarea id="player1-log" readonly class="player1-log"></textarea>
         </div>
+        <!-- Seats and States labels removed as per new design -->
       </div>
       <div class="main-panel">
         <!-- Timer and Seats will be moved to the sidebar below -->
@@ -91,25 +91,25 @@
         </div>
         <div class="category-buttons-container" id="category-buttons-container">
           <div class="category-btn-row">
-            <button class="category-btn" data-category="UnionTerritory">Union Territories</button>
-            <button class="category-btn" data-category="CoastalIndia">Coastal India</button>
-            <button class="category-btn" data-category="NortheastIndia">Northeast India</button>
-            <button class="category-btn" data-category="SouthIndia">South India</button>
-            <button class="category-btn" data-category="HindiHeartland">Hindi Heartland</button>
+            <button class="category-btn" data-category="UnionTerritory" id="category-btn-UnionTerritory">Union Territories</button>
+            <button class="category-btn" data-category="CoastalIndia" id="category-btn-CoastalIndia">Coastal India</button>
+            <button class="category-btn" data-category="NortheastIndia" id="category-btn-NortheastIndia">Northeast India</button>
+            <button class="category-btn" data-category="SouthIndia" id="category-btn-SouthIndia">South India</button>
+            <button class="category-btn" data-category="HindiHeartland" id="category-btn-HindiHeartland">Hindi Heartland</button>
           </div>
           <div class="category-btn-row">
-            <button class="category-btn" data-category="AgriculturalRegion">Agricultural Region</button>
-            <button class="category-btn" data-category="BorderLands">Border Lands</button>
-            <button class="category-btn" data-category="Pilgrimage">Pilgrimage</button>
-            <button class="category-btn" data-category="IndustrialCorridor">Industrial Corridor</button>
-            <button class="category-btn" data-category="Manufacturing">Manufacturing</button>
+            <button class="category-btn" data-category="AgriculturalRegion" id="category-btn-AgriculturalRegion">Agricultural Region</button>
+            <button class="category-btn" data-category="BorderLands" id="category-btn-BorderLands">Border Lands</button>
+            <button class="category-btn" data-category="Pilgrimage" id="category-btn-Pilgrimage">Pilgrimage</button>
+            <button class="category-btn" data-category="IndustrialCorridor" id="category-btn-IndustrialCorridor">Industrial Corridor</button>
+            <button class="category-btn" data-category="Manufacturing" id="category-btn-Manufacturing">Manufacturing</button>
           </div>
           <div class="category-btn-row">
-            <button class="category-btn" data-category="Education">Education</button>
-            <button class="category-btn" data-category="TribalLands">Tribal Lands</button>
-            <button class="category-btn" data-category="TravelAndTourism">Travel &amp; Tourism</button>
-            <button class="category-btn" data-category="NaturalResources">Natural Resources</button>
-            <button class="category-btn" data-category="MinorityAreas">Minority Areas</button>
+            <button class="category-btn" data-category="Education" id="category-btn-Education">Education</button>
+            <button class="category-btn" data-category="TribalLands" id="category-btn-TribalLands">Tribal Lands</button>
+            <button class="category-btn" data-category="TravelAndTourism" id="category-btn-TravelAndTourism">Travel &amp; Tourism</button>
+            <button class="category-btn" data-category="NaturalResources" id="category-btn-NaturalResources">Natural Resources</button>
+            <button class="category-btn" data-category="MinorityAreas" id="category-btn-MinorityAreas">Minority Areas</button>
           </div>
         </div>
       </div>

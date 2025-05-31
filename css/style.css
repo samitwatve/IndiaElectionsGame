@@ -1,3 +1,15 @@
+/* BJP orange color for Player 1 label */
+.bjp-orange {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* Make the Purse label bigger for Player 1 */
+#player1-purse.player-purse {
+  font-size: 1.35em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
 /* ===== Pause Overlay ===== */
 .pause-overlay {
   position: fixed;
