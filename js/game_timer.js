@@ -2,7 +2,7 @@
 import { logAction, saveLogToFile, logGameStart } from './logger.js';
 import { addPhasePurseBonus, addPhasePurseBonusAI } from './purse.js';
 
-let totalPhases = 8;
+let totalPhases = 2;
 window.currentPhase = 1;
 
 let duration = 27;
