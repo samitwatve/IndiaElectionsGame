@@ -9,9 +9,18 @@ function getAllCategories() {
 // Helper: For a given category, get all SvgIds in that category
 function getSvgIdsForCategory(category) {
     if (!window.statesDataMap) return [];
+    // Accept both boolean true and string 'TRUE' (case-insensitive)
+    const isTrue = v => v === true || (typeof v === 'string' && v.toUpperCase() === 'TRUE');
+    // Use a Set to avoid duplicate SvgIds
+    const seen = new Set();
     return Object.values(window.statesDataMap)
-        .filter(d => d[category] === true)
-        .map(d => d.SvgId);
+        .filter(d => isTrue(d[category]))
+        .map(d => d.SvgId)
+        .filter(id => {
+            if (seen.has(id)) return false;
+            seen.add(id);
+            return true;
+        });
 }
 
 // Helper: For a given category, get total seats in that category

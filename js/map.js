@@ -273,20 +273,158 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // --- Inject fake hitboxes for small UTs ---
                 smallUTsHitboxes.forEach(hitbox => {
+                // Draw a single group rectangle and label once, before the first button
+                if (hitbox.id === 'hitbox-chandigarh') {
+                  const groupBoxX = -100;
+                  const groupBoxY = 700;
+                  const groupBoxWidth = 180;
+                  const groupBoxHeight = 300;
+                  let groupRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                  groupRect.setAttribute('x', groupBoxX);
+                  groupRect.setAttribute('y', groupBoxY);
+                  groupRect.setAttribute('width', groupBoxWidth);
+                  groupRect.setAttribute('height', groupBoxHeight);
+                  groupRect.setAttribute('rx', 16);
+                  groupRect.setAttribute('fill', 'none');
+                  groupRect.setAttribute('stroke', 'red');
+                  groupRect.setAttribute('stroke-width', '3');
+                  groupRect.setAttribute('pointer-events', 'none');
+                  svg.appendChild(groupRect);
+                  // Add group label text inside the rectangle at the top
+                  let groupLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                  groupLabel.setAttribute('x', groupBoxX + groupBoxWidth / 2);
+                  groupLabel.setAttribute('y', groupBoxY + 28);
+                  groupLabel.setAttribute('text-anchor', 'middle');
+                  groupLabel.setAttribute('font-size', '20');
+                  groupLabel.setAttribute('font-family', 'sans-serif');
+                  groupLabel.setAttribute('fill', 'black');
+                  groupLabel.setAttribute('font-weight', 'bold');
+                  groupLabel.setAttribute('pointer-events', 'none');
+                  groupLabel.textContent = 'Small UTs';
+                  svg.appendChild(groupLabel);
+                }
                   if (svg.getElementById(hitbox.id)) return; // Avoid duplicates
                   let el = document.createElementNS('http://www.w3.org/2000/svg', hitbox.type);
                   el.setAttribute('id', hitbox.id);
-                  el.setAttribute('x', hitbox.cx - hitbox.width / 2);
-                  el.setAttribute('y', hitbox.cy - hitbox.height / 2);
-                  el.setAttribute('width', hitbox.width);
-                  el.setAttribute('height', hitbox.height);
-                  el.setAttribute('rx', hitbox.rx);
-                  el.setAttribute('fill', hitbox.fill);
+                  if (hitbox.type === 'rect') {
+                    el.setAttribute('x', hitbox.cx - hitbox.width / 2);
+                    el.setAttribute('y', hitbox.cy - hitbox.height / 2);
+                    el.setAttribute('width', hitbox.width);
+                    el.setAttribute('height', hitbox.height);
+                    if (hitbox.rx !== undefined) el.setAttribute('rx', hitbox.rx);
+                  } else if (hitbox.type === 'ellipse') {
+                    el.setAttribute('cx', hitbox.cx);
+                    el.setAttribute('cy', hitbox.cy);
+                    el.setAttribute('rx', hitbox.rx);
+                    el.setAttribute('ry', hitbox.ry);
+                  }
+                  // Initially set to neutral, will update after popularityScores are ready
+                  el.setAttribute('fill', '#bdbdbd');
                   el.setAttribute('style', hitbox.style);
                   el.setAttribute('stroke', 'none');
                   el.setAttribute('pointer-events', 'all');
                   el.classList.add('ut-hitbox');
+                  // Make the button act like clicking the real UT region
+                  // Mouseover/hover for info display
+                  el.addEventListener('mouseenter', function(e) {
+                    const region = svg.getElementById(hitbox.targetId);
+                    if (!region) return;
+                    let data = window.statesDataMap[hitbox.targetId];
+                    let popObj = window.popularityScores ? window.popularityScores[hitbox.targetId] : undefined;
+                    if (data) {
+                        let popText = 'N/A';
+                        if (popObj && typeof popObj === 'object') {
+                            popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                        }
+                        const info = [
+                            `State: ${data.State}`,
+                            `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                            `Popularity: ${popText}`
+                        ].join(' | ');
+                        if (regionNameDisplay) regionNameDisplay.textContent = info;
+                    } else {
+                        if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
+                    }
+                  });
+                  el.addEventListener('mouseleave', function(e) {
+                    if (regionNameDisplay) regionNameDisplay.textContent = '';
+                  });
+                  el.addEventListener('click', function(e) {
+                    // Directly run the same logic as region click
+                    const regionId = hitbox.targetId;
+                    if (!window.popularityScores || !window.popularityScores[regionId]) return;
+                    let popObj = window.popularityScores[regionId];
+                    let seats = +window.statesDataMap[regionId].LokSabhaSeats;
+                    if (getPlayer1Purse() < seats) {
+                      shakePlayer1Purse();
+                      if (typeof playSound === 'function') {
+                        playSound('error.mp3');
+                      } else {
+                        const audio = new Audio('static/sounds/error.mp3');
+                        audio.volume = 0.7;
+                        audio.play();
+                      }
+                      return;
+                    }
+                    showRippleOnState(svg.getElementById(regionId), '#ff9800');
+                    setPlayer1Purse(getPlayer1Purse() - seats);
+                    updatePlayer1PurseDisplay();
+                    showPlayer1PurseDeduction(seats);
+                    const stateName = window.statesDataMap[regionId]?.State || regionId;
+                    logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
+                    if (typeof window !== 'undefined') {
+                      window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
+                    }
+                    let increase = 5;
+                    let newP1 = Math.min(100, popObj.p1 + increase);
+                    let delta = newP1 - popObj.p1;
+                    if (delta <= 0) return;
+                    let totalOther = popObj.p2 + popObj.others;
+                    let newP2 = popObj.p2;
+                    let newOthers = popObj.others;
+                    if (totalOther > 0) {
+                        newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
+                        newOthers = Math.max(0, 100 - newP1 - newP2);
+                    } else {
+                        newP2 = 0;
+                        newOthers = 100 - newP1;
+                    }
+                    window.popularityScores[regionId] = { p1: newP1, p2: newP2, others: newOthers };
+                    refreshAllStateColors();
+                    if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
+                    if (regionNameDisplay) {
+                        let data = window.statesDataMap[regionId];
+                        let popObj = window.popularityScores[regionId];
+                        let popText = 'N/A';
+                        if (popObj && typeof popObj === 'object') {
+                            popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                        }
+                        const info = [
+                            `State: ${data.State}`,
+                            `Lok Sabha Seats: ${data.LokSabhaSeats}`,
+                            `Popularity: ${popText}`
+                        ].join(' | ');
+                        regionNameDisplay.textContent = info;
+                    }
+                  });
                   svg.appendChild(el);
+                  // Add label for fake UT box if present (append after rect so label is on top)
+                  if (hitbox.label) {
+                    let label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    label.setAttribute('x', hitbox.cx);
+                    label.setAttribute('y', hitbox.cy + 7); // centered in the button
+                    label.setAttribute('text-anchor', 'middle');
+                    label.setAttribute('font-size', '15');
+                    label.setAttribute('font-family', 'sans-serif');
+                    label.setAttribute('fill', 'black');
+                    label.setAttribute('font-weight', 'bold');
+                    label.setAttribute('pointer-events', 'none');
+                    label.textContent = hitbox.label;
+                    svg.appendChild(label);
+                  }
+                  // Store reference for later color updates
+                  if (!window.utButtonMap) window.utButtonMap = {};
+                  window.utButtonMap[hitbox.targetId] = el;
                 });
 
                 // --- INITIAL LEAN ASSIGNMENT AND EVENT BINDINGS ---
@@ -301,6 +439,10 @@ document.addEventListener('DOMContentLoaded', function () {
                           if (region) {
                               region.classList.remove('lean-p1', 'lean-p2', 'lean-none');
                               region.style.fill = popularityToColor(popObj);
+                          }
+                          // Also update UT button color if present
+                          if (window.utButtonMap && window.utButtonMap[id]) {
+                              window.utButtonMap[id].setAttribute('fill', popularityToColor(popObj));
                           }
                       });
                   }

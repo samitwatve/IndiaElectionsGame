@@ -1,36 +1,63 @@
 // Play/Pause logic
 
-let gamePaused = false;
-export function togglePausePlay() {
-  gamePaused = !gamePaused;
-  setPauseState(gamePaused);
-}
 
-function setPauseState(paused) {
-  gamePaused = paused;
+let gamePaused = false;
+let soundOn = true;
+let musicOn = true;
+
+function updatePauseIcon() {
   const icon = document.getElementById('pause-play-icon');
   if (icon) {
     icon.className = gamePaused ? 'fas fa-play' : 'fas fa-pause';
   }
+}
+
+function updatePauseOverlay() {
+  const overlay = document.getElementById('pause-overlay');
+  if (overlay) {
+    overlay.classList.toggle('hidden', !gamePaused);
+    overlay.style.pointerEvents = gamePaused ? 'auto' : '';
+  }
+  document.body.style.pointerEvents = gamePaused ? 'none' : '';
+}
+
+function updateSoundIcon() {
+  const icon = document.getElementById('sound-toggle-icon');
+  if (icon) {
+    icon.className = soundOn ? 'fas fa-volume-up' : 'fas fa-volume-mute';
+  }
+}
+
+function updateMusicIcon() {
+  const icon = document.getElementById('music-toggle-icon');
+  if (icon) {
+    icon.className = musicOn ? 'fas fa-music' : 'fas fa-music-slash';
+  }
+}
+
+function updateHelpModal(show) {
+  const modal = document.getElementById('help-modal');
+  if (modal) {
+    modal.style.display = show ? 'flex' : 'none';
+  }
+}
+
+function setPauseState(paused) {
+  gamePaused = paused;
+  updatePauseIcon();
+  updatePauseOverlay();
   if (typeof window.setGamePaused === 'function') {
     window.setGamePaused(gamePaused);
   }
   if (typeof window.setAIPaused === 'function') {
     window.setAIPaused(gamePaused);
   }
-  // Show/hide overlay
-  const overlay = document.getElementById('pause-overlay');
-  if (overlay) {
-    overlay.classList.toggle('hidden', !gamePaused);
-  }
-  // Disable pointer events for everything except overlay when paused
-  if (gamePaused) {
-    document.body.style.pointerEvents = 'none';
-    if (overlay) overlay.style.pointerEvents = 'auto';
-  } else {
-    document.body.style.pointerEvents = '';
-  }
 }
+
+export function togglePausePlay() {
+  setPauseState(!gamePaused);
+}
+
 
 // Resume button handler
 window.addEventListener('DOMContentLoaded', () => {
@@ -38,22 +65,24 @@ window.addEventListener('DOMContentLoaded', () => {
   if (resumeBtn) {
     resumeBtn.onclick = () => setPauseState(false);
   }
+  updatePauseIcon();
+  updatePauseOverlay();
+  updateSoundIcon();
+  updateMusicIcon();
 });
 
-// menu.js - Handles top-right menu bar logic for sound/music/help
 
-let soundOn = true;
-let musicOn = true;
 
 export function toggleSound() {
   soundOn = !soundOn;
-  document.getElementById('sound-toggle-icon').className = soundOn ? 'fas fa-volume-up' : 'fas fa-volume-mute';
   window.soundEnabled = soundOn;
+  updateSoundIcon();
 }
+
 
 export function toggleMusic() {
   musicOn = !musicOn;
-  document.getElementById('music-toggle-icon').className = musicOn ? 'fas fa-music' : 'fas fa-music-slash';
+  updateMusicIcon();
   if (window.bgMusic) {
     if (musicOn) {
       window.bgMusic.play();
@@ -63,12 +92,13 @@ export function toggleMusic() {
   }
 }
 
+
 export function showHelp() {
-  document.getElementById('help-modal').style.display = 'flex';
+  updateHelpModal(true);
 }
 
 export function hideHelp() {
-  document.getElementById('help-modal').style.display = 'none';
+  updateHelpModal(false);
 }
 
 // Allow closing help modal by clicking outside or pressing Escape

@@ -2,53 +2,57 @@
 // Each hitbox is a transparent SVG rectangle or circle overlaying the real region
 // The hitboxes are injected and event-bound in map.js
 
+// Place fake bounding boxes for small UTs as SVG buttons in the bottom left
+// For clean layout, all buttons will be inside a single group rectangle
+// Rectangle: x = -100, y = 700, width = 180, height = 300
+const groupBoxX = -100;
+const groupBoxY = 700;
+const groupBoxWidth = 180;
+const groupBoxHeight = 300;
+const buttonCount = 3;
+const buttonSpacing = 24;
+const buttonHeight = Math.floor((groupBoxHeight - (buttonCount + 1) * buttonSpacing) / buttonCount * 0.8);
+const buttonWidth = groupBoxWidth - 20;
+const buttonStartX = groupBoxX + (groupBoxWidth - buttonWidth) / 2;
+
 export const smallUTsHitboxes = [
   {
     id: 'hitbox-chandigarh',
     targetId: 'INCH',
     type: 'rect',
-    cx: 334.9,
-    cy: 255.1,
-    width: 24,
-    height: 24,
-    rx: 6,
-    fill: 'transparent',
-    style: 'pointer-events: all;',
+    cx: buttonStartX + buttonWidth / 2,
+    cy: groupBoxY + 2 * buttonSpacing + buttonHeight / 2,
+    width: buttonWidth,
+    height: buttonHeight,
+    rx: 8,
+    fill: '#1976d2',
+    style: 'cursor:pointer; opacity:0.92;',
+    label: 'Chandigarh',
   },
   {
-    id: 'hitbox-dadra-nagar-haveli',
-    targetId: 'INDH',
+    id: 'hitbox-dnh-diu',
+    targetId: ['INDH', 'INDD'],
     type: 'rect',
-    cx: 232.5,
-    cy: 573.8,
-    width: 28,
-    height: 28,
+    cx: buttonStartX + buttonWidth / 2,
+    cy: groupBoxY + 2 * buttonSpacing + buttonHeight + buttonSpacing + buttonHeight / 2,
+    width: buttonWidth,
+    height: buttonHeight,
     rx: 8,
-    fill: 'transparent',
-    style: 'pointer-events: all;',
-  },
-  {
-    id: 'hitbox-daman-diu',
-    targetId: 'INDH', // Same as Dadra & Nagar Haveli (merged UT)
-    type: 'rect',
-    cx: 232.5,
-    cy: 573.8,
-    width: 28,
-    height: 28,
-    rx: 8,
-    fill: 'transparent',
-    style: 'pointer-events: all;',
+    fill: '#1976d2',
+    style: 'cursor:pointer; opacity:0.92;',
+    label: 'Dadra & Nagar Haveli & Daman & Diu',
   },
   {
     id: 'hitbox-puducherry',
     targetId: 'INPY',
     type: 'rect',
-    cx: 417.7,
-    cy: 838.9,
-    width: 32,
-    height: 32,
-    rx: 10,
-    fill: 'transparent',
-    style: 'pointer-events: all;',
+    cx: buttonStartX + buttonWidth / 2,
+    cy: groupBoxY + 2 * buttonSpacing + 2 * (buttonHeight + buttonSpacing) + buttonHeight / 2,
+    width: buttonWidth,
+    height: buttonHeight,
+    rx: 8,
+    fill: '#1976d2',
+    style: 'cursor:pointer; opacity:0.92;',
+    label: 'Puducherry',
   }
 ];
