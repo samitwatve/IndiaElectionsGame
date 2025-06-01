@@ -202,18 +202,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Helper to highlight all states for a category
     function highlightCategoryStates(category) {
-        // Remove previous highlights
+        // Remove previous highlights and UT button borders
         const svg = mapContainer.querySelector('svg');
         if (!svg || !window.statesDataMap) return;
         svg.querySelectorAll('.region-highlighted').forEach(el => el.classList.remove('region-highlighted'));
+        // Remove black border from all UT buttons
+        if (window.utButtonMap) {
+            Object.values(window.utButtonMap).forEach(btn => {
+                if (btn) {
+                    btn.setAttribute('stroke', 'none');
+                    btn.setAttribute('stroke-width', '0');
+                }
+            });
+        }
         // Find all SvgIds where category is TRUE or true
         const matchingIds = Object.values(window.statesDataMap)
             .filter(d => (d[category] === true) || (d[category] === 'TRUE'))
             .map(d => d.SvgId);
-        // Highlight all matching regions
+        // Highlight all matching regions and UT buttons
         matchingIds.forEach(id => {
             const els = svg.querySelectorAll(`[id="${id}"]`);
             els.forEach(el => el.classList.add('region-highlighted'));
+            // Also highlight UT button if present
+            if (window.utButtonMap) {
+                // utButtonMap keys may be arrays (for merged buttons)
+                Object.entries(window.utButtonMap).forEach(([key, btn]) => {
+                    // key can be a string or array (for merged buttons)
+                    if (Array.isArray(key)) {
+                        if (key.includes(id) && btn) {
+                            btn.setAttribute('stroke', 'black');
+                            btn.setAttribute('stroke-width', '4');
+                        }
+                    } else {
+                        if (key === id && btn) {
+                            btn.setAttribute('stroke', 'black');
+                            btn.setAttribute('stroke-width', '4');
+                        }
+                    }
+                });
+            }
         });
     }
 
@@ -327,35 +354,38 @@ document.addEventListener('DOMContentLoaded', function () {
                   // Make the button act like clicking the real UT region
                   // Mouseover/hover for info display
                   el.addEventListener('mouseenter', function(e) {
-                    const region = svg.getElementById(hitbox.targetId);
-                    if (!region) return;
-                    let data = window.statesDataMap[hitbox.targetId];
-                    let popObj = window.popularityScores ? window.popularityScores[hitbox.targetId] : undefined;
-                    if (data) {
-                        let popText = 'N/A';
-                        if (popObj && typeof popObj === 'object') {
-                            popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
-                        }
-                        const info = [
-                            `State: ${data.State}`,
-                            `Lok Sabha Seats: ${data.LokSabhaSeats}`,
-                            `Popularity: ${popText}`
-                        ].join(' | ');
-                        if (regionNameDisplay) regionNameDisplay.textContent = info;
-                    } else {
-                        if (regionNameDisplay) regionNameDisplay.textContent = region.getAttribute('name') || region.id;
-                    }
+                    // Support merged buttons (targetId as array)
+                    const ids = Array.isArray(hitbox.targetId) ? hitbox.targetId : [hitbox.targetId];
+                    let infoArr = [];
+                    ids.forEach(regionId => {
+                      const region = svg.getElementById(regionId);
+                      let data = window.statesDataMap[regionId];
+                      let popObj = window.popularityScores ? window.popularityScores[regionId] : undefined;
+                      if (data) {
+                          let popText = 'N/A';
+                          if (popObj && typeof popObj === 'object') {
+                              popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
+                          }
+                          infoArr.push(`State: ${data.State} | Lok Sabha Seats: ${data.LokSabhaSeats} | Popularity: ${popText}`);
+                      } else if (region) {
+                          infoArr.push(region.getAttribute('name') || region.id);
+                      }
+                    });
+                    if (regionNameDisplay) regionNameDisplay.textContent = infoArr.join(' || ');
                   });
                   el.addEventListener('mouseleave', function(e) {
                     if (regionNameDisplay) regionNameDisplay.textContent = '';
                   });
                   el.addEventListener('click', function(e) {
-                    // Directly run the same logic as region click
-                    const regionId = hitbox.targetId;
-                    if (!window.popularityScores || !window.popularityScores[regionId]) return;
-                    let popObj = window.popularityScores[regionId];
-                    let seats = +window.statesDataMap[regionId].LokSabhaSeats;
-                    if (getPlayer1Purse() < seats) {
+                    // Support merged buttons (targetId as array)
+                    const ids = Array.isArray(hitbox.targetId) ? hitbox.targetId : [hitbox.targetId];
+                    // Only proceed if all regions are valid and player can afford all
+                    let totalSeats = 0;
+                    for (const regionId of ids) {
+                      if (!window.popularityScores || !window.popularityScores[regionId]) return;
+                      totalSeats += +window.statesDataMap[regionId].LokSabhaSeats;
+                    }
+                    if (getPlayer1Purse() < totalSeats) {
                       shakePlayer1Purse();
                       if (typeof playSound === 'function') {
                         playSound('error.mp3');
@@ -366,45 +396,50 @@ document.addEventListener('DOMContentLoaded', function () {
                       }
                       return;
                     }
-                    showRippleOnState(svg.getElementById(regionId), '#ff9800');
-                    setPlayer1Purse(getPlayer1Purse() - seats);
-                    updatePlayer1PurseDisplay();
-                    showPlayer1PurseDeduction(seats);
-                    const stateName = window.statesDataMap[regionId]?.State || regionId;
-                    logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
-                    if (typeof window !== 'undefined') {
-                      window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
-                    }
-                    let increase = 5;
-                    let newP1 = Math.min(100, popObj.p1 + increase);
-                    let delta = newP1 - popObj.p1;
-                    if (delta <= 0) return;
-                    let totalOther = popObj.p2 + popObj.others;
-                    let newP2 = popObj.p2;
-                    let newOthers = popObj.others;
-                    if (totalOther > 0) {
-                        newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
-                        newOthers = Math.max(0, 100 - newP1 - newP2);
-                    } else {
-                        newP2 = 0;
-                        newOthers = 100 - newP1;
-                    }
-                    window.popularityScores[regionId] = { p1: newP1, p2: newP2, others: newOthers };
+                    // Apply campaign logic to all regions
+                    ids.forEach(regionId => {
+                      let popObj = window.popularityScores[regionId];
+                      let seats = +window.statesDataMap[regionId].LokSabhaSeats;
+                      showRippleOnState(svg.getElementById(regionId), '#ff9800');
+                      setPlayer1Purse(getPlayer1Purse() - seats);
+                      updatePlayer1PurseDisplay();
+                      showPlayer1PurseDeduction(seats);
+                      const stateName = window.statesDataMap[regionId]?.State || regionId;
+                      logAction(`<Player1> spent ₹ ${seats}M on a ${stateName} campaign`);
+                      if (typeof window !== 'undefined') {
+                        window.p1SpentThisPhase = (window.p1SpentThisPhase || 0) + seats;
+                      }
+                      let increase = 5;
+                      let newP1 = Math.min(100, popObj.p1 + increase);
+                      let delta = newP1 - popObj.p1;
+                      if (delta <= 0) return;
+                      let totalOther = popObj.p2 + popObj.others;
+                      let newP2 = popObj.p2;
+                      let newOthers = popObj.others;
+                      if (totalOther > 0) {
+                          newP2 = Math.max(0, popObj.p2 - Math.round(delta * (popObj.p2 / totalOther)));
+                          newOthers = Math.max(0, 100 - newP1 - newP2);
+                      } else {
+                          newP2 = 0;
+                          newOthers = 100 - newP1;
+                      }
+                      window.popularityScores[regionId] = { p1: newP1, p2: newP2, others: newOthers };
+                    });
                     refreshAllStateColors();
                     if (typeof updateCategoryButtonBorders === 'function') updateCategoryButtonBorders();
+                    // Show info for all regions
                     if (regionNameDisplay) {
+                      let infoArr = [];
+                      ids.forEach(regionId => {
                         let data = window.statesDataMap[regionId];
                         let popObj = window.popularityScores[regionId];
                         let popText = 'N/A';
                         if (popObj && typeof popObj === 'object') {
                             popText = `P1: ${popObj.p1}% | P2: ${popObj.p2}% | Others: ${popObj.others}%`;
                         }
-                        const info = [
-                            `State: ${data.State}`,
-                            `Lok Sabha Seats: ${data.LokSabhaSeats}`,
-                            `Popularity: ${popText}`
-                        ].join(' | ');
-                        regionNameDisplay.textContent = info;
+                        infoArr.push(`State: ${data.State} | Lok Sabha Seats: ${data.LokSabhaSeats} | Popularity: ${popText}`);
+                      });
+                      regionNameDisplay.textContent = infoArr.join(' || ');
                     }
                   });
                   svg.appendChild(el);
@@ -424,7 +459,13 @@ document.addEventListener('DOMContentLoaded', function () {
                   }
                   // Store reference for later color updates
                   if (!window.utButtonMap) window.utButtonMap = {};
-                  window.utButtonMap[hitbox.targetId] = el;
+                  if (Array.isArray(hitbox.targetId)) {
+                    hitbox.targetId.forEach(id => {
+                      window.utButtonMap[id] = el;
+                    });
+                  } else {
+                    window.utButtonMap[hitbox.targetId] = el;
+                  }
                 });
 
                 // --- INITIAL LEAN ASSIGNMENT AND EVENT BINDINGS ---

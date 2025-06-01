@@ -7,11 +7,13 @@
 // Rectangle: x = -100, y = 700, width = 180, height = 300
 const groupBoxX = -100;
 const groupBoxY = 700;
+const labelHeight = 36; // Space for the "Small UTs" label
 const groupBoxWidth = 180;
 const groupBoxHeight = 300;
-const buttonCount = 3;
-const buttonSpacing = 24;
-const buttonHeight = Math.floor((groupBoxHeight - (buttonCount + 1) * buttonSpacing) / buttonCount * 0.8);
+
+const buttonCount = 4;
+const buttonHeight = 48;
+const buttonSpacing = (groupBoxHeight - labelHeight - buttonCount * buttonHeight) / (buttonCount + 1);
 const buttonWidth = groupBoxWidth - 20;
 const buttonStartX = groupBoxX + (groupBoxWidth - buttonWidth) / 2;
 
@@ -21,7 +23,7 @@ export const smallUTsHitboxes = [
     targetId: 'INCH',
     type: 'rect',
     cx: buttonStartX + buttonWidth / 2,
-    cy: groupBoxY + 2 * buttonSpacing + buttonHeight / 2,
+    cy: groupBoxY + labelHeight + buttonSpacing + buttonHeight / 2,
     width: buttonWidth,
     height: buttonHeight,
     rx: 8,
@@ -30,24 +32,37 @@ export const smallUTsHitboxes = [
     label: 'Chandigarh',
   },
   {
-    id: 'hitbox-dnh-diu',
-    targetId: ['INDH', 'INDD'],
+    id: 'hitbox-dnh',
+    targetId: 'INDH',
     type: 'rect',
     cx: buttonStartX + buttonWidth / 2,
-    cy: groupBoxY + 2 * buttonSpacing + buttonHeight + buttonSpacing + buttonHeight / 2,
+    cy: groupBoxY + labelHeight + 2 * buttonSpacing + buttonHeight + buttonHeight / 2,
     width: buttonWidth,
     height: buttonHeight,
     rx: 8,
     fill: '#1976d2',
     style: 'cursor:pointer; opacity:0.92;',
-    label: 'Dadra & Nagar Haveli & Daman & Diu',
+    label: 'Dadra & Nagar Haveli',
+  },
+  {
+    id: 'hitbox-diu',
+    targetId: 'INDD',
+    type: 'rect',
+    cx: buttonStartX + buttonWidth / 2,
+    cy: groupBoxY + labelHeight + 3 * buttonSpacing + 2 * buttonHeight + buttonHeight / 2,
+    width: buttonWidth,
+    height: buttonHeight,
+    rx: 8,
+    fill: '#1976d2',
+    style: 'cursor:pointer; opacity:0.92;',
+    label: 'Daman & Diu',
   },
   {
     id: 'hitbox-puducherry',
     targetId: 'INPY',
     type: 'rect',
     cx: buttonStartX + buttonWidth / 2,
-    cy: groupBoxY + 2 * buttonSpacing + 2 * (buttonHeight + buttonSpacing) + buttonHeight / 2,
+    cy: groupBoxY + labelHeight + 4 * buttonSpacing + 3 * buttonHeight + buttonHeight / 2,
     width: buttonWidth,
     height: buttonHeight,
     rx: 8,
